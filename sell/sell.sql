@@ -10,7 +10,7 @@ insert into product_info(product_id, product_name, product_price, product_stock,
 
 insert into product_info(product_id, product_name, product_price, product_stock, product_description, product_icon, product_status, category_type) values('123457','皮皮虾',3.2,100,'很好吃', 'image.imooc.com/2.jpg',0,2);
 
-insert into order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_staus) values('12367', '师兄','13860138600','慕课网总部','1101110',2.5,0,0);
+insert into order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) values('12367', '师兄','13860138600','慕课网总部','1101110',2.5,0,0);
 	
 insert into order_detail(detail_id, order_id, product_id, product_name, product_price, product_quantity, product_icon) values('12367', '123456','157875196366160022','皮蛋粥',0.01,2,'http://xxx.com');
 
@@ -51,7 +51,7 @@ create table `order_master`(
 	`buyer_openid` varchar(64) not null comment '买家微信openid',
 	`order_amount` decimal(8,2) not null comment '订单总金额',
 	`order_status` tinyint(3) not null default '0' comment '订单状态，默认0新下单',
-	`pay_staus` tinyint(3) not null default '0' comment '支付状态，默认0未支付',
+	`pay_status` tinyint(3) not null default '0' comment '支付状态，默认0未支付',
 	`create_time` timestamp not null default current_timestamp comment '创建时间',
 	`update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
 	primary key(`order_id`),

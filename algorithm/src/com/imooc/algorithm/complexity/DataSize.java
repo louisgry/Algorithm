@@ -1,5 +1,8 @@
 package com.imooc.algorithm.complexity;
 
+/**
+ * 2-2：对数据规模有一个概念
+ */
 public class DataSize {
 
     public static void main(String[] args) {
