@@ -41,7 +41,7 @@ public class Vector<Item> {
         for(int i=0; i<size; i++)
             newData[i] = data[i];
 
-        data = newData;
+        data = newData; // data是全局变量，无引用传递问题
         capacity = newCapacity;
     }
 

@@ -1,4 +1,4 @@
----- 数据 ----
+-- -- 数据 --
 -- 插入数据
 insert into product_category(category_id, category_name, category_type) values (1, '热销榜', 2);
 
@@ -15,7 +15,7 @@ insert into order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer
 insert into order_detail(detail_id, order_id, product_id, product_name, product_price, product_quantity, product_icon) values('12367', '123456','157875196366160022','皮蛋粥',0.01,2,'http://xxx.com');
 
 
----- 表 ----
+-- -- 表 --
 -- 商品表
 create table `product_info`(
 	`product_id` varchar(32) not null,

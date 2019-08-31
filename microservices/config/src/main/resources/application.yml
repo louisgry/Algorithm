@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:louisgry/config-repo.git
+          basedir: D:/GitHub/Programming/springcloud/config/src/main/resources/basedir
+  rabbitmq:
+    host: 192.168.99.100
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/, http://localhost:8762/eureka/
+management:
+  endpoints:
+    web:
+      expose: "*"
