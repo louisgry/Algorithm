@@ -8,8 +8,6 @@ public class MoveZeroes {
     /**
      * 283. Move Zeroes
      * https://leetcode.com/problems/move-zeroes/
-     * 时间复杂度：O(n)
-     * 空间复杂度：O(1)
      */
     public void moveZeroes(int[] nums){
         /**

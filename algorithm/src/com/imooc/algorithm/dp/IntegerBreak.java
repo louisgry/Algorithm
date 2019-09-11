@@ -6,8 +6,6 @@ public class IntegerBreak {
     /**
      * 343 Integer Break
      * https://leetcode.com/problems/integer-break/
-     * 时间复杂度：
-     * 空间复杂度：
      */
 //    private int[] memo;
     public int integerBreak(int n) {

@@ -4,11 +4,14 @@ public class MinimumSizeSubarraySum {
     /**
      * 209 Minimum Size Subarray Sum
      * https://leetcode.com/problems/minimum-size-subarray-sum/
-     * 时间复杂度：O(n)
-     * 空间复杂度：O(1)
+     *
      */
     public int minSubArrayLen(int s, int[] nums) {
-        /** 滑动窗口：维护nums[i...j]，如果sum比s小 sum += nums[++j]，否则sum -= nums[i++] */
+        /**
+         * 滑动窗口：维护nums[i...j]，如果sum比s小 sum += nums[++j]，否则sum -= nums[i++]
+         * 时间复杂度：O(n)
+         * 空间复杂度：O(1)
+         */
 //        int i = 0, j = -1; // j不包含任何元素
 //        int sum = 0;
 //        int len = nums.length+1;

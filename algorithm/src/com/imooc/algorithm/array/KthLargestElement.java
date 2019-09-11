@@ -6,8 +6,6 @@ public class KthLargestElement {
     /**
      * 215. Kth Largest Element in an Array
      * https://leetcode.com/problems/kth-largest-element-in-an-array/
-     * 时间复杂度：O(n)
-     * 空间复杂度：O(logn)
      */
     public int findKthLargest(int[] nums, int k) {
         /**

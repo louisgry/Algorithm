@@ -4,8 +4,6 @@ public class TwoSumII {
     /**
      * 167. Two Sum II
      * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-     * 时间复杂度：O(n)
-     * 空间复杂度：O(1)
      */
     public int[] twoSum(int[] numbers, int target) {
         /**

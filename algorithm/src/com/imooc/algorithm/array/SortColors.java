@@ -7,8 +7,6 @@ public class SortColors {
     /**
      * 75. Sort Colors
      * https://leetcode.com/problems/sort-colors/
-     * 时间复杂度：O(n)
-     * 空间复杂度：O(1)
      */
     public void sortColors(int[] nums){
 
