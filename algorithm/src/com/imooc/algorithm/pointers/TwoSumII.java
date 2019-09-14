@@ -1,4 +1,4 @@
-package com.imooc.algorithm.array;
+package com.imooc.algorithm.pointers;
 
 public class TwoSumII {
     /**
@@ -62,6 +62,6 @@ public class TwoSumII {
         int[] numbers = {2,7,11,15};
         int target = 9;
         int[] result = (new TwoSumII()).twoSum(numbers, target);
-        System.out.println(result[0]+ " " +result[1]);
+        System.out.println(result[0]+ " " +result[1]); // ==> [0, 1]
     }
 }

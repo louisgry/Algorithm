@@ -1,6 +1,4 @@
-package com.imooc.algorithm.array;
-
-import java.util.Arrays;
+package com.imooc.algorithm.partition;
 
 public class KthLargestElement {
     /**

@@ -1,4 +1,4 @@
-package com.imooc.algorithm.array;
+package com.imooc.algorithm.pointers;
 
 public class ContainerWithMostWater {
     /**
@@ -21,5 +21,12 @@ public class ContainerWithMostWater {
                 j--;
         }
         return area;
+    }
+
+    // main
+    public static void main(String[] args) {
+        int[] height = {1,8,6,2,5,4,8,3,7};
+        // ==> 49
+        System.out.println((new ContainerWithMostWater()).maxArea(height));
     }
 }

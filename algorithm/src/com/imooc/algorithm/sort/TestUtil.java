@@ -1,4 +1,4 @@
-package com.imooc.algorithm.utils;
+package com.imooc.algorithm.sort;
 
 /**
  * 2-4：亲自试验自己算法的时间复杂度

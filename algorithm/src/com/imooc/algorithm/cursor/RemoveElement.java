@@ -1,4 +1,4 @@
-package com.imooc.algorithm.array;
+package com.imooc.algorithm.cursor;
 
 public class RemoveElement {
 
