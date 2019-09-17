@@ -10,7 +10,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     public int lengthOfLongestSubstring(String s) {
         int[] freq = new int[256]; // 记录字母是否重复
         int i=0, j=-1;
-        int len = 0;
+        int max = 0;
         while(i<s.length()){
             if(j+1<s.length() && freq[s.charAt(j+1)]==0){
                 j++;
@@ -20,9 +20,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 freq[s.charAt(i)]--;
                 i++;
             }
-            len = Math.max(len, j-i+1); // 注意：是最长子串max
+            max = Math.max(max, j-i+1); // 注意：是最长子串max
         }
-        return len;
+        return max;
     }
 
     // main
