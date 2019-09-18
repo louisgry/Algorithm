@@ -1,5 +1,10 @@
 package com.imooc.algorithm.window;
 
+/**
+ * @Author: Louis
+ * @Date: Create in 2019/9/5 21:28
+ * @Description:
+ */
 public class MinimumSizeSubarraySum {
     /**
      * 209 Minimum Size Subarray Sum

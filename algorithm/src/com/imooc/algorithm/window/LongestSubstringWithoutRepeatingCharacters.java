@@ -1,5 +1,10 @@
 package com.imooc.algorithm.window;
 
+/**
+ * @Author: Louis
+ * @Date: Create in 2019/9/17 21:28
+ * @Description:
+ */
 public class LongestSubstringWithoutRepeatingCharacters {
     /**
      * 3 Longest Substring Without Repeating Characters
@@ -8,7 +13,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * 空间复杂度：O(1)
      */
     public int lengthOfLongestSubstring(String s) {
-        int[] freq = new int[256]; // 记录字母是否重复
+        // 记录字母是否重复
+        int[] freq = new int[256];
         int i=0, j=-1;
         int max = 0;
         while(i<s.length()){
@@ -20,12 +26,15 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 freq[s.charAt(i)]--;
                 i++;
             }
-            max = Math.max(max, j-i+1); // 注意：是最长子串max
+            // 注意：是最长子串max
+            max = Math.max(max, j-i+1);
         }
         return max;
     }
 
-    // main
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String s1 = "abcabcab";
         System.out.println((new LongestSubstringWithoutRepeatingCharacters()).lengthOfLongestSubstring(s1));
