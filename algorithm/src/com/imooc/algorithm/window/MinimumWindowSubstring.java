@@ -9,6 +9,9 @@ public class MinimumWindowSubstring {
     /**
      * 76 Minimum Window Substring
      * https://leetcode.com/problems/minimum-window-substring/
+     * 思路：滑动窗口
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public String minWindow(String s, String t) {
         int[] sFreq = new int[256];
@@ -28,16 +31,21 @@ public class MinimumWindowSubstring {
                 }
                 j++;
             } else {
+                assert count<=t.length();
                 if(count==t.length() && j-i+1<minLen){
                     minLen = j-i+1;
                     startIndex = i;
                 }
-                sFreq[s.charAt(i)]--
+                sFreq[s.charAt(i)]--;
+                if (sFreq[s.charAt(i)] < tFreq[s.charAt(i)]){
+                    count--;
+                }
+                i++;
             }
         }
 
         if (startIndex != -1){
-            return s.substring(startIndex, minLen);
+            return s.substring(startIndex, startIndex+minLen);
         }
         return "";
     }
