@@ -14,6 +14,8 @@ public class FindAllAnagramsInAString {
     /**
      * 438 Find All Anagrams in a String
      * https://leetcode.com/problems/find-all-anagrams-in-a-string/
+     * 时间复杂度：
+     * 空间复杂度：
      */
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> indexList = new ArrayList<Integer>();
@@ -40,7 +42,8 @@ public class FindAllAnagramsInAString {
      * main
      */
     public static void main(String[] args) {
-        String s = "cbaebabacd";
+//        String s = "cbaebabacd";
+        String s = "cbadbac";
         String p = "abc";
         List<Integer> indexList = (new FindAllAnagramsInAString()).findAnagrams(s, p);
         for (int e : indexList) {
