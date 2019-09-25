@@ -16,6 +16,7 @@ public class MaximumDepthOfBinaryTree {
     /**
      * 104 Maximum Depth of Binary Tree
      * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+     * 思路：递归
      * 时间复杂度：O(n)，n是节点数
      * 空间复杂度：O(h)，h是树深度
      */

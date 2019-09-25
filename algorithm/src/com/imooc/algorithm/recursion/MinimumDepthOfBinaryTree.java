@@ -16,6 +16,9 @@ public class MinimumDepthOfBinaryTree {
     /**
      * 111 Minimum Depth of Binary Tree
      * https://leetcode.com/problems/minimum-depth-of-binary-tree/
+     * 思路：递归
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(h)
      */
     public int minDepth(TreeNode root) {
         // 递归终止条件
