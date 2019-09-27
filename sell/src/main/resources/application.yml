@@ -7,6 +7,9 @@ spring:
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL5Dialect
-
 server:
   context-path: /sell
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#    level: debug
