@@ -6,6 +6,7 @@ package com.imooc.algorithm.recursion;
  * @Description:
  */
 public class SameTree {
+
     public class TreeNode {
         int val;
         TreeNode left;
@@ -13,9 +14,14 @@ public class SameTree {
         TreeNode(int x) { val = x; }
     }
     /**
-     *
+     * 100 Same Tree
+     * https://leetcode.com/problems/same-tree/
+     * 思路：递归
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(h)
      */
     public boolean isSameTree(TreeNode p, TreeNode q) {
+        // 递归终止条件
         if (p==null && q==null) {
             return true;
         }
@@ -25,6 +31,7 @@ public class SameTree {
         if (p.val != q.val) {
             return false;
         }
+        // 递归过程
         boolean left = isSameTree(p.left, q.left);
         boolean right = isSameTree(p.right, q.right);
         return left && right;
