@@ -1,4 +1,4 @@
-package com.imooc.algorithm.complexity;
+package com.imooc.datastructure.complexity;
 
 /**
  * 2-3：简单的复杂度分析

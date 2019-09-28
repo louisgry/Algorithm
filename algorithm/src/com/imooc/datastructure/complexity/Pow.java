@@ -1,4 +1,4 @@
-package com.imooc.algorithm.complexity;
+package com.imooc.datastructure.complexity;
 
 /**
  * 2-5：递归算法的复杂度分析

@@ -1,4 +1,4 @@
-package com.imooc.algorithm.sort;
+package com.imooc.datastructure.sort;
 
 public class InsertionSort {
     /**

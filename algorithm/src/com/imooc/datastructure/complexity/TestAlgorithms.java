@@ -1,4 +1,4 @@
-package com.imooc.algorithm.complexity;
+package com.imooc.datastructure.complexity;
 
 /**
  * 2-4：亲自试验自己算法的时间复杂度
