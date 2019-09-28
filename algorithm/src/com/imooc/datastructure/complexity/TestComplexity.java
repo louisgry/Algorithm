@@ -1,6 +1,6 @@
-package com.imooc.algorithm.complexity;
+package com.imooc.datastructure.complexity;
 
-import com.imooc.algorithm.sort.TestUtil;
+import com.imooc.datastructure.sort.TestUtil;
 
 /**
  * 2-4：亲自试验自己算法的时间复杂度

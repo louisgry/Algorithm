@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 
 /**
  * 商品实体类
+ * @author Louis
  */
 @Entity
 @Data

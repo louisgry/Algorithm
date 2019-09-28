@@ -1,4 +1,4 @@
-package com.imooc.algorithm.recursion;
+package com.imooc.algorithm.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;

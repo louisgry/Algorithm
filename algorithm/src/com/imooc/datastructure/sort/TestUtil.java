@@ -1,4 +1,4 @@
-package com.imooc.algorithm.sort;
+package com.imooc.datastructure.sort;
 
 /**
  * 2-4：亲自试验自己算法的时间复杂度

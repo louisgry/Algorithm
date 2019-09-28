@@ -10,10 +10,11 @@ import java.util.Date;
 
 /**
  * 类目实体类
+ * @author Louis
  */
 @Entity
-@DynamicUpdate // 动态更新时间
-@Data // lombok: 不需要重写Getter and Setter
+@DynamicUpdate
+@Data
 public class ProductCategory {
 
     /** 类目ID */

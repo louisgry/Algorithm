@@ -1,4 +1,4 @@
-package com.imooc.algorithm.complexity;
+package com.imooc.datastructure.complexity;
 
 public class Vector<Item> {
 

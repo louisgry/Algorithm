@@ -1,4 +1,4 @@
-package com.imooc.algorithm.complexity;
+package com.imooc.datastructure.complexity;
 
 /**
  * 2-2：对数据规模有一个概念
