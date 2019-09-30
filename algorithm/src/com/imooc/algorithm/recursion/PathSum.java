@@ -14,7 +14,11 @@ public class PathSum {
         TreeNode(int x) { val = x; }
     }
     /**
-     *
+     * 112 Path Sum
+     * https://leetcode.com/problems/path-sum/
+     * 思路：递归
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(h)
      */
     public boolean hasPathSum(TreeNode root, int sum) {
         // 递归终止条件
