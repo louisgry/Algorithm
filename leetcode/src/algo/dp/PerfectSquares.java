@@ -34,19 +34,19 @@ public class PerfectSquares {
                 memo[i] = Math.min(memo[i], 1+memo[i-j*j]);
         return memo[n];
         /**
-         * 思路3：ds.queue
+         * 思路3：queue
          * 时间复杂度：
          * 空间复杂度：
          */
 //        int res = 0;
-//        LinkedList<Pair<Integer, Integer>> ds.queue = new LinkedList<Pair<Integer, Integer>>();
-//        ds.queue.addLast(new Pair<Integer, Integer>(n, 0));
+//        LinkedList<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
+//        queue.addLast(new Pair<Integer, Integer>(n, 0));
 //
 //        boolean[] visited = new boolean[n+1];
 //        visited[n] = true;
 //
-//        while(!ds.queue.isEmpty()) {
-//            Pair<Integer, Integer> front = ds.queue.removeFirst();
+//        while(!queue.isEmpty()) {
+//            Pair<Integer, Integer> front = queue.removeFirst();
 //            int num = front.getKey();
 //            int step = front.getValue();
 //
@@ -55,7 +55,7 @@ public class PerfectSquares {
 //            }
 //            for(int i=1; num-i*i>=0; i++) {
 //                if(!visited[num-i*i]) {
-//                    ds.queue.addLast(new Pair<Integer, Integer>(num-i*i, step+1));
+//                    queue.addLast(new Pair<Integer, Integer>(num-i*i, step+1));
 //                    visited[num-i*i] = true;
 //                }
 //            }
