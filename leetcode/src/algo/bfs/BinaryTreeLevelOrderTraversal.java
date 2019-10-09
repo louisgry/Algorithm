@@ -1,4 +1,4 @@
-package ds.queue;
+package algo.bfs;
 
 import javafx.util.Pair;
 

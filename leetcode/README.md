@@ -1,34 +1,34 @@
 # LeetCode分类汇总 (Java)
 
 - 数据结构
-    - [ds.stack](#stack)
-    - [ds.queue](#queue)
-    - [ds.linkedlist](#linkedlist)
-    - [ds.binarytree](#binarytree)
-    - [ds.collection](#collection)
+    - [stack](#stack)
+    - [queue](#queue)
+    - [linkedlist](#linkedlist)
+    - [binarytree](#binarytree)
+    - [collection](#collection)
 - 算法思想
-    - [algo.cursor](#cursor)
-    - [algo.partition](#partition)
-    - [algo.pointers](#pointers)
-    - [algo.window](#window)
-    - [algo.dp](#dp)
-    - [algo.backtracking.greedy](#greedy)
-    - [algo.backtracking](#backtracking)
+    - [cursor](#cursor)
+    - [partition](#partition)
+    - [pointers](#pointers)
+    - [window](#window)
+    - [dp](#dp)
+    - [greedy](#greedy)
+    - [backtracking](#backtracking)
     - [bfs](#bfs)
     - [dfs](#dfs)
 
 ## 数据结构
-### ds.stack
+### stack
 - 栈
     - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)：[【20题解】](#20题解) 
     - [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)：[【144题解】](#144题解)
 
-### ds.queue
+### queue
 - 队列
     - [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)：[【347题解】](#347题解)
 
 
-### ds.linkedlist
+### linkedlist
 - 链表
     - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)：[【206题解】](#206题解)
     - [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)：[【203题解】](#203题解)
@@ -38,7 +38,7 @@
     - more
     - [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)：[【234题解】](#234题解)
 
-### ds.binarytree
+### binarytree
 - 二叉树
     - [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)：[【104题解】](#104题解)
     - [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)：[【11题解】](#111题解)
@@ -56,7 +56,7 @@
     - [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)：[【113题解】](#113题解)
     - [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)：[【129题解】](#129题解)
 
-### ds.collection
+### collection
 - 查找表
     - [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)：[【349题解】](#349题解)
     - [350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)：[【350题解】](#350题解)
@@ -72,18 +72,18 @@
     - [804. Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)：[【804题解】](#804题解)
 
 ## 算法思想
-### algo.cursor
+### cursor
 - 游标
     - [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)：[【283题解】](#283题解)
     - [27. Remove Element](https://leetcode.com/problems/remove-element/)：[【27题解】](#27题解)
 
-### algo.partition
+### partition
 - Partition
     - [75. Sort Colors](https://leetcode.com/problems/sort-colors/)：[【75题解】](#75题解)
     - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)：[【215题解】](#215题解)
 
 
-### algo.pointers
+### pointers
 - 双指针
     - [167. Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)：[【167题解】](#167题解)
     - [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)：[【11题解】](#11题解)
@@ -91,7 +91,7 @@
     - [345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)：[【345题解】](#345题解)
 
 
-### algo.window
+### window
 - 滑动窗口
     - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)：[【209题解】](#209题解)
     - [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)：[【3题解】](#3题解)
@@ -101,7 +101,7 @@
     - [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)：[【424题解】](#424题解)
 
 
-### algo.dp
+### dp
 - 动态规划
     - [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)：[【70题解】](#70题解)
     - [343. Integer Break](https://leetcode.com/problems/integer-break/)：[【343题解】](#343题解)
@@ -112,12 +112,12 @@
     - [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)：[【300题解】](#300题解)
     - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)：[【1143题解】](#1143题解)
 
-### algo.backtracking.greedy
+### greedy
 - 贪心
     - [455. Assign Cookies](https://leetcode.com/problems/assign-cookies/)：[【455题解】](#455题解)
     - [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)：[【435题解】](#435题解)
 
-### algo.backtracking
+### backtracking
 - 回溯
     - [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)：[【17题解】](#17题解)
     - [46. Permutations](https://leetcode.com/problems/permutations/)：[【46题解】](#46题解)
@@ -137,9 +137,9 @@
 
 # 题解
 
-**ds.stack**
+**stack**
 ### 20题解
-- ds.stack
+- stack
     - 20 Valid Parentheses：https://leetcode.com/problems/valid-parentheses/
         - 判断括号是否匹配
         - Input: "()[]{}"
@@ -156,20 +156,20 @@
         // ---- 如果for结束，栈不为空，返回false
         // ---- 否则，返回true
         
-        Stack<Character> ds.stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<Character>();
         char[] matchs = {'(', '{', '['};
         
         for(int i=0; i<s.length(); i++) {
             // s.charAt(i) (
             if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='[') {
-                ds.stack.push(s.charAt(i));    
+                stack.push(s.charAt(i));    
             }
             else {
                 // 【Runtime Error："]"】没有进行size为0的判断
-                if(ds.stack.size()==0) {
+                if(stack.size()==0) {
                     return false;
                 }
-                char c = ds.stack.pop();
+                char c = stack.pop();
                 char match;
                 if(s.charAt(i)==')') {
                     match = matchs[0];
@@ -187,7 +187,7 @@
             }
         }
         
-        if(ds.stack.size()!=0) {
+        if(stack.size()!=0) {
             return false;
         }
         return true;
@@ -195,7 +195,7 @@
     ```
 
 ### 144题解
-- ds.stack
+- stack
     - 144 Binary Tree Preorder Traversal：https://leetcode.com/problems/binary-tree-preorder-traversal/
         - 二叉树的前序遍历
         - Input: binary tree [1,2,3]
@@ -238,23 +238,23 @@
         if(root == null) {
             return res;
         }
-        Stack<Command> ds.stack = new Stack<Command>();
-        ds.stack.push(new Command("go", root));
-        while(!ds.stack.empty()) {
+        Stack<Command> stack = new Stack<Command>();
+        stack.push(new Command("go", root));
+        while(!stack.empty()) {
             // 取出栈顶元素
-            Command command = ds.stack.pop();
+            Command command = stack.pop();
             if(command.s == "print") {
                 res.add(command.node.val);
             }
             else {
                 // 如果是go命令，倒序压入指令
                 if(command.node.right != null) {
-                    ds.stack.push(new Command("go", command.node.right));
+                    stack.push(new Command("go", command.node.right));
                 }
                 if(command.node.left != null) {
-                    ds.stack.push(new Command("go", command.node.left));
+                    stack.push(new Command("go", command.node.left));
                 }
-                ds.stack.push(new Command("print", command.node));
+                stack.push(new Command("print", command.node));
             }
         }
         return res;
@@ -272,10 +272,10 @@
     ```
 
 ---
-**ds.queue**
+**queue**
 
 ### 347题解
-- ds.queue
+- queue
     - 347 Top K Frequent Elements：https://leetcode.com/problems/top-k-frequent-elements/
         - 返回前k个出现频率最高的元素
         - Input: nums = [1,1,1,2,2,3], k = 2
@@ -334,9 +334,9 @@
     ```
 
 ---
-**ds.linkedlist**
+**linkedlist**
 ### 206题解
-- ds.linkedlist
+- linkedlist
     - 206 Reverse Linked List：https://leetcode.com/problems/reverse-linked-list/
         - 反转一个链表
         - Input: 1->2->3->4->5->NULL
@@ -378,7 +378,7 @@
     ```
 
 ### 203题解
-- ds.linkedlist
+- linkedlist
     - 203 Remove Linked List Elements：https://leetcode.com/problems/remove-linked-list-elements/
         - 删除链表中特定值的所有元素
         - Input: 1->2->6->3->4->5->6, val = 6
@@ -405,7 +405,7 @@
     ```
 
 ### 24题解
-- ds.linkedlist
+- linkedlist
     - 24 Swap Nodes in Pairs：https://leetcode.com/problems/swap-nodes-in-pairs/
         - 链表两两交换节点
         - Input: 1->2->3->4->null
@@ -443,7 +443,7 @@
     ```
   
 ### 237题解
-- ds.linkedlist
+- linkedlist
     - 237 Delete Node in a Linked List：https://leetcode.com/problems/delete-node-in-a-linked-list/
         - 给定链表中的一个节点，删除该节点
         - Input: head = [4,5,1,9], node = 5
@@ -468,7 +468,7 @@
     ```
   
 ### 19题解
-- ds.linkedlist
+- linkedlist
     - 19 Remove Nth Node From End of List：https://leetcode.com/problems/remove-nth-node-from-end-of-list/
         - 删除链表的倒数第N个元素
         - Input: 1->2->3->4->5, n = 2
@@ -521,7 +521,7 @@
     ```
   
 ### 234题解
-- ds.linkedlist
+- linkedlist
     - 234 Palindrome Linked List：https://leetcode.com/problems/palindrome-linked-list/
         - 判断链表是否是回文的
         - Input: 1->2->2->1
@@ -566,7 +566,7 @@
     ```
 
 ---
-**ds.binarytree**
+**binarytree**
 ### 104题解
 - 104题解
     - 104 Maximum Depth of Binary Tree：https://leetcode.com/problems/maximum-depth-of-binary-tree/
@@ -968,7 +968,7 @@
 
 
 ---
-**ds.collection**
+**collection**
 ### 349题解
 - 349题解
     - 349 Intersection of Two Arrays：https://leetcode.com/problems/intersection-of-two-arrays/
@@ -1320,7 +1320,7 @@
     ```
 
 ---
-**algo.cursor**
+**cursor**
 ### 283题解
 - 283题解
     - 283 Move Zeroes：https://leetcode.com/problems/move-zeroes/
@@ -1370,7 +1370,7 @@
         - 给定nums，删除指定的值val
         - Input: nums = [3,2,2,3], val = 3,
         - Output: Your function should return length = 2, with the first two elements of nums being 2.
-    - 思路：algo.cursor
+    - 思路：cursor
     - 时间复杂度：O(n)
     - 空间复杂度：O(1)
      ```
@@ -1393,7 +1393,7 @@
      ```
 
 ---
-**algo.partition**
+**partition**
 ### 75题解
 - 75题解
     - 75 Sort Color：https://leetcode.com/problems/sort-colors/
@@ -1450,7 +1450,7 @@
         private int findKthLargest(int[] nums, int l, int r, int k){
             if(l==r)
                 return nums[l];
-            int p = algo.partition(nums, l, r);
+            int p = partition(nums, l, r);
 
             if( p == k )
                 return nums[p];
@@ -1460,7 +1460,7 @@
                 return findKthLargest(nums, p+1 , r, k);
         }
 
-        private int algo.partition(int[] nums, int l , int r){
+        private int partition(int[] nums, int l , int r){
             int p = (int) (Math.random()%(r-l+1) + l);
             swap(nums, l, p);
             int lt = l + 1;
@@ -1482,7 +1482,7 @@
 `remain`
 
 ---
-**algo.pointers**
+**pointers**
 ### 167题解
 - 167题解
     - 167 Two Sum II：https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 
@@ -1604,7 +1604,7 @@
     ```
 
 ---
-**algo.window**
+**window**
 ### 209题解
 - 209题解
     - 209 Minimum Size Subarray Sum：https://leetcode.com/problems/minimum-size-subarray-sum/
@@ -1706,7 +1706,7 @@
 
 ### 76题解
 - 76题解
-    - 76 Minimum Window Substring：https://leetcode.com/problems/minimum-algo.window-substring/
+    - 76 Minimum Window Substring：https://leetcode.com/problems/minimum-window-substring/
         - 求字符串s中包含字符串t的最小窗口
         - Input: S = "ADOBECODEBANC", T = "ABC"
         - Output: "BANC"
@@ -1820,9 +1820,9 @@
 
 
 ---
-**algo.dp**
+**dp**
 ### 70题解
-- algo.dp
+- dp
     - 70 Climbing Stairs：https://leetcode.com/problems/climbing-stairs/
         - 给定n，求step的组合，step仅为1和2
         - Input: 2
@@ -1870,7 +1870,7 @@
     ```
 
 ### 343题解
-- algo.dp
+- dp
     - 343 Integer Break：https://leetcode.com/problems/integer-break/ 
         - 给定正整数n，分割n为至少两个数之和，返回分割后的数字相乘的最大值
         - Input: 10
@@ -1932,7 +1932,7 @@
     ```
 
 ### 198题解
-- algo.dp
+- dp
     - 198 House Robber：https://leetcode.com/problems/house-robber/ 
         - 给定nums数组代表连续相邻的家庭所有的money，若抢相邻的两家会触发报警，求所能抢的money的最大值
         - Input: [1,2,3,1]
@@ -1989,7 +1989,7 @@
     ```
 
 ### 279题解
-- algo.dp
+- dp
     - 279 Perfect Squares：https://leetcode.com/problems/perfect-squares/
         - 给定一个正整数n，求其由最少个完全平方数组成的和等于n的个数
         - Input: n = 13
@@ -2032,7 +2032,7 @@
     }
     ```
 ### 91题解
-- algo.dp
+- dp
     - 91 Decode Ways：https://leetcode.com/problems/decode-ways/
         - 求数字解码对应的字母含义的组合个数
         - Input: "12"
@@ -2090,8 +2090,8 @@
     ```
 
 ### 416题解
-- algo.dp
-    - 416 Partition Equal Subset Sum：https://leetcode.com/problems/algo.partition-equal-subset-sum/
+- dp
+    - 416 Partition Equal Subset Sum：https://leetcode.com/problems/partition-equal-subset-sum/
         - 给定数组nums，求其是否可以被分成两个子数组，其和相等（注意：最多有200个数字，每个数字最大为100）
         - Input: [1, 5, 11, 5]
         - Output: true
@@ -2155,7 +2155,7 @@
     ```
 
 ### 300题解
-- algo.dp
+- dp
     - 300 Longest Increasing Subsequence：https://leetcode.com/problems/longest-increasing-subsequence/
         - 求最长上升子序列的length 
         - Input: [10,9,2,5,3,7,101,18]
@@ -2211,7 +2211,7 @@
     ```
 
 ### 1143题解
-- algo.dp
+- dp
     - 1143 Longest Common Subsequence：https://leetcode.com/problems/longest-common-subsequence/
         - LCS：找两个字符串的最长公共子序列的长度
         - Input: text1 = "abcde", text2 = "ace" 
@@ -2270,7 +2270,7 @@
                     memo[0][j] = 1;
                 break;
             }
-        // algo.dp
+        // dp
         for(int i=1; i<m; i++)
             for(int j=1; j<n; j++)
                 if(text1.charAt(i) == text2.charAt(j))
@@ -2282,9 +2282,9 @@
     ```
 
 ---
-**algo.backtracking.greedy**
+**backtracking.greedy**
 ### 455题解
-- algo.backtracking.greedy
+- backtracking.greedy
     - 455 Assign Cookies：https://leetcode.com/problems/assign-cookies/
         - 分饼干，s为饼干大小，g为满意的最小值，返回最多可以让几个小朋友开心
         - Input: g=[1,2,3], s=[1,1]
@@ -2314,7 +2314,7 @@
     ```
 
 ### 435题解
-- algo.backtracking.greedy
+- backtracking.greedy
     - 435 Non-overlapping Intervals：https://leetcode.com/problems/non-overlapping-intervals/
         - 给定一个区间，问最少删除多少个区间，可以让这些区间之间不重叠
         - Input: [[1,2],[2,3],[3,4],[1,3]]
@@ -2390,7 +2390,7 @@
 
 
 ---
-**algo.backtracking**
+**backtracking**
 ### 17题解
 - 17题解
     - 17 Letter Combinations of a Phone Number：https://leetcode.com/problems/letter-combinations-of-a-phone-number/
@@ -2438,7 +2438,7 @@
     ```
 
 ### 46题解
-- algo.backtracking
+- backtracking
     - 46 Permutations：https://leetcode.com/problems/permutations/
         - 求数组的全排列
         - Input: [1,2,3]
@@ -2478,7 +2478,7 @@
     ```
 
 ### 77题解
-- algo.backtracking
+- backtracking
     - 77 Combinations：https://leetcode.com/problems/combinations/
         - 在n个数字中选出k个数字的所有组合
         - Input: n = 4, k = 2
@@ -2537,7 +2537,7 @@
     ```
 
 ### 79题解
-- algo.backtracking
+- backtracking
     - 79 Word Search：https://leetcode.com/problems/word-search/
         - 查询二维字符数组中，连起来是否有word
         - Input: board=[['A','B','C','E'],['S','F','C','S'],['A','D','E','E']]，word="ABCCED"
@@ -2587,7 +2587,7 @@
     }
     ```
 ### 200题解
-- algo.backtracking
+- backtracking
     - 200 Number of Islands：https://leetcode.com/problems/number-of-islands/
         - 二维数组中查找岛屿的个数，值为1
         - Input: [[11110][11010][11000][00000]]
@@ -2632,7 +2632,7 @@
     }
     ```
 ### 51题解
-- algo.backtracking
+- backtracking
     - 51 N Queens：https://leetcode.com/problems/n-queens/
         - n皇后问题的所有解，在横竖斜方向都不会有两个皇后
         - Input: 4
@@ -2690,7 +2690,7 @@
 ---
 **BFS**
 ### 102题解
-- ds.queue
+- queue
     - 102 Binary Tree Level Order Traversal：https://leetcode.com/problems/binary-tree-level-order-traversal/
         - 二叉树的层序遍历
         - Input: binary tree [3,9,20,null,null,15,7]
@@ -2716,10 +2716,10 @@
         if(root == null) {
             return res;
         }
-        Queue<Pair<TreeNode, Integer>> ds.queue = new LinkedList<Pair<TreeNode, Integer>>();
-        ds.queue.add(new Pair<>(root, 0));
-        while(!ds.queue.isEmpty()) {
-            Pair<TreeNode, Integer> front = ds.queue.poll();
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
+        queue.add(new Pair<>(root, 0));
+        while(!queue.isEmpty()) {
+            Pair<TreeNode, Integer> front = queue.poll();
             TreeNode node = front.getKey();
             int level = front.getValue();
             // 新的一层
@@ -2729,10 +2729,10 @@
             // 把值放到level层的res
             res.get(level).add(node.val);
             if(node.left != null) {
-                ds.queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
+                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
             }
             if(node.right != null) {
-                ds.queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
+                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
             }
         }
         return res;
@@ -2740,7 +2740,7 @@
     ```
 
 ### 279题解-BFS
-- ds.queue
+- queue
     - 279 Perfect Squares：https://leetcode.com/problems/perfect-squares/
         - 给定一个正整数n，求其由最少个完全平方数组成的和等于n的个数
         - Input: n = 13
@@ -2761,12 +2761,12 @@
         // -- for循环，i从1开始自增，当num-i*i>=0
         // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
         
-        Queue<Pair<Integer, Integer>> ds.queue = new LinkedList<Pair<Integer, Integer>>();
+        Queue<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
         boolean[] visited = new boolean[n+1];
-        ds.queue.add(new Pair(n, 0));
+        queue.add(new Pair(n, 0));
         visited[n] = true;
-        while(!ds.queue.isEmpty()) {
-            Pair<Integer, Integer> front = ds.queue.poll();
+        while(!queue.isEmpty()) {
+            Pair<Integer, Integer> front = queue.poll();
             int num = front.getKey();
             int step = front.getValue();
             if(num == 0) {
@@ -2774,7 +2774,7 @@
             }
             for(int i=0; num-i*i>=0; i++) {
                 if(!visited[num-i*i]) {
-                    ds.queue.add(new Pair(num-i*i, step+1));
+                    queue.add(new Pair(num-i*i, step+1));
                     visited[num-i*i] = true;
                 }
             }
