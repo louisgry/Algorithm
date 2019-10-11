@@ -11,7 +11,9 @@ public class IntersectionOfTwoArrays {
     /**
      * 349 Intersection of Two Arrays
      * https://leetcode.com/problems/intersection-of-two-arrays/
-     * 思路：
+     * 思路：Hash Set
+     * 时间复杂度：O(nlogn)
+     * 空间复杂度：O(n)
      */
     public int[] intersection(int[] nums1, int[] nums2) {
         HashSet<Integer> record = new HashSet<Integer>();
