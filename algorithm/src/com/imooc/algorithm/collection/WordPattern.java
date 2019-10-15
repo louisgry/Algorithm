@@ -26,18 +26,17 @@ public class WordPattern {
 
         for(int i=0; i<patterns.length; i++) {
             char c = patterns[i];
-            if(record.containsKey(c)) {
-                String value = record.get(c);
-                if(!value.equals(strs[i])) {
-                    return false;
-                }
-            }
-            else {
-                // 存在该value，但key不一样
+            if(!record.containsKey(c)) {
                 if(record.containsValue(strs[i])) {
                     return false;
                 }
                 record.put(c, strs[i]);
+            }
+            else {
+                String value = record.get(c);
+                if(!value.equals(strs[i])) {
+                    return false;
+                }
             }
         }
         return true;
