@@ -16,14 +16,14 @@ public class IntersectionOfTwoArrays {
      * 空间复杂度：O(n)
      */
     public int[] intersection(int[] nums1, int[] nums2) {
-        HashSet<Integer> record = new HashSet<Integer>();
+        HashSet<Integer> set = new HashSet<Integer>();
         for(int num : nums1) {
-            record.add(num);
+            set.add(num);
         }
 
         HashSet<Integer> result = new HashSet<Integer>();
         for(int num : nums2) {
-            if(record.contains(num)) {
+            if(set.contains(num)) {
                 result.add(num);
             }
         }

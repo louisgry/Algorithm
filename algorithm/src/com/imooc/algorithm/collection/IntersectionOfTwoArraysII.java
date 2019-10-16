@@ -18,21 +18,21 @@ public class IntersectionOfTwoArraysII {
      * 空间复杂度：O(n)
      */
     public int[] intersect(int[] nums1, int[] nums2) {
-        HashMap<Integer, Integer> record = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int num : nums1) {
-            if(!record.containsKey(num)) {
-                record.put(num, 1);
+            if(!map.containsKey(num)) {
+                map.put(num, 1);
             }
             else {
-                record.put(num, record.get(num)+1);
+                map.put(num, map.get(num)+1);
             }
         }
 
         List<Integer> result = new ArrayList<Integer>();
         for(int num : nums2) {
-            if(record.containsKey(num) && record.get(num)>0) {
+            if(map.containsKey(num) && map.get(num)>0) {
                 result.add(num);
-                record.put(num, record.get(num)-1);
+                map.put(num, map.get(num)-1);
             }
         }
         int[] res = new int[result.size()];

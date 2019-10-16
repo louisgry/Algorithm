@@ -59,9 +59,7 @@ public class LetterCombinationsOfAPhoneNumber {
             System.out.print(s + " ");
         }
     }
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
         printList((new LetterCombinationsOfAPhoneNumber()).letterCombinations("23"));
     }

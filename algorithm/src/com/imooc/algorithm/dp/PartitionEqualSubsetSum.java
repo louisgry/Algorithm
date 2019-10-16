@@ -61,7 +61,7 @@ public class PartitionEqualSubsetSum {
 //        return memo[index][sum] == 1;
 //    }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         int[] nums1 = {1, 5, 11, 5};
         System.out.println((new PartitionEqualSubsetSum()).canPartition(nums1));

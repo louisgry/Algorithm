@@ -1,7 +1,6 @@
 package com.imooc.algorithm.cursor;
 
 public class RemoveElement {
-
     /**
      * 27. Remove Element
      * https://leetcode.com/problems/remove-element/
@@ -25,7 +24,7 @@ public class RemoveElement {
         return k;
     }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         int[] nums = {0,1,2,2,3,0,4,2};
         int val = 2;

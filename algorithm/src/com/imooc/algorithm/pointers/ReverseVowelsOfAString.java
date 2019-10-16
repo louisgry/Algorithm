@@ -9,6 +9,7 @@ public class ReverseVowelsOfAString {
     /**
      * 345 Reverse Vowels of a String
      * https://leetcode.com/problems/reverse-vowels-of-a-string/
+     * 思路：双指针
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
@@ -34,9 +35,7 @@ public class ReverseVowelsOfAString {
         return new String(arr);
     }
 
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
         // ==> holle
         System.out.println((new ReverseVowelsOfAString()).reverseVowels("hello"));

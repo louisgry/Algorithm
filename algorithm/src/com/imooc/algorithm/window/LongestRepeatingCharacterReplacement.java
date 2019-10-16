@@ -29,9 +29,7 @@ public class LongestRepeatingCharacterReplacement {
         }
         return max;
     }
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
         String s1 = "ABAB";
         int k1 = 2;

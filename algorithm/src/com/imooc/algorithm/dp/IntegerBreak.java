@@ -51,7 +51,7 @@ public class IntegerBreak {
         return Math.max(a, Math.max(b, c));
     }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         System.out.println((new IntegerBreak()).integerBreak(2));
         System.out.println((new IntegerBreak()).integerBreak(10));

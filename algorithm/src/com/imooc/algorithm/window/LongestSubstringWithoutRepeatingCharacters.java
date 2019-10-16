@@ -9,6 +9,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     /**
      * 3 Longest Substring Without Repeating Characters
      * https://leetcode.com/problems/longest-substring-without-repeating-characters/
+     * 思路：滑动窗口
      * 时间复杂度：O(n)
      * 空间复杂度：O(1)
      */
@@ -32,9 +33,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return max;
     }
 
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
         String s1 = "abcabcab";
         System.out.println((new LongestSubstringWithoutRepeatingCharacters()).lengthOfLongestSubstring(s1));

@@ -66,7 +66,7 @@ public class LongestCommonSubsequence {
 //        return max;
 //    }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         String s1 = "abcde";
         String s2 = "ace";

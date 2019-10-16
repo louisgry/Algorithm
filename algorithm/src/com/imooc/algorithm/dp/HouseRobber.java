@@ -49,7 +49,7 @@ public class HouseRobber {
 //        return max;
 //    }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         int[] nums1 = {1,2,3,1};
         System.out.println((new HouseRobber()).rob(nums1));

@@ -86,7 +86,7 @@ public class Knapsack01 {
 //        return max;
 //    }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         int[] w = {1, 2, 3};
         int[] v = {6, 10, 12};

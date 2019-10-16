@@ -41,7 +41,7 @@ public class ClimbingStairs {
 //        return memo[n];
 //    }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         System.out.println((new ClimbingStairs()).climbStairs(2));
         System.out.println((new ClimbingStairs()).climbStairs(3));

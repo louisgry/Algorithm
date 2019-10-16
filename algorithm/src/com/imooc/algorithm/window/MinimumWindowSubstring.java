@@ -50,9 +50,7 @@ public class MinimumWindowSubstring {
         return "";
     }
 
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
         String t = "ABC";

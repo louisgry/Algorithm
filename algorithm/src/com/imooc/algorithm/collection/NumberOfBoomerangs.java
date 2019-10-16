@@ -20,20 +20,20 @@ public class NumberOfBoomerangs {
         // 遍历枢纽点i
         for(int i=0; i<points.length; i++) {
             // 把其他点的距离放入Map
-            HashMap<Integer, Integer> record = new HashMap<Integer, Integer>();
+            HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
             for(int j=0; j<points.length; j++) {
                 if(j != i) {
                     // 对比距离时使用距离的平方，无浮点数误差问题
                     int dist = dis(points[i], points[j]);
-                    if(!record.containsKey(dist))
-                        record.put(dist, 1);
+                    if(!map.containsKey(dist))
+                        map.put(dist, 1);
                     else
-                        record.put(dist, record.get(dist)+1);
+                        map.put(dist, map.get(dist)+1);
                 }
             }
             // 计算相同距离点的个数的组合
-            for(Integer dis : record.keySet())
-                res += record.get(dis) * (record.get(dis)-1);
+            for(Integer dis : map.keySet())
+                res += map.get(dis) * (map.get(dis)-1);
         }
         return res;
     }

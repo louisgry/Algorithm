@@ -19,11 +19,11 @@ public class HappyNumber {
         if(n<1) {
             return false;
         }
-        HashSet<Integer> record = new HashSet<Integer>();
+        HashSet<Integer> set = new HashSet<Integer>();
         int t;
         int newN;
-        while(n!=1 && !record.contains(n)) {
-            record.add(n);
+        while(n!=1 && !set.contains(n)) {
+            set.add(n);
             newN = 0;
             while(n>0) {
                 t = n%10;

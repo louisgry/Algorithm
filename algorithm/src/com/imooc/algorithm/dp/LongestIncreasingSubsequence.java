@@ -52,7 +52,7 @@ public class LongestIncreasingSubsequence {
         return memo[index];
     }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         int[] nums1 = {10,9,2,5,3,7,101,18};
         System.out.println((new LongestIncreasingSubsequence()).lengthOfLIS(nums1));

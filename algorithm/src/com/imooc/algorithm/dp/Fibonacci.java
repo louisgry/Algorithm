@@ -53,7 +53,7 @@ public class Fibonacci {
 
     }
 
-    // main
+    /** main */
     public static void main(String[] args) {
         System.out.println((new Fibonacci()).fib(2));
         System.out.println((new Fibonacci()).fib(3));

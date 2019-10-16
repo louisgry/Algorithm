@@ -16,15 +16,15 @@ public class TwoSum {
      * 空间复杂度：O(n)
      */
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> record = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int[] res = new int[2];
         for(int i=0; i<nums.length; i++) {
             int complement = target - nums[i];
-            if(record.containsKey(complement)) {
+            if(map.containsKey(complement)) {
                 res[0] = i;
-                res[1] = record.get(complement);
+                res[1] = map.get(complement);
             }
-            record.put(nums[i], i);
+            map.put(nums[i], i);
         }
         return res;
     }

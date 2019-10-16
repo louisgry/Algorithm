@@ -16,7 +16,7 @@ public class WordPattern {
      * 空间复杂度：O(n+m)
      */
     public boolean wordPattern(String pattern, String str) {
-        HashMap<Character, String> record = new HashMap<Character, String>();
+        HashMap<Character, String> map = new HashMap<Character, String>();
         char[] patterns = pattern.toCharArray();
         String[] strs = str.split(" ");
 
@@ -26,14 +26,14 @@ public class WordPattern {
 
         for(int i=0; i<patterns.length; i++) {
             char c = patterns[i];
-            if(!record.containsKey(c)) {
-                if(record.containsValue(strs[i])) {
+            if(!map.containsKey(c)) {
+                if(map.containsValue(strs[i])) {
                     return false;
                 }
-                record.put(c, strs[i]);
+                map.put(c, strs[i]);
             }
             else {
-                String value = record.get(c);
+                String value = map.get(c);
                 if(!value.equals(strs[i])) {
                     return false;
                 }

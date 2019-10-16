@@ -16,15 +16,15 @@ public class FourSumII {
      * 空间复杂度：O(n^2)
      */
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
-        HashMap<Integer, Integer> record = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int i=0; i<C.length; i++) {
             for (int j = 0; j < D.length; j++) {
                 int sum = C[i] + D[j];
-                if(!record.containsKey(sum)) {
-                    record.put(sum, 1);
+                if(!map.containsKey(sum)) {
+                    map.put(sum, 1);
                 }
                 else {
-                    record.put(sum, record.get(sum)+1);
+                    map.put(sum, map.get(sum)+1);
                 }
             }
         }
@@ -32,8 +32,8 @@ public class FourSumII {
         int res = 0;
         for(int i=0; i<A.length; i++) {
             for (int j=0; j<B.length; j++) {
-                if(record.containsKey(0-A[i]-B[j])) {
-                    res += record.get(0-A[i]-B[j]);
+                if(map.containsKey(0-A[i]-B[j])) {
+                    res += map.get(0-A[i]-B[j]);
                 }
             }
         }

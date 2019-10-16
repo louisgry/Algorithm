@@ -39,9 +39,7 @@ public class PermutationInString {
         }
         return false;
     }
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
         String s1 = "ab";
         String s2 = "eidbaooo";

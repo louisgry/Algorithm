@@ -9,12 +9,12 @@ import java.util.List;
  * @Description:
  */
 public class FindAllAnagramsInAString {
-
     /**
      * 438 Find All Anagrams in a String
      * https://leetcode.com/problems/find-all-anagrams-in-a-string/
-     * 时间复杂度：
-     * 空间复杂度：
+     * 思路：滑动窗口
+     * 时间复杂度：O(m+n)
+     * 空间复杂度：O(1)
      */
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> indexList = new ArrayList<Integer>();
@@ -37,9 +37,7 @@ public class FindAllAnagramsInAString {
         }
         return indexList;
     }
-    /**
-     * main
-     */
+    /** main */
     public static void main(String[] args) {
 //        String s = "cbaebabacd";
         String s = "cbadbac";

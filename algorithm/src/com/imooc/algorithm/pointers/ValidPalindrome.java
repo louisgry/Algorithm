@@ -4,8 +4,9 @@ public class ValidPalindrome {
     /**
      * 125 Valid Palindrome
      * https://leetcode.com/problems/valid-palindrome/
-     * 时间复杂度：
-     * 空间复杂度：
+     * 思路：双指针
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(1)
      */
     public boolean isPalindrome(String s) {
         if(s==null)
@@ -29,7 +30,7 @@ public class ValidPalindrome {
         }
         return flag;
     }
-    // main
+    /** main */
     public static void main(String[] args) {
         String s1= "A man, a plan, a canal: Panama";
         // ==> true
