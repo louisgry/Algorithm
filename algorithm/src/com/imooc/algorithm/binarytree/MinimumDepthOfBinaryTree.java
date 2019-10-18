@@ -1,4 +1,4 @@
-package com.imooc.algorithm.recursion;
+package com.imooc.algorithm.binarytree;
 
 /**
  * @Author: Louis

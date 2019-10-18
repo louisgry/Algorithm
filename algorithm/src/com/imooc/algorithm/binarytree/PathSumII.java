@@ -1,4 +1,4 @@
-package com.imooc.algorithm.recursion;
+package com.imooc.algorithm.binarytree;
 
 import java.util.List;
 import java.util.ArrayList;
