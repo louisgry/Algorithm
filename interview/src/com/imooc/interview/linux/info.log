@@ -1,5 +1,0 @@
-2019-7-30 14:00:00.100 INFO 1000 [http-nio-8080-exec-189] --- search.service.SearchService: type[QUERY], engine[1f8ad8fad8238gf], query[title:(what)], partial[true]
-2019-7-30 14:01:00.100 INFO 1000 [http-nio-8080-exec-189] --- search.service.SearchService: type[QUERY], engine[2f8ad8fad8238gf], query[title:(what)], partial[false]
-2019-7-30 14:02:00.100 INFO 1000 [http-nio-8080-exec-189] --- search.service.SearchService: type[QUERY], engine[1f8ad8fad8238gf], query[title:(what)], partial[true]
-2019-7-30 14:03:00.100 INFO 1000 [http-nio-8080-exec-189] --- search.service.SearchService: type[QUERY], engine[4f8ad8fad8238gf], query[title:(what)], partial[false]
-2019-7-30 14:04:00.100 INFO 1000 [http-nio-8080-exec-189] --- search.service.SearchService: type[QUERY], engine[5f8ad8fad8238gf], query[title:(what)], partial[true]

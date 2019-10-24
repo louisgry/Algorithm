@@ -1,5 +1,0 @@
-Str a = "Jack is ma".
-
-Str b = "Jack is Jack ma".
-
-Str c = "Jack is Integer".
