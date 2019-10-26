@@ -1,5 +1,10 @@
 package cursor;
 
+/**
+ * @Author: Louis
+ * @Date: Create in 2019/09/02 11:54
+ * @Description:
+ */
 public class RemoveElement {
     /**
      * 27. Remove Element

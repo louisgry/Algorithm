@@ -1,5 +1,10 @@
 package dp;
 
+/**
+ * @Author: Louis
+ * @Date: Create in 2019/09/13 11:54
+ * @Description:
+ */
 public class LongestCommonSubsequence {
     /**
      * 1143 Longest Common Subsequence

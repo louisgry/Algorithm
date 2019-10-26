@@ -1,7 +1,11 @@
 package dp;
 
 import java.util.Arrays;
-
+/**
+ * @Author: Louis
+ * @Date: Create in 2019/09/12 11:54
+ * @Description:
+ */
 public class LongestIncreasingSubsequence {
     /**
      * 300 Longest Increasing Subsequence

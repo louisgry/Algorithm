@@ -2,7 +2,7 @@ package window;
 
 /**
  * @Author: Louis
- * @Date: Create in 2019/9/22 0:54
+ * @Date: Create in 2019/9/21 0:54
  * @Description:
  */
 public class LongestRepeatingCharacterReplacement {
