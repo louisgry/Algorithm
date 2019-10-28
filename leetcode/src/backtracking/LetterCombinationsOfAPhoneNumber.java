@@ -12,7 +12,7 @@ public class LetterCombinationsOfAPhoneNumber {
     /**
      * 17 Letter Combinations of a Phone Number
      * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
-     * 思路：递归
+     * 思路：回溯法，formulate树形问题
      * 时间复杂度：O(2^n)
      * 空间复杂度：O(n)
      */
