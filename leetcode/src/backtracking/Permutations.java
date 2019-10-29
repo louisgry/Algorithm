@@ -10,7 +10,9 @@ public class Permutations {
     /**
      * 46 Permutations
      * https://leetcode.com/problems/permutations/
-     *
+     * 思路：回溯法，Perms(nums)={取出一个数字}+Perms(nums-这个数字)
+     * 时间复杂度：O(n^n)
+     * 空间复杂度：O(n)
      */
     private List<List<Integer>> res;
     private boolean[] used;
@@ -20,8 +22,7 @@ public class Permutations {
             return res;
         }
         used = new boolean[nums.length];
-        LinkedList<Integer> p = new LinkedList<Integer>();
-        generatePerm(nums, 0, p);
+        generatePerm(nums, 0, new LinkedList<Integer>());
         return res;
     }
     private void generatePerm(int[] nums, int index, LinkedList<Integer> p) {
