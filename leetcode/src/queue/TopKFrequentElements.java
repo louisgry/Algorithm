@@ -53,7 +53,7 @@ public class TopKFrequentElements {
     private class PairComparator implements Comparator<Pair<Integer, Integer>> {
         @Override
         public int compare(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2) {
-            if(p1.getKey() != p2.getKey()) {
+            if(p1.getKey().equals(p2.getKey())) {
                 return p1.getKey() - p2.getKey();
             }
             return p1.getValue() - p2.getValue();
