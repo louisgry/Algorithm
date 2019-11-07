@@ -23,9 +23,8 @@ public class NQueens {
         col = new boolean[n];
         dia1 = new boolean[2*n-1];
         dia2 = new boolean[2*n-1];
-        LinkedList<Integer> row = new LinkedList<Integer>();
 
-        putQueen(n, 0, row);
+        putQueen(n, 0, new LinkedList<Integer>());
         return res;
     }
     private void putQueen(int n, int index, LinkedList<Integer> row){

@@ -1,4 +1,4 @@
-package array;
+package ds.array;
 
 /**
  * @Author: Louis
@@ -7,7 +7,7 @@ package array;
  */
 public class SearchInTwoDimArray {
     /**
-     * 二维数组中的查找
+     * 4 二维数组中的查找
      * https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e
      * 思路：双指针
      * 时间复杂度：O(n)

@@ -1,4 +1,4 @@
-package idea;
+package algo;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package binarytree;
+package ds.binarytree;
 
 import java.util.Arrays;
 /**

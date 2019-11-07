@@ -1,4 +1,4 @@
-package array;
+package ds.array;
 
 /**
  * @Author: Louis
@@ -7,7 +7,7 @@ package array;
  */
 public class DuplicateNumberInArray {
     /**
-     * 数组中重复的数字
+     * 3 数组中重复的数字
      * https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8
      * 思路：Hash Table
      * 时间复杂度：O(n)
