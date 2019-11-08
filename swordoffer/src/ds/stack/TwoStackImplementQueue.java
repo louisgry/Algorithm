@@ -9,11 +9,11 @@ import java.util.Stack;
  */
 public class TwoStackImplementQueue {
     /**
-     * 8 用两个栈来实现队列
+     * 9 用两个栈来实现队列
      * https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6
      */
-    Stack<Integer> stack1 = new Stack<Integer>();
-    Stack<Integer> stack2 = new Stack<Integer>();
+    private Stack<Integer> stack1 = new Stack<Integer>();
+    private Stack<Integer> stack2 = new Stack<Integer>();
 
     public void push(int node) {
         while(!stack1.empty()) {
