@@ -1,4 +1,4 @@
-# LeetCode分类汇总
+# LeetCode分类汇总 (Java)
 > https://github.com/louisgry/Algorithm/tree/master/leetcode
 ## LeetCode-目录
 - 数据结构
@@ -17,7 +17,7 @@
     - [backtracking](#backtracking)
 
 
-# 《剑指Offer》
+# 《剑指Offer》 (Java)
 > https://github.com/louisgry/Algorithm/tree/master/swordoffer
 ## 剑指Offer-目录
 - 数据结构

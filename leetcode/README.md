@@ -1,4 +1,4 @@
-# LeetCode分类汇总
+# LeetCode分类汇总 (Java)
 
 - 数据结构
     - [stack](#stack)
