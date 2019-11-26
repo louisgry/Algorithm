@@ -137,7 +137,7 @@
     - 思路：栈（只关心最近一次操作）
     - 时间复杂度：O(n)
     - 空间复杂度：O(n)
-    ```
+    ```java
     public boolean isValid(String s) {
         // 遍历string
         // -- 如果是左括号，压入栈
@@ -183,6 +183,7 @@
         return true;
     }
     ```
+
 ### 144题解
 - stack
     - 144 Binary Tree Preorder Traversal：https://leetcode.com/problems/binary-tree-preorder-traversal/
@@ -192,7 +193,7 @@
     - 思路1：递归
     - 时间复杂度：O(n)
     - 空间复杂度：O(h)
-    ```
+    ```java
     public List<Integer> preorderTraversal(TreeNode root) {
         // 递归解法：根节点->左节点->右节点
         // 要返回List，所以需要辅助函数来做递归
@@ -215,7 +216,7 @@
     - 思路2：非递归（栈+Command）
     - 时间复杂度：O(n)
     - 空间复杂度：O(h)
-    ```
+    ```java
     public List<Integer> preorderTraversal(TreeNode root) {
         // 非递归解法：栈（递归的本质是栈）
         // 把第一个指令go-root压入栈，while循环直到stack为空
@@ -248,7 +249,6 @@
         }
         return res;
     }
-    // class 是小写的
     public class Command {
         // 指令：print、go
         String s;
@@ -272,7 +272,7 @@
     - 思路：基于队列的BFS层次遍历
     - 时间复杂度：O(n)
     - 空间复杂度：O(n)
-    ```
+    ```java
     import javafx.util.Pair;
 
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -290,24 +290,23 @@
         if(root == null) {
             return res;
         }
-        
-        LinkedList<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
-        queue.addLast(new Pair<TreeNode, Integer>(root, 0));
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
+        queue.add(new Pair<>(root, 0));
         while(!queue.isEmpty()) {
-            Pair<TreeNode, Integer> front = queue.removeFirst();
+            Pair<TreeNode, Integer> front = queue.poll();
             TreeNode node = front.getKey();
             int level = front.getValue();
             // 新的一层
             if(level == res.size()) {
-                res.add(new ArrayList<Integer>());
+                res.add(new ArrayList<>());
             }
-            // get level层的res
+            // 把值放到level层的res
             res.get(level).add(node.val);
             if(node.left != null) {
-                queue.addLast(new Pair<TreeNode, Integer>(node.left, level+1));
+                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
             }
             if(node.right != null) {
-                queue.addLast(new Pair<TreeNode, Integer>(node.right, level+1));
+                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
             }
         }
         return res;
@@ -465,6 +464,7 @@
         return pre;
     }
     ```
+
 ### 203题解
 - linkedlist
     - 203 Remove Linked List Elements：https://leetcode.com/problems/remove-linked-list-elements/
@@ -491,6 +491,7 @@
         return dummyHead.next;
     }
     ```
+
 ### 24题解
 - linkedlist
     - 24 Swap Nodes in Pairs：https://leetcode.com/problems/swap-nodes-in-pairs/
@@ -502,21 +503,29 @@
     - 空间复杂度：O(1)
     ```java
     public ListNode swapPairs(ListNode head) {
+        // 涉及头结点：dummyHead，四指针（p、node1、node2、next）
+        // 定义pre指向dummyHead
+        // while循环：当pre.next(node1)和pre.next.next(node2)不为空时
+        // -- 定义node1、node2
+        // -- 更改指向
+        // -- 将pre指向下一个目标之前(node1)
         ListNode dummyHead = new ListNode(0);
-        dummyHead.next = head;        
+        dummyHead.next = head;
         
-        ListNode p = dummyHead;
-        // 注意：边界是p.next和p.next.next
-        while(p.next!=null && p.next.next!=null) {
-            ListNode node1 = p.next;
+        ListNode pre = dummyHead;
+        
+        while(pre.next != null && pre.next.next != null) {
+            ListNode node1 = pre.next;
             ListNode node2 = node1.next;
             ListNode next = node2.next;
             
+            pre.next = node2;
             node2.next = node1;
             node1.next = next;
-            p.next = node2;
-            p = node1;
+            
+            pre = node1;
         }
+        
         return dummyHead.next;
     }
     ```
