@@ -1,59 +1,51 @@
 package ds;
+import javafx.util.Pair;
+
 import java.util.*;
 
 public class QueueProblem {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
-
     /**
-     * https://leetcode.com/problems/binary-tree-level-order-traversal/
+     * https://leetcode.com/problems/top-k-frequent-elements/
      */
-    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-        if(root == null) {
-            return res;
+    public List<Integer> topKFrequent(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int i=0; i<nums.length; i++) {
+            if(!map.containsKey(nums[i])) {
+                map.put(nums[i], 1);
+            }
+            else {
+                map.put(nums[i], map.get(nums[i])+1);
+            }
         }
-        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
-        queue.add(new Pair<>(root, 0));
-        while(!queue.isEmpty()) {
-            Pair<TreeNode, Integer> front = queue.poll();
-            TreeNode node = front.getKey();
-            int level = front.getValue();
-            // 新的一层
-            if(level == res.size()) {
-                res.add(new ArrayList<>());
+        PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<Pair<Integer, Integer>>(new PairComparator());
+        // 遍历map，维护大小为k的优先队列
+        for(Integer num : map.keySet()) {
+            int freq = map.get(num);
+            // 如果队列没有满，入队
+            if(pq.size() != k) {
+                pq.add(new Pair(freq, num));
             }
-            // 把值放到level层的res
-            res.get(level).add(node.val);
-            if(node.left != null) {
-                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
+            else {
+                if(freq > pq.peek().getKey()) {
+                    pq.poll();
+                    pq.add(new Pair(freq, num));
+                }
             }
-            if(node.right != null) {
-                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
-            }
+        }
+        List<Integer> res = new ArrayList<Integer>();
+        while(!pq.isEmpty()) {
+            res.add(pq.poll().getValue());
         }
         return res;
     }
-    private class Pair<K, V> {
-        K key;
-        V value;
-
-        Pair(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-
-        K getKey() {
-            return key;
-        }
-
-        V getValue() {
-            return value;
+    private class PairComparator implements Comparator<Pair<Integer, Integer>> {
+        @Override
+        public int compare(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2) {
+            if(p1.getKey() != p2.getKey()) {
+                return p1.getKey() - p2.getKey();
+            }
+            return p1.getValue() - p2.getValue();
         }
     }
 

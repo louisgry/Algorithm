@@ -7,6 +7,11 @@ public class LinkedListProblem {
         ListNode next;
         ListNode(int x) { val = x; }
     }
+
+    /**
+     * https://leetcode.com/problems/palindrome-linked-list/
+     */
+
     /**
      * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
      */
@@ -25,6 +30,10 @@ public class LinkedListProblem {
         p.next = p.next.next;
         return dummyHead.next;
     }
+
+    /**
+     * https://leetcode.com/problems/delete-node-in-a-linked-list/
+     */
 
     /**
      * https://leetcode.com/problems/swap-nodes-in-pairs/
@@ -48,6 +57,38 @@ public class LinkedListProblem {
         }
 
         return dummyHead.next;
+    }
+
+    /**
+     * https://leetcode.com/problems/remove-linked-list-elements/
+     */
+
+
+    /**
+     * https://leetcode.com/problems/reverse-linked-list/
+     */
+    public ListNode reverseList(ListNode head) {
+        /** 递归 */
+//        // condition：下面没有return head，上面就需要；NPE加head.next==null判定条件
+//        if(head==null || head.next==null) {
+//            return head;
+//        }
+//        // recursion
+//        ListNode node = reverseList(head.next);
+//        head.next.next = head;
+//        head.next = null;
+//        return node;
+
+        /** 迭代 */
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
     }
 
 }

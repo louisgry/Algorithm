@@ -9,16 +9,19 @@ public class CollectionProblem {
     public int singleNumber(int[] A) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int i=0; i<A.length; i++) {
-            if(!map.containsKey(A[i]))
+            if(!map.containsKey(A[i])) {
                 map.put(A[i], 1);
-            else
-                map.put(A[i], map.get(A[i])+1);
+            }
+            else {
+                map.put(A[i], map.get(A[i]) + 1);
+            }
         }
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(entry.getValue()==1)
-                return entry.getKey();
+        for(Integer num : map.keySet()) {
+            if(map.get(num) == 1) {
+                return num;
+            }
         }
-        return 0;
+        throw new IllegalStateException("no solution");
     }
 
 }

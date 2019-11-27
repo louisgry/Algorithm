@@ -3,13 +3,6 @@ import java.util.*;
 
 public class StackProblem {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
-
     /**
      * https://leetcode.com/problems/binary-tree-preorder-traversal/
      */
@@ -80,5 +73,13 @@ public class StackProblem {
             return false;
         }
         return true;
+    }
+
+    /** common */
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
     }
 }
