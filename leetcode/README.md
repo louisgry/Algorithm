@@ -23,8 +23,6 @@
 
 ### queue
 - 队列
-    - [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)：[【102题解】](#102题解)
-    - [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)：[【279题解-Queue】](#279题解-Queue)
     - [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)：[【347题解】](#347题解)
 
 
@@ -123,6 +121,13 @@
     - [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)：[【200题解】](#200题解)
     - [51. N Queens](https://leetcode.com/problems/n-queens/)：[【51题解】](#51题解)
     
+### bfs
+- BFS
+    - [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)：[【102题解】](#102题解)
+    - [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)：[【279题解-BFS】](#279题解-BFS)
+
+### dfs
+- DFS
 
 
 # 题解
@@ -263,104 +268,6 @@
 
 ---
 **queue**
-### 102题解
-- queue
-    - 102 Binary Tree Level Order Traversal：https://leetcode.com/problems/binary-tree-level-order-traversal/
-        - 二叉树的层序遍历
-        - Input: binary tree [3,9,20,null,null,15,7]
-        - Output: [[3], [9,20], [15,7]]
-    - 思路：基于队列的BFS层次遍历
-    - 时间复杂度：O(n)
-    - 空间复杂度：O(n)
-    ```java
-    import javafx.util.Pair;
-
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        // 层次遍历：BFS（基于队列）
-        // 先进行非空判断
-        // 队列（节点值，层）：LinkedList<Pair<TreeNode, Integer>>
-        // 初始化是(root, 0)
-        // 当queue不为空时，while循环
-        // -- 如果level==res.size()：是新一层，res新增list
-        // -- 把值add进level层的res
-        // -- 如果有左子树，入队left，level+1
-        // -- 如果有右子树，入队right，level+1
-        
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
-        if(root == null) {
-            return res;
-        }
-        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
-        queue.add(new Pair<>(root, 0));
-        while(!queue.isEmpty()) {
-            Pair<TreeNode, Integer> front = queue.poll();
-            TreeNode node = front.getKey();
-            int level = front.getValue();
-            // 新的一层
-            if(level == res.size()) {
-                res.add(new ArrayList<>());
-            }
-            // 把值放到level层的res
-            res.get(level).add(node.val);
-            if(node.left != null) {
-                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
-            }
-            if(node.right != null) {
-                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
-            }
-        }
-        return res;
-    }
-    ```
-
-### 279题解-Queue
-- queue
-    - 279 Perfect Squares：https://leetcode.com/problems/perfect-squares/
-        - 给定一个正整数n，求其由最少个完全平方数组成的和等于n的个数
-        - Input: n = 13
-        - Output: 2
-        - Explanation: 13 = 4 + 9.
-    - 思路：转化为BFS求无权图的最短路径
-    - 时间复杂度：O(n)
-    - 空间复杂度：O(n)
-    ```
-    import javafx.util.Pair;
-
-    public int numSquares(int n) {
-        // 转化为在无权图中找最短路径
-        // 建图：0到n每个数字代表节点，若数字x到y相差一个完全平方数则连接这条边
-        // 队列（数字，步数）。先入队（n，0）
-        // 声明BFS的visited数组(0到n个)。最后一个数字n设为已访问
-        // 当队列不为空时，while循环
-        // -- 取出队首，若num为0，return step
-        // -- for循环，i从1开始自增，当num-i*i>=0
-        // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
-        
-        LinkedList<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
-        queue.addLast(new Pair<Integer, Integer>(n, 0));
-        
-        boolean[] visited = new boolean[n+1];
-        visited[n] = true;
-        
-        while(!queue.isEmpty()) {
-            Pair<Integer, Integer> front = queue.removeFirst();
-            int num = front.getKey();
-            int step = front.getValue();
-            
-            if(num == 0) {
-                return step;
-            }
-            
-            for(int i=1; num-i*i>=0; i++) {
-                if(!visited[num-i*i]) {
-                    queue.addLast(new Pair<Integer, Integer>(num-i*i, step+1));
-                    visited[num-i*i] = true;
-                }
-            }
-        }
-        throw new IllegalStateException("No solution");
-    }
-    ```
 
 ### 347题解
 - queue
@@ -371,7 +278,7 @@
     - 思路：前K大（优先队列+PairComparator），频率（Map）
     - 时间复杂度：O(nlogk)
     - 空间复杂度：O(n+k)
-    ```
+    ```java
     import javafx.util.Pair;
 
     public List<Integer> topKFrequent(int[] nums, int k) {
@@ -745,9 +652,7 @@
         if (p.val != q.val) {
             return false;
         }
-        boolean left = isSameTree(p.left, q.left);
-        boolean right = isSameTree(p.right, q.right);
-        return left && right;
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
     ```
 
@@ -2769,3 +2674,102 @@
         return board;
     }
     ```
+
+---
+**BFS**
+### 102题解
+- queue
+    - 102 Binary Tree Level Order Traversal：https://leetcode.com/problems/binary-tree-level-order-traversal/
+        - 二叉树的层序遍历
+        - Input: binary tree [3,9,20,null,null,15,7]
+        - Output: [[3], [9,20], [15,7]]
+    - 思路：基于队列的BFS层次遍历
+    - 时间复杂度：O(n)
+    - 空间复杂度：O(n)
+    ```java
+    import javafx.util.Pair;
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        // 层次遍历：BFS（基于队列）
+        // 先进行非空判断
+        // 队列（节点值，层）：LinkedList<Pair<TreeNode, Integer>>
+        // 初始化是(root, 0)
+        // 当queue不为空时，while循环
+        // -- 如果level==res.size()：是新一层，res新增list
+        // -- 把值add进level层的res
+        // -- 如果有左子树，入队left，level+1
+        // -- 如果有右子树，入队right，level+1
+        
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        if(root == null) {
+            return res;
+        }
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
+        queue.add(new Pair<>(root, 0));
+        while(!queue.isEmpty()) {
+            Pair<TreeNode, Integer> front = queue.poll();
+            TreeNode node = front.getKey();
+            int level = front.getValue();
+            // 新的一层
+            if(level == res.size()) {
+                res.add(new ArrayList<>());
+            }
+            // 把值放到level层的res
+            res.get(level).add(node.val);
+            if(node.left != null) {
+                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
+            }
+            if(node.right != null) {
+                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
+            }
+        }
+        return res;
+    }
+    ```
+
+### 279题解-BFS
+- queue
+    - 279 Perfect Squares：https://leetcode.com/problems/perfect-squares/
+        - 给定一个正整数n，求其由最少个完全平方数组成的和等于n的个数
+        - Input: n = 13
+        - Output: 2
+        - Explanation: 13 = 4 + 9.
+    - 思路：转化为BFS求无权图的最短路径
+    - 时间复杂度：O(n)
+    - 空间复杂度：O(n)
+    ```java
+    import javafx.util.Pair;
+
+    public int numSquares(int n) {
+        // BFS求无权图中n到0的最短路径问题：node是数字，edge为是否相差一个完全平方数
+        // 声明队列<num, step>，先入队<数字：n, 步数：0>
+        // 声明BFS的visited数组(0到n个)。最后一个数字n设为已访问
+        // 当队列不为空时，while循环
+        // -- 取出队首，若num为0，return step
+        // -- for循环，i从1开始自增，当num-i*i>=0
+        // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
+        
+        Queue<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
+        boolean[] visited = new boolean[n+1];
+        queue.add(new Pair(n, 0));
+        visited[n] = true;
+        while(!queue.isEmpty()) {
+            Pair<Integer, Integer> front = queue.poll();
+            int num = front.getKey();
+            int step = front.getValue();
+            if(num == 0) {
+                return step;
+            }
+            for(int i=0; num-i*i>=0; i++) {
+                if(!visited[num-i*i]) {
+                    queue.add(new Pair(num-i*i, step+1));
+                    visited[num-i*i] = true;
+                }
+            }
+        }
+        throw new IllegalStateException("no solution");
+    }
+    ```
+  
+---
+**DFS**
