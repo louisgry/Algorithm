@@ -5,9 +5,8 @@ import javafx.util.Pair;
 import java.util.*;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/26 16:55
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/26 16:55
  */
 public class TopKFrequentElements {
     /**

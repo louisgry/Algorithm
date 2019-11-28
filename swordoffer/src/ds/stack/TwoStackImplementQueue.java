@@ -3,9 +3,8 @@ package ds.stack;
 import java.util.Stack;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/11/6 17:12
- * @Description:
+ * @author Louis
+ * @date Create in 2019/11/6 17:12
  */
 public class TwoStackImplementQueue {
     /**

@@ -4,9 +4,8 @@ import javafx.util.Pair;
 import java.util.Arrays;
 import java.util.LinkedList;
 /**
- * @Author: Louis
- * @Date: Create in 2019/09/09 11:54
- * @Description:
+ * @author Louis
+ * @date Create in 2019/09/09 11:54
  */
 public class PerfectSquares {
     /**

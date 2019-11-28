@@ -2,9 +2,8 @@ package greedy;
 
 import java.util.*;
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/27 16:31
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/27 16:31
  */
 public class AssignCookies {
     /**

@@ -3,9 +3,8 @@ package binarytree;
 import java.util.List;
 import java.util.ArrayList;
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/1 12:18
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/1 12:18
  */
 public class BinaryTreePaths {
 

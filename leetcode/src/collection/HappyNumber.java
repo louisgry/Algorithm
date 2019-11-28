@@ -3,9 +3,8 @@ package collection;
 import java.util.HashSet;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/11 22:44
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/11 22:44
  */
 public class HappyNumber {
     /**

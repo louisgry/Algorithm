@@ -1,9 +1,8 @@
 package dp;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/09/13 11:54
- * @Description:
+ * @author Louis
+ * @date Create in 2019/09/13 11:54
  */
 public class LongestCommonSubsequence {
     /**

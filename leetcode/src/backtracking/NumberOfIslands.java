@@ -1,9 +1,8 @@
 package backtracking;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/31 17:19
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/31 17:19
  */
 public class NumberOfIslands {
     /**

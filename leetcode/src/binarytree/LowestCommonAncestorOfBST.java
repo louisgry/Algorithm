@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/10 16:08
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/10 16:08
  */
 public class LowestCommonAncestorOfBST {
 

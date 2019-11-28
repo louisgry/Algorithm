@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/26 23:56
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/26 23:56
  */
 public class SameTree {
 

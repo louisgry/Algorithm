@@ -1,9 +1,8 @@
 package linkedlist;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/19 11:37
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/19 11:37
  */
 public class RemoveLinkedListElements {
 

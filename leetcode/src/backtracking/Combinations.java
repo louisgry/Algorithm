@@ -2,9 +2,8 @@ package backtracking;
 
 import java.util.*;
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/29 10:51
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/29 10:51
  */
 public class Combinations {
     /**

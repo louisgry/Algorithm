@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/29 17:35
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/29 17:35
  */
 public class BalancedBinaryTree {
 

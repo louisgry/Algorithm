@@ -2,9 +2,8 @@ package ds.binarytree;
 
 import java.util.Arrays;
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/27 14:25
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/27 14:25
  */
 public class ReconstructBinaryTree {
 

@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/30 15:34
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/30 15:34
  */
 public class PathSum {
 

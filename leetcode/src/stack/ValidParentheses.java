@@ -3,9 +3,8 @@ package stack;
 import java.util.Stack;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/24 14:21
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/24 14:21
  */
 public class ValidParentheses {
     /**

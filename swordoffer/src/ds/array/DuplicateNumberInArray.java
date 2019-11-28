@@ -1,9 +1,8 @@
 package ds.array;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/24 19:05
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/24 19:05
  */
 public class DuplicateNumberInArray {
     /**

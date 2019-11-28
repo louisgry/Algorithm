@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/18 21:29
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/18 21:29
  */
 public class FindAllAnagramsInAString {
     /**

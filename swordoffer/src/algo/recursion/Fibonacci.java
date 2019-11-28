@@ -1,9 +1,8 @@
 package algo.recursion;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/11/12 9:59
- * @Description:
+ * @author Louis
+ * @date Create in 2019/11/12 9:59
  */
 public class Fibonacci {
     /**

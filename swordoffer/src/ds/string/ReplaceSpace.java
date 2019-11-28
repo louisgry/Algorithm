@@ -1,9 +1,8 @@
 package ds.string;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/26 21:45
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/26 21:45
  */
 public class ReplaceSpace {
     /**

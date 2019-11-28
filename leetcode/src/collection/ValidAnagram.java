@@ -1,9 +1,8 @@
 package collection;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/11 22:24
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/11 22:24
  */
 public class ValidAnagram {
     /**

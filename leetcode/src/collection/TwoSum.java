@@ -3,9 +3,8 @@ package collection;
 import java.util.HashMap;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/12 12:08
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/12 12:08
  */
 public class TwoSum {
     /**

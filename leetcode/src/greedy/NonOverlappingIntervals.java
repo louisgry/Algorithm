@@ -2,9 +2,8 @@ package greedy;
 
 import java.util.*;
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/28 11:44
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/28 11:44
  */
 public class NonOverlappingIntervals {
     /**

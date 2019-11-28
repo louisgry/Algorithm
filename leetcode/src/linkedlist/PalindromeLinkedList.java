@@ -1,9 +1,8 @@
 package linkedlist;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/23 11:47
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/23 11:47
  */
 public class PalindromeLinkedList {
 

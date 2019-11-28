@@ -8,9 +8,8 @@ import java.util.ArrayList;
 import java.util.Queue;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/24 20:53
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/24 20:53
  */
 public class BinaryTreeLevelOrderTraversal {
 

@@ -3,9 +3,8 @@ package collection;
 import java.util.TreeSet;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/15 11:04
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/15 11:04
  */
 public class UniqueMorseRepresentations {
     /**

@@ -3,9 +3,8 @@ package collection;
 import java.util.HashMap;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/11 23:02
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/11 23:02
  */
 public class WordPattern {
     /**

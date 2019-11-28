@@ -5,9 +5,8 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/11 21:40
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/11 21:40
  */
 public class IntersectionOfTwoArraysII {
     /**

@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/25 1:11
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/25 1:11
  */
 public class MinimumDepthOfBinaryTree {
 

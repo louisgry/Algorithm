@@ -1,9 +1,8 @@
 package backtracking;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/30 16:00
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/30 16:00
  */
 public class WordSearch {
     /**

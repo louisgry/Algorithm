@@ -1,9 +1,8 @@
 package partition;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/09/03 11:54
- * @Description:
+ * @author Louis
+ * @date Create in 2019/09/03 11:54
  */
 public class SortColors {
 

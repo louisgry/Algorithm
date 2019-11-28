@@ -3,9 +3,8 @@ package collection;
 import java.util.HashSet;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/16 17:49
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/16 17:49
  */
 public class ContainsDuplicateII {
     /**

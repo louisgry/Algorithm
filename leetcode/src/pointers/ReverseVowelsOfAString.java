@@ -1,9 +1,8 @@
 package pointers;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/16 21:28
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/16 21:28
  */
 public class ReverseVowelsOfAString {
     /**

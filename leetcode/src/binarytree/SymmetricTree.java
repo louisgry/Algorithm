@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/27 10:44
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/27 10:44
  */
 public class SymmetricTree {
 

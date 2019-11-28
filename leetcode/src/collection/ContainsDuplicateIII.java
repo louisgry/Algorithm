@@ -3,9 +3,8 @@ package collection;
 import java.util.TreeSet;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/16 20:27
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/16 20:27
  */
 public class ContainsDuplicateIII {
     /**

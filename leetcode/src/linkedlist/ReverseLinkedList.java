@@ -1,9 +1,8 @@
 package linkedlist;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/18 23:17
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/18 23:17
  */
 public class ReverseLinkedList {
 

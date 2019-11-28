@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/1 16:25
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/1 16:25
  */
 public class SumOfLeftLeaves {
 

@@ -1,9 +1,8 @@
 package ds.binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/11/8 11:04
- * @Description:
+ * @author Louis
+ * @date Create in 2019/11/8 11:04
  */
 public class FindNextNode {
 

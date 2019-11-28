@@ -1,9 +1,8 @@
 package binarytree;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/28 10:26
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/28 10:26
  */
 public class CountCompleteTreeNodes {
 

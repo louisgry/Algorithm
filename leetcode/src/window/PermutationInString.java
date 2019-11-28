@@ -1,9 +1,8 @@
 package window;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/9/20 13:15
- * @Description:
+ * @author Louis
+ * @date Create in 2019/9/20 13:15
  */
 public class PermutationInString {
     /**

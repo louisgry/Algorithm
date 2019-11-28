@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 /**
- * @Author: Louis
- * @Date: Create in 2019/10/24 15:17
- * @Description:
+ * @author Louis
+ * @date Create in 2019/10/24 15:17
  */
 public class BinaryTreePreorderTraversal {
 
