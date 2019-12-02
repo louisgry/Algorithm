@@ -973,7 +973,7 @@
         - 找两个数组的交集
         - Input: nums1 = [1,2,2,1], nums2 = [2,2]
         - Output: [2]
-    - 思路：Set
+    - 思路：HashSet，一个set、一个resultSet
     - 时间复杂度：O(n+m)
     - 空间复杂度：O(n)
     ```java
@@ -1003,7 +1003,7 @@
         - 找两个数组的交集（包括重复的）
         - Input: nums1 = [1,2,2,1], nums2 = [2,2]
         - Output: [2,2]
-    - 思路：Map
+    - 思路：HashMap，计算元素个数
     - 时间复杂度：O(n+mlogn)
     - 空间复杂度：O(n)
     ```java
@@ -1040,7 +1040,7 @@
         - 找出数组中和等于target的数字的下标（注意nums不是有序的）
         - Input: nums = [2, 7, 11, 15], target = 9
         - Output: [0,1]
-    - 思路：将元素a放入Map中，之后查找target-a是否存在（双指针法要解决排序后下标改变的问题）
+    - 思路：将元素a放入Map中，之后查找target-a是否存在
     - 时间复杂度：O(n)
     - 空间复杂度：O(n)
     ```java
@@ -1068,7 +1068,7 @@
         - Explanation: The two tuples are:
             1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0
             2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0
-    - 思路：将C+D的所有组合放入Map中
+    - 思路：将C+D的所有组合放入Map中，查找0-A-B
     - 时间复杂度：O(n^2)
     - 空间复杂度：O(n^2)
     ```java
@@ -1105,7 +1105,7 @@
         - Input: [[0,0],[1,0],[2,0]]
         - Output: 2
         - Explanation: The two boomerangs are [[1,0],[0,0],[2,0]] and [[1,0],[2,0],[0,0]]
-    - 思路：以i为枢纽点，把其他点跟i的距离放入Map，查找距离相同点的个数的组合
+    - 思路：以i为枢纽点，把其他点跟i的距离放入map<距离，频数>，查找距离相同的点组合个数(频数*频数-1)
     - 时间复杂度：O(n^2)
     - 空间复杂度：O(n)
     ```java
@@ -1169,12 +1169,12 @@
         - 判断数组是否在k长度内有差值不大于t的两个数
         - Input: nums = [1,2,3,1], k = 3, t = 0
         - Output: true
-    - 思路：set+滑动窗口
+    - 思路：Set+滑动窗口：TreeSet(有序)，查找比x-t大的最小的元素(ceiling)是否<=x+t
     - 时间复杂度：O(nlogk)
     - 空间复杂度：O(k)
     ```java
     public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        // 需要用Long和long，会发生整型溢出
+        // 需要用long，否则会发生整型溢出
         TreeSet<Long> set = new TreeSet<Long>();
         for(int i=0; i<nums.length; i++) {
             if(set.ceiling((long)nums[i]-(long)t) != null && set.ceiling((long)nums[i]-(long)t)<=(long)nums[i]+(long)t){
