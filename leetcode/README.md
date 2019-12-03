@@ -14,6 +14,8 @@
     - [dp](#dp)
     - [greedy](#greedy)
     - [backtracking](#backtracking)
+    - [bfs](#bfs)
+    - [dfs](#dfs)
 
 ## 数据结构
 ### stack
