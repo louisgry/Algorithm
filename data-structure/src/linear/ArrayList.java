@@ -18,10 +18,29 @@ public class ArrayList<E> {
         this(10);
     }
 
+    public ArrayList(E[] arr){
+        data = (E[])new Object[arr.length];
+        for(int i = 0 ; i < arr.length ; i ++) {
+            data[i] = arr[i];
+        }
+        size = arr.length;
+    }
     /**
      * 添加
      */
-    public void add(int index, E e) {
+    public void add(E e) {
+        add(size, e);
+    }
+
+    public void addFirst(E e){
+        add(0, e);
+    }
+
+    public void addLast(E e){
+        add(size, e);
+    }
+
+    private void add(int index, E e) {
         if(index<0 || index>size) {
             throw new IllegalArgumentException("Require 0<index<size");
         }
@@ -33,14 +52,6 @@ public class ArrayList<E> {
         }
         data[index] = e;
         size++;
-    }
-
-    public void addFirst(E e){
-        add(0, e);
-    }
-
-    public void addLast(E e){
-        add(size, e);
     }
 
     /**
@@ -76,6 +87,15 @@ public class ArrayList<E> {
 
     public E removeLast(){
         return remove(size - 1);
+    }
+
+    private int find(E e){
+        for(int i = 0 ; i < size ; i ++){
+            if(data[i].equals(e)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -118,6 +138,9 @@ public class ArrayList<E> {
         return false;
     }
 
+    /**
+     * 动态扩容
+     */
     private void grow(int newCapacity) {
         E[] newData = (E[]) new Object[newCapacity];
         for(int i=0; i<size; i++) {
@@ -126,14 +149,6 @@ public class ArrayList<E> {
         data = newData;
     }
 
-    public int find(E e){
-        for(int i = 0 ; i < size ; i ++){
-            if(data[i].equals(e)) {
-                return i;
-            }
-        }
-        return -1;
-    }
     public int size() {
         return size;
     }
@@ -146,9 +161,17 @@ public class ArrayList<E> {
         return size == 0;
     }
 
+    public void swap(int i, int j){
+        if(i < 0 || i >= size || j < 0 || j >= size) {
+            throw new IllegalArgumentException("Index is illegal.");
+        }
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
+    }
+
     @Override
     public String toString(){
-
         StringBuilder res = new StringBuilder();
         res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
         res.append('[');
