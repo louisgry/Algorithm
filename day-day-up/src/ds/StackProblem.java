@@ -8,6 +8,39 @@ import java.util.*;
 public class StackProblem {
 
     /**
+     * https://leetcode.com/problems/trapping-rain-water/
+     */
+    public int trap(int[] height) {
+        // Stack
+        Stack<Integer> stack = new Stack<Integer>();
+        int res = 0, i = 0;
+        while(i < height.length) {
+            if(stack.empty() || height[i]<height[stack.peek()]) {
+                // 左边界坐标入栈
+                stack.push(i);
+                i++;
+            }
+            else {
+                // 栈顶元素就是可以装雨水的坑
+                int hole_idx = stack.pop();
+                if (stack.empty()) {
+                    continue;
+                }
+                // 距离=右边界坐标-左边界坐标-1
+                int dist = i - stack.peek() - 1;
+                // 新栈顶是左边界，取左右的最小高度减去坑的高度
+                int h = Math.min(height[i], height[stack.peek()])-height[hole_idx];
+                res += dist * h;
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
+        System.out.println((new StackProblem()).trap(height));
+    }
+    /**
      * https://leetcode.com/problems/binary-tree-preorder-traversal/
      */
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
