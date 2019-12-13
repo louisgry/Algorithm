@@ -15,22 +15,25 @@
     - [dp](#dp)
     - [greedy](#greedy)
     - [backtracking](#backtracking)
-    - [bfs](#bfs)
-    - [dfs](#dfs)
+    - [math](#math)
 
 ## 数据结构
 ### stack
-- 栈
+- [栈](#栈)
     - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)：[【20题解】](#20题解) 
     - [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)：[【144题解】](#144题解)
+    - more
+    - [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)：[【150题解】](#150题解)
+    - [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)：[【42题解】](#42题解)
 
 ### queue
-- 队列
+- [队列](#队列)
     - [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)：[【347题解】](#347题解)
-
+    - [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)：[【102题解-BFS】](#102题解)
+    - [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)：[【279题解-BFS】](#279题解-BFS)
 
 ### linkedlist
-- 链表
+- [链表](#链表)
     - [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)：[【206题解】](#206题解)
     - [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)：[【203题解】](#203题解)
     - [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)：[【24题解】](#24题解)
@@ -40,7 +43,7 @@
     - [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)：[【234题解】](#234题解)
 
 ### binarytree
-- 二叉树
+- [二叉树](#二叉树)
     - [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)：[【104题解】](#104题解)
     - [111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)：[【11题解】](#111题解)
     - [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)：[【226题解】](#226题解)
@@ -58,7 +61,7 @@
     - [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)：[【129题解】](#129题解)
 
 ### collection
-- 查找表
+- [查找表](#查找表)
     - [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)：[【349题解】](#349题解)
     - [350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)：[【350题解】](#350题解)
     - [1. Two Sum](https://leetcode.com/problems/two-sum/)：[【1题解-Map】](#1题解-Map)
@@ -67,6 +70,7 @@
     - [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)：[【219题解】](#219题解)
     - [220. Contain Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/)：[【220题解】](#220题解)
     - more
+    - [136. Single Number](https://leetcode.com/problems/single-number/)：[【136题解】](#136题解)
     - [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)：[【242题解】](#242题解)
     - [202. Happy Number](https://leetcode.com/problems/happy-number/)：[【202题解】](#202题解)
     - [290. Word Pattern](https://leetcode.com/problems/word-pattern/)：[【290题解】](#290题解)
@@ -74,18 +78,20 @@
 
 ## 算法思想
 ### cursor
-- 游标
+- [游标](#游标)
     - [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)：[【283题解】](#283题解)
+    - more
     - [27. Remove Element](https://leetcode.com/problems/remove-element/)：[【27题解】](#27题解)
+    - [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)：[【122题解】](#122题解)
 
 ### partition
-- Partition
+- [Partition](#Partition)
     - [75. Sort Colors](https://leetcode.com/problems/sort-colors/)：[【75题解】](#75题解)
     - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)：[【215题解】](#215题解)
 
 
 ### pointers
-- 双指针
+- [双指针](#双指针)
     - [167. Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)：[【167题解】](#167题解)
     - [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)：[【11题解】](#11题解)
     - [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)：[【125题解】](#125题解)
@@ -93,7 +99,7 @@
 
 
 ### window
-- 滑动窗口
+- [滑动窗口](#滑动窗口)
     - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)：[【209题解】](#209题解)
     - [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)：[【3题解】](#3题解)
     - [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)：[【438题解】](#438题解)
@@ -103,7 +109,7 @@
 
 
 ### dp
-- 动态规划
+- [动态规划](#动态规划)
     - [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)：[【70题解】](#70题解)
     - [343. Integer Break](https://leetcode.com/problems/integer-break/)：[【343题解】](#343题解)
     - [198. House Robber](https://leetcode.com/problems/house-robber/)：[【198题解】](#198题解)
@@ -114,12 +120,12 @@
     - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)：[【1143题解】](#1143题解)
 
 ### greedy
-- 贪心
+- [贪心](#贪心)
     - [455. Assign Cookies](https://leetcode.com/problems/assign-cookies/)：[【455题解】](#455题解)
     - [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)：[【435题解】](#435题解)
 
 ### backtracking
-- 回溯
+- [回溯](#回溯)
     - [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)：[【17题解】](#17题解)
     - [46. Permutations](https://leetcode.com/problems/permutations/)：[【46题解】](#46题解)
     - [77. Combinations](https://leetcode.com/problems/combinations/)：[【77题解】](#77题解)
@@ -127,18 +133,13 @@
     - [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)：[【200题解】](#200题解)
     - [51. N Queens](https://leetcode.com/problems/n-queens/)：[【51题解】](#51题解)
     
-### bfs
-- BFS
-    - [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)：[【102题解】](#102题解)
-    - [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)：[【279题解-BFS】](#279题解-BFS)
-
-### dfs
-- DFS
-
+### math
+- [数学](#数学)
+    - [136. Single Number](https://leetcode.com/problems/single-number/)：[【136题解-异或】](#136题解-异或)
+    - [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/)：[【9题解】](#9题解)
 
 # 题解
-
-**stack**
+## 栈
 ### 20题解
 - stack
     - 20 Valid Parentheses：https://leetcode.com/problems/valid-parentheses/
@@ -272,9 +273,97 @@
     }
     ```
 
----
-**queue**
+### 150题解
+- 150 Evaluate Reverse Polish Notation：https://leetcode.com/problems/evaluate-reverse-polish-notation/
+    - 逆波兰表达式求值
+    - Input: ["2", "1", "+", "3", "*"]
+    - Output: 9
+    - Explanation: ((2 + 1) * 3) = 9
+- 思路：Stack存num，遇到运算符pop，注意减和除的处理
+- 复杂度：O(n)、O(n)
+```java
+    public int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<Integer>();
+        for(int i=0; i<tokens.length; i++) {
+            if(tokens[i].equals("+")) {
+                stack.push(stack.pop()+stack.pop());
+            }
+            else if(tokens[i].equals("-")) {
+                int num = stack.pop();
+                stack.push(stack.pop()-num);
+            }
+            else if(tokens[i].equals("*")) {
+                stack.push(stack.pop()*stack.pop());
+            }
+            else if(tokens[i].equals("/")) {
+                int num = stack.pop();
+                stack.push(stack.pop()/num);
+            }
+            else {
+                stack.push(Integer.parseInt(tokens[i]));
+            }
+        }
+        return stack.pop();
+    }
+```
 
+### 42题解
+- 42 Trapping Rain Water：https://leetcode.com/problems/trapping-rain-water/
+    - 接雨水
+    - Input: [0,1,0,2,1,0,1,3,2,1,2,1]
+    - Output: 6
+- 思路1：暴力解法
+- 复杂度：O(n^2)、O(n)
+```java
+    public int trap(int[] height) {
+        // 暴力解法
+        int res = 0;
+        for(int i=1; i<height.length; i++) {
+            int maxLeft = 0, maxRight = 0;
+            // 往左
+            for(int j=i; j>=0; j--) {
+                maxLeft = Math.max(maxLeft, height[j]);
+            }
+            // 往右
+            for(int j=i; j<height.length; j++) {
+                maxRight = Math.max(maxRight, height[j]);
+            }
+            res += Math.min(maxLeft, maxRight)-height[i];
+        }
+        return res;
+    }
+```
+- 思路2：Stack
+- 复杂度：O(n)、O(n)
+```java
+    public int trap(int[] height) {
+        // Stack
+        Stack<Integer> stack = new Stack<Integer>();
+        int res = 0, i = 0;
+        while(i < height.length) {
+            if(stack.empty() || height[i]<height[stack.peek()]) {
+                // 左边界坐标入栈
+                stack.push(i);
+                i++;
+            }
+            else {
+                // 栈顶元素就是可以装雨水的坑
+                int hole_idx = stack.pop();
+                if (stack.empty()) {
+                    continue;
+                }
+                // 距离=右边界坐标-左边界坐标-1
+                int dist = i - stack.peek() - 1;
+                // 新栈顶是左边界，取左右的最小高度减去坑的高度
+                int h = Math.min(height[i], height[stack.peek()])-height[hole_idx];
+                res += dist * h;
+            }
+        }
+        return res;
+    }
+```
+
+## 队列
 ### 347题解
 - queue
     - 347 Top K Frequent Elements：https://leetcode.com/problems/top-k-frequent-elements/
@@ -333,9 +422,102 @@
         }
     }
     ```
+  
+### 102题解
+- queue
+    - 102 Binary Tree Level Order Traversal：https://leetcode.com/problems/binary-tree-level-order-traversal/
+        - 二叉树的层序遍历
+        - Input: binary tree [3,9,20,null,null,15,7]
+        - Output: [[3], [9,20], [15,7]]
+    - 思路：基于队列的BFS层次遍历
+    - 时间复杂度：O(n)
+    - 空间复杂度：O(n)
+    ```java
+    import javafx.util.Pair;
 
----
-**linkedlist**
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        // 层次遍历：BFS（基于队列）
+        // 先进行非空判断
+        // 队列（节点值，层）：LinkedList<Pair<TreeNode, Integer>>
+        // 初始化是(root, 0)
+        // 当queue不为空时，while循环
+        // -- 如果level==res.size()：是新一层，res新增list
+        // -- 把值add进level层的res
+        // -- 如果有左子树，入队left，level+1
+        // -- 如果有右子树，入队right，level+1
+        
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        if(root == null) {
+            return res;
+        }
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
+        queue.add(new Pair<>(root, 0));
+        while(!queue.isEmpty()) {
+            Pair<TreeNode, Integer> front = queue.poll();
+            TreeNode node = front.getKey();
+            int level = front.getValue();
+            // 新的一层
+            if(level == res.size()) {
+                res.add(new ArrayList<>());
+            }
+            // 把值放到level层的res
+            res.get(level).add(node.val);
+            if(node.left != null) {
+                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
+            }
+            if(node.right != null) {
+                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
+            }
+        }
+        return res;
+    }
+    ```
+
+### 279题解-BFS
+- queue
+    - 279 Perfect Squares：https://leetcode.com/problems/perfect-squares/
+        - 给定一个正整数n，求其由最少个完全平方数组成的和等于n的个数
+        - Input: n = 13
+        - Output: 2
+        - Explanation: 13 = 4 + 9.
+    - 思路：转化为BFS求无权图的最短路径
+    - 时间复杂度：O(n)
+    - 空间复杂度：O(n)
+    ```java
+    import javafx.util.Pair;
+
+    public int numSquares(int n) {
+        // BFS求无权图中n到0的最短路径问题：node是数字，edge为是否相差一个完全平方数
+        // 声明队列<num, step>，先入队<数字：n, 步数：0>
+        // 声明BFS的visited数组(0到n个)。最后一个数字n设为已访问
+        // 当队列不为空时，while循环
+        // -- 取出队首，若num为0，return step
+        // -- for循环，i从1开始自增，当num-i*i>=0
+        // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
+        
+        Queue<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
+        boolean[] visited = new boolean[n+1];
+        queue.add(new Pair(n, 0));
+        visited[n] = true;
+        while(!queue.isEmpty()) {
+            Pair<Integer, Integer> front = queue.poll();
+            int num = front.getKey();
+            int step = front.getValue();
+            if(num == 0) {
+                return step;
+            }
+            for(int i=0; num-i*i>=0; i++) {
+                if(!visited[num-i*i]) {
+                    queue.add(new Pair(num-i*i, step+1));
+                    visited[num-i*i] = true;
+                }
+            }
+        }
+        throw new IllegalStateException("no solution");
+    }
+    ```
+
+## 链表
 ### 206题解
 - linkedlist
     - 206 Reverse Linked List：https://leetcode.com/problems/reverse-linked-list/
@@ -566,8 +748,7 @@
     }
     ```
 
----
-**binarytree**
+## 二叉树
 ### 104题解
 - 104题解
     - 104 Maximum Depth of Binary Tree：https://leetcode.com/problems/maximum-depth-of-binary-tree/
@@ -968,8 +1149,7 @@
     ```
 
 
----
-**collection**
+## 查找表
 ### 349题解
 - 349题解
     - 349 Intersection of Two Arrays：https://leetcode.com/problems/intersection-of-two-arrays/
@@ -1191,6 +1371,52 @@
         return false;
     }
     ```
+  
+### 136题解
+- 136 Single Number：https://leetcode.com/problems/single-number/
+    - 找出数组中只出现过一次的元素，其他元素出现两次
+    - Input: [2,2,1]
+    - Output: 1
+- 思路1：HashMap
+- 复杂度：O(n)、O(n)
+```java
+    public int singleNumber(int[] A) {
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int i=0; i<A.length; i++) {
+            if(!map.containsKey(A[i])) {
+                map.put(A[i], 1);
+            }
+            else {
+                map.put(A[i], map.get(A[i])+1);
+            }
+        }
+        for(Integer num : map.keySet()) {
+            if(map.get(num) == 1) {
+                return num;
+            }
+        }
+        throw new IllegalStateException("no solution");
+    }
+```
+- 思路2：异或，两个相同的数异或为0，与0异或为本身
+> 假设 数组为 2,3,2,3,4,1,4 那么结果应该为1，过程如下：
+2^3=0000 0010 ^ 0000 0011 = 0000 0001 1
+1^2=0000 0001 ^ 0000 0010 = 0000 0011 3
+3^3=0000 0011 ^ 0000 0011 = 0000 0000 0
+0^4=0000 0000 ^ 0000 0100 = 0000 0100 4
+4 ^ 1 =0000 0100 ^ 0000 0001 = 0000 0101 5
+5 ^ 4= 0000 0101 ^ 0000 0100 =0000 0001 1
+
+- 复杂度：O(n)、O(1)
+```java
+    public int singleNumber(int[] A) {
+        int res= 0;
+        for(int i=0; i<A.length; i++) {
+            res ^= A[i];
+        }
+        return res;
+    }
+```
 
 ### 242题解
 - 242题解
@@ -1320,48 +1546,31 @@
     }
     ```
 
----
-**cursor**
+## 游标
 ### 283题解
 - 283题解
     - 283 Move Zeroes：https://leetcode.com/problems/move-zeroes/
         - 把数组中的零移到后面去
         - Input: [0,1,0,3,12]
         - Output: [1,3,12,0,0]
-    - 问题：使用了O(n)的空间，可以原地吗？
-    - 优化1：用一个k游标去保存非零元素的个数
-    ```
+    - 思路：cursor，用一个k游标去保存非零元素的个数，swap零和非零元素
+    - 时间复杂度：O(n)
+    - 空间复杂度：O(1)
+    ```java
     public void moveZeroes(int[] nums) {
-        // 优化1：原地，不用O(n)的空间
-        // 时间复杂度：O(n)
-        // 空间复杂度：O(1)
+        // 游标k记录非零元素个数
         int k = 0;
-        for(int i=0; i<nums.length; i++)
-            if(nums[i]!=0)
-                nums[k++] = nums[i];
-        for(int i=k; i<nums.length; i++)
-            nums[i] = 0;
-    }
-    ```
-    - 优化2：swap 0和非0（用游标k，就不用再for循环了）
-    ```
-    public void moveZeroes(int[] nums) {
-        // 优化2：swap 0和非0（用游标k，就不用再for循环了）
-        // 时间复杂度：O(n)
-        // 空间复杂度：O(1)
-        int k = 0;
-        for(int i=0; i<nums.length; i++)
-            if(nums[i]!=0){
-                // swap(nums[i], nums[k])
-                if(i!=k){
-                    int t = nums[i];
-                    nums[i] = nums[k];
-                    nums[k] = t;
-                    k++;
-                }
-                else // i==k
-                    k++;
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] != 0) {
+                swap(nums, k, i);
+                k++;
             }
+        }
+    }
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
     }
     ```
 
@@ -1374,27 +1583,50 @@
     - 思路：cursor
     - 时间复杂度：O(n)
     - 空间复杂度：O(1)
-     ```
+    ```java
     public int removeElement(int[] nums, int val) {
         int k = 0;
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] != val){
-                if(i!=k){
-                    int t = nums[i];
-                    nums[i] = nums[k];
-                    nums[k] = t;
-                    k++;
-                }
-                else
-                    k++;
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] != val) {
+                swap(nums, i, k);
+                k++;
             }
         }
         return k;
     }
-     ```
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+    ```
+  
+### 122题解
+- 122 Best Time to Buy and Sell Stock II：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+    - 求买卖股票最多可获得的收益
+    - Input: [7,1,5,3,6,4]
+    - Output: 7
+    - Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4. Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3. 
+- 思路：cursor
+- 复杂度：O(n)、O(1)
+```java
+    public int maxProfit(int[] prices) {
+        int k = 0;
+        int res = 0;
+        for(int i=1; i<prices.length; i++) {
+            if(prices[i]>prices[k]) {
+                res += prices[i]-prices[k];
+                k = i;
+            }
+            else {
+                k++;
+            }
+        }
+        return res;
+    }
+```
 
----
-**partition**
+## Partition
 ### 75题解
 - 75题解
     - 75 Sort Color：https://leetcode.com/problems/sort-colors/
@@ -1482,8 +1714,7 @@
 - 88题解
 `remain`
 
----
-**pointers**
+## 双指针
 ### 167题解
 - 167题解
     - 167 Two Sum II：https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 
@@ -1604,8 +1835,7 @@
     }
     ```
 
----
-**window**
+## 滑动窗口
 ### 209题解
 - 209题解
     - 209 Minimum Size Subarray Sum：https://leetcode.com/problems/minimum-size-subarray-sum/
@@ -1820,8 +2050,7 @@
     ```
 
 
----
-**dp**
+## 动态规划
 ### 70题解
 - dp
     - 70 Climbing Stairs：https://leetcode.com/problems/climbing-stairs/
@@ -2282,10 +2511,9 @@
     }
     ```
 
----
-**backtracking.greedy**
+## 贪心
 ### 455题解
-- backtracking.greedy
+- greedy
     - 455 Assign Cookies：https://leetcode.com/problems/assign-cookies/
         - 分饼干，s为饼干大小，g为满意的最小值，返回最多可以让几个小朋友开心
         - Input: g=[1,2,3], s=[1,1]
@@ -2315,7 +2543,7 @@
     ```
 
 ### 435题解
-- backtracking.greedy
+- greedy
     - 435 Non-overlapping Intervals：https://leetcode.com/problems/non-overlapping-intervals/
         - 给定一个区间，问最少删除多少个区间，可以让这些区间之间不重叠
         - Input: [[1,2],[2,3],[3,4],[1,3]]
@@ -2390,8 +2618,7 @@
     ```
 
 
----
-**backtracking**
+## 回溯
 ### 17题解
 - 17题解
     - 17 Letter Combinations of a Phone Number：https://leetcode.com/problems/letter-combinations-of-a-phone-number/
@@ -2688,101 +2915,66 @@
     }
     ```
 
----
-**BFS**
-### 102题解
-- queue
-    - 102 Binary Tree Level Order Traversal：https://leetcode.com/problems/binary-tree-level-order-traversal/
-        - 二叉树的层序遍历
-        - Input: binary tree [3,9,20,null,null,15,7]
-        - Output: [[3], [9,20], [15,7]]
-    - 思路：基于队列的BFS层次遍历
-    - 时间复杂度：O(n)
-    - 空间复杂度：O(n)
-    ```java
-    import javafx.util.Pair;
+## 数学
+### 136题解-异或
+- 136 Single Number：https://leetcode.com/problems/single-number/
+    - 找出数组中只出现过一次的元素，其他元素出现两次
+    - Input: [2,2,1]
+    - Output: 1
+- 思路2：异或，两个相同的数异或为0，与0异或为本身
+> 假设 数组为 2,3,2,3,4,1,4 那么结果应该为1，过程如下：
+2^3=0000 0010 ^ 0000 0011 = 0000 0001 1
+1^2=0000 0001 ^ 0000 0010 = 0000 0011 3
+3^3=0000 0011 ^ 0000 0011 = 0000 0000 0
+0^4=0000 0000 ^ 0000 0100 = 0000 0100 4
+4 ^ 1 =0000 0100 ^ 0000 0001 = 0000 0101 5
+5 ^ 4= 0000 0101 ^ 0000 0100 =0000 0001 1
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        // 层次遍历：BFS（基于队列）
-        // 先进行非空判断
-        // 队列（节点值，层）：LinkedList<Pair<TreeNode, Integer>>
-        // 初始化是(root, 0)
-        // 当queue不为空时，while循环
-        // -- 如果level==res.size()：是新一层，res新增list
-        // -- 把值add进level层的res
-        // -- 如果有左子树，入队left，level+1
-        // -- 如果有右子树，入队right，level+1
-        
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
-        if(root == null) {
-            return res;
-        }
-        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<Pair<TreeNode, Integer>>();
-        queue.add(new Pair<>(root, 0));
-        while(!queue.isEmpty()) {
-            Pair<TreeNode, Integer> front = queue.poll();
-            TreeNode node = front.getKey();
-            int level = front.getValue();
-            // 新的一层
-            if(level == res.size()) {
-                res.add(new ArrayList<>());
-            }
-            // 把值放到level层的res
-            res.get(level).add(node.val);
-            if(node.left != null) {
-                queue.add(new Pair<TreeNode, Integer>(node.left, level+1));
-            }
-            if(node.right != null) {
-                queue.add(new Pair<TreeNode, Integer>(node.right, level+1));
-            }
+- 复杂度：O(n)、O(1)
+```java
+    public int singleNumber(int[] A) {
+        int res= 0;
+        for(int i=0; i<A.length; i++) {
+            res ^= A[i];
         }
         return res;
     }
-    ```
+```
 
-### 279题解-BFS
-- queue
-    - 279 Perfect Squares：https://leetcode.com/problems/perfect-squares/
-        - 给定一个正整数n，求其由最少个完全平方数组成的和等于n的个数
-        - Input: n = 13
-        - Output: 2
-        - Explanation: 13 = 4 + 9.
-    - 思路：转化为BFS求无权图的最短路径
-    - 时间复杂度：O(n)
-    - 空间复杂度：O(n)
-    ```java
-    import javafx.util.Pair;
+### 9题解
+- 9 Palindrome Number：https://leetcode.com/problems/palindrome-number/
+    - 判断整数是否为回文的，要求使用原地算法
+    - Input: 121
+    - Output: true
+- 思路：通过取整和取余操作获取整数中对应的数字进行比较
+> 如1221：
+通过计算 1221 / 1000， 得首位1
+通过计算 1221 % 10， 可得末位 1
+进行比较
+再将 22 取出来继续比较
 
-    public int numSquares(int n) {
-        // BFS求无权图中n到0的最短路径问题：node是数字，edge为是否相差一个完全平方数
-        // 声明队列<num, step>，先入队<数字：n, 步数：0>
-        // 声明BFS的visited数组(0到n个)。最后一个数字n设为已访问
-        // 当队列不为空时，while循环
-        // -- 取出队首，若num为0，return step
-        // -- for循环，i从1开始自增，当num-i*i>=0
-        // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
-        
-        Queue<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
-        boolean[] visited = new boolean[n+1];
-        queue.add(new Pair(n, 0));
-        visited[n] = true;
-        while(!queue.isEmpty()) {
-            Pair<Integer, Integer> front = queue.poll();
-            int num = front.getKey();
-            int step = front.getValue();
-            if(num == 0) {
-                return step;
-            }
-            for(int i=0; num-i*i>=0; i++) {
-                if(!visited[num-i*i]) {
-                    queue.add(new Pair(num-i*i, step+1));
-                    visited[num-i*i] = true;
-                }
-            }
+- 复杂度：O(logn)、O(1)
+```java
+    public boolean isPalindrome(int x) {
+        // 边界
+        if(x < 0) {
+            return false;
         }
-        throw new IllegalStateException("no solution");
+        int div = 1;
+        // 直到div跟x同位
+        while(x/div >= 10) {
+            div *= 10;
+        }
+        while(x > 0) {
+            int left = x / div;
+            int right = x % 10;
+            if(left != right) {
+                return false;
+            }
+            // 去掉第一位和最后一位
+            x = (x % div) / 10;
+            div /= 100;
+        }
+        return true;
     }
-    ```
-  
----
-**DFS**
+```
