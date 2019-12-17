@@ -36,7 +36,7 @@ public class FindNextNode {
             return pNode.next;
         }
         // 3. 无右子树，且该节点为父节点的右子树：则下一个为该节点的最父节点
-        while(pNode.next != null) {
+        if(pNode.next != null) {
             TreeLinkNode pNext = pNode.next;
             while(pNext.next!=null && pNext.next.right==pNext) {
                 pNext = pNext.next;
