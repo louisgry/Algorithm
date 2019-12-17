@@ -16,26 +16,27 @@ public class ReplaceSpace {
         /**
          * 扫两遍：从前往后记录空格数，接着从后往前替换
          */
+        // 从前往后遍历，记录空格数
         int count = 0;
-        for(int i=0; i<str.length(); i++){
+        for(int i=0; i<str.length(); i++) {
             if(str.charAt(i) == ' ') {
                 count++;
             }
         }
-        char[] cArr = new char[str.length()+2*count];
-        // 边界条件：>=
-        for(int i=str.length()-1; i>=0; i--){
-            if(str.charAt(i) != ' '){
-                cArr[i+2*count] = str.charAt(i);
+        // 从后往前，替换
+        char[] charArr = new char[str.length()+2*count];
+        for(int i=str.length()-1; i>=0; i--) {
+            if(str.charAt(i) != ' ') {
+                charArr[i+2*count] = str.charAt(i);
             }
             else {
                 count--;
-                cArr[i+2*count] = '%';
-                cArr[i+2*count+1] = '2';
-                cArr[i+2*count+2] = '0';
+                charArr[i+2*count] = '%';
+                charArr[i+2*count+1] = '2';
+                charArr[i+2*count+2] = '0';
             }
         }
-        return new String(cArr);
+        return new String(charArr);
         /**
          * 调用自带replace函数
          */

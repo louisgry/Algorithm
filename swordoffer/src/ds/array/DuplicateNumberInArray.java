@@ -13,6 +13,7 @@ public class DuplicateNumberInArray {
      * 空间复杂度：O(n)
      */
     public boolean duplicate(int numbers[],int length,int [] duplication) {
+        // 边界条件判断
         if(numbers==null || length==0) {
             return false;
         }

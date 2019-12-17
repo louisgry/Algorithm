@@ -13,6 +13,10 @@ public class SearchInTwoDimArray {
      * 空间复杂度：O(1)
      */
     public boolean Find(int target, int [][] array) {
+        // 边界条件判断
+        if(array.length==0 || array[0].length==0) {
+            return false;
+        }
         int i = 0;
         int j = array[0].length - 1;
         while(i<array.length && j>=0) {

@@ -21,17 +21,22 @@ public class ReconstructBinaryTree {
      * 空间复杂度：O(n)
      */
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+        // 边界条件
         if(pre.length==0 || in.length==0) {
             return null;
         }
-        // 前序第一个节点为根节点
         TreeNode root = new TreeNode(pre[0]);
-        // 中序找前序的根
+        // 遍历in，在中序里找前序的根
         for(int i=0; i<in.length; i++) {
             if(in[i] == pre[0]) {
-                // copyOfRange左闭右开
-                root.left = reConstructBinaryTree(Arrays.copyOfRange(pre, 1, i+1), Arrays.copyOfRange(in, 0, i));
-                root.right = reConstructBinaryTree(Arrays.copyOfRange(pre, i+1, pre.length), Arrays.copyOfRange(in, i+1, in.length));
+                // copyOfRange函数，左闭右开
+                int[] leftPre = Arrays.copyOfRange(pre, 1, i+1);
+                int[] leftIn = Arrays.copyOfRange(in, 0, i);
+                root.left = reConstructBinaryTree(leftPre, leftIn);
+                // i为中序的下标找到前序根，pre包括下标i，in不包括i
+                int[] rightPre = Arrays.copyOfRange(pre, i+1, pre.length);
+                int[] rightIn = Arrays.copyOfRange(in, i+1, in.length);
+                root.right = reConstructBinaryTree(rightPre, rightIn);
                 break;
             }
         }

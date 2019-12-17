@@ -1,6 +1,8 @@
 package ds.linkedlist;
 
 import java.util.ArrayList;
+import java.util.Stack;
+
 /**
  * @author Louis
  * @date Create in 2019/10/27 13:45
@@ -28,17 +30,17 @@ public class PrintListReverse {
 //        res.add(listNode.val);
 //        return res;
         /**
-         * 思路2：栈，利用List的add(index, value)方法
+         * 思路2：模拟栈，利用List的add(index, value)方法
          * 时间复杂度：O(n)
          * 空间复杂度：O(n)
          */
-        ArrayList<Integer> res = new ArrayList<Integer>();
-        ListNode cur = listNode;
-        while(cur != null) {
-            res.add(0, cur.val);
-            cur = cur.next;
+        // 模拟栈，每次在第一个位置插入元素，取出来的就是最新的元素
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        while(listNode != null) {
+            list.add(0, listNode.val);
+            listNode = listNode.next;
         }
-        return res;
+        return list;
     }
     /** main */
     public static void main(String[] args) {
