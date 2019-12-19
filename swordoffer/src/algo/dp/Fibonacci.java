@@ -8,8 +8,8 @@ import java.util.Arrays;
  */
 public class Fibonacci {
     /**
-     * - 10 斐波那契数列
-     * - https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3
+     * 10 斐波那契数列
+     * https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3
      */
 //    int[] memo;
     public int Fibonacci(int n) {
@@ -17,6 +17,7 @@ public class Fibonacci {
 //        memo = new int[n+2];
 //        Arrays.fill(memo, -1);
 //        return getFib(n, memo);
+
 
         /** 思路2：动态规划 */
         int[] memo = new int[n+2];

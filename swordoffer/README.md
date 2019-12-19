@@ -1,5 +1,6 @@
 # 《剑指Offer》 (Java)
 
+
 - 数据结构
     - [数组](#数组)
     - [字符串](#字符串)
@@ -8,106 +9,134 @@
     - [栈](#栈)
 - 算法思想
     - [递归与循环](#递归与循环)
+    - [查找和排序](#查找和排序)
 
+## 数组
+- [3.数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[题解](#3.数组中重复的数字)
+- [4.二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[题解](#4.二维数组中的查找)
+
+## 字符串
+- [5.替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[题解](#5.替换空格)
+
+## 链表
+- [6.从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[题解](#6.从尾到头打印链表)
+
+## 树
+- [7.重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[题解](#7.重建二叉树)
+- [8.二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e)：[题解](#8.二叉树的下一个节点)
+
+## 栈
+- [9.用两个栈来实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)：[题解](#9.用两个栈来实现队列)
+
+## 递归与循环
+- [10.斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[题解](#10.斐波那契数列)
+
+## 查找和排序
+- [11.旋转数组的最小数字](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)：[题解](#11.旋转数组的最小数字)
+
+---
 ### 3.数组中重复的数字
-- 3 数组中重复的数字
 - https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8
 - 请找出数组中任意一个重复的数字
 - 思路：Hash
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
+- 复杂度：O(n)、O(n)
 ```java
-public boolean duplicate(int numbers[],int length,int [] duplication) {
+public class Solution {
+    public boolean duplicate(int numbers[],int length,int [] duplication) {
     // 边界条件判断
-    if(numbers==null || length==0) {
+        if(numbers==null || length==0) {
+            return false;
+        }
+        int[] freq = new int[length];
+        for(int i=0; i<numbers.length; i++) {
+            freq[numbers[i]]++;
+            if(freq[numbers[i]]>1){
+                duplication[0] = numbers[i];
+                return true;
+            }
+        }
         return false;
     }
-    int[] freq = new int[length];
-    for(int i=0; i<numbers.length; i++) {
-        freq[numbers[i]]++;
-        if(freq[numbers[i]]>1){
-            duplication[0] = numbers[i];
-            return true;
-        }
-    }
-    return false;
 }
 ```
 
 ### 4.二维数组中的查找
-- 4 二维数组中的查找
 - https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e
 - 判断二维数组中是否含有某一整数
 - 思路：双指针，比target大j--，小i++
-- 时间复杂度：O(n+m)
-- 空间复杂度：O(1)
+- 复杂度：O(n+m)、O(1)
 ```java
-public boolean Find(int target, int [][] array) {
-    int i = 0;
-    int j = array[0].length - 1;
-    while(i<array.length && j>=0) {
-        if(array[i][j] == target) {
-            return true;
+public class Solution {
+    public boolean Find(int target, int [][] array) {
+        // 边界条件判断
+        if(array.length==0 || array[0].length==0) {
+            return false;
         }
-        else if(array[i][j] > target) {
-            j--;
+        int i=0, j=array[0].length-1;
+        while(i<array.length && j>=0) {
+            if(array[i][j] == target) {
+                return true;
+            }
+            else if(array[i][j] > target) {
+                j--;
+            }
+            else {
+                i++;
+            }
         }
-        else {
-            i++;
-        }
+        return false;
     }
-    return false;
 }
 ```
 
 ### 5.替换空格
-- 5 替换空格
 - https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423
 - 替换字符串的空格为“%20”
 - 思路：扫两遍，从前往后记录空格数，接着从后往前替换
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
+- 复杂度：O(n)、O(n)
 ```java
-public String replaceSpace(StringBuffer str) {
-    // 从前往后遍历，记录空格数
-    int count = 0;
-    for(int i=0; i<str.length(); i++) {
-        if(str.charAt(i) == ' ') {
-            count++;
+public class Solution {
+    public String replaceSpace(StringBuffer str) {
+        // 从前往后遍历，记录空格数
+        int count = 0;
+        for(int i=0; i<str.length(); i++) {
+            if(str.charAt(i) == ' ') {
+                count++;
+            }
         }
+        // 从后往前，替换
+        char[] charArr = new char[str.length()+2*count];
+        for(int i=str.length()-1; i>=0; i--) {
+            if(str.charAt(i) != ' ') {
+                charArr[i+2*count] = str.charAt(i);
+            }
+            else {
+                count--;
+                charArr[i+2*count] = '%';
+                charArr[i+2*count+1] = '2';
+                charArr[i+2*count+2] = '0';
+            }
+        }
+        return new String(charArr);
     }
-    // 从后往前，替换
-    char[] charArr = new char[str.length()+2*count];
-    for(int i=str.length()-1; i>=0; i--) {
-        if(str.charAt(i) != ' ') {
-            charArr[i+2*count] = str.charAt(i);
-        }
-        else {
-            count--;
-            charArr[i+2*count] = '%';
-            charArr[i+2*count+1] = '2';
-            charArr[i+2*count+2] = '0';
-        }
-    }
-    return new String(charArr);
 }
 ```
 - 思路：调用自带replace函数
 ```
 public String replaceSpace(StringBuffer str) {
- return str.toString().replace(" ", "%20");
+    return str.toString().replace(" ", "%20");
 }
 ``` 
 
 ### 6.从尾到头打印链表
-- 6 从尾到头打印链表
 - https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035
 - 反向打印链表
 - 思路1：模拟栈，利用List的add(index, value)方法
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
-```
-public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+- 复杂度：O(n)、O(n)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
     // 模拟栈，每次在第一个位置插入元素，取出来的就是最新的元素
     ArrayList<Integer> list = new ArrayList<Integer>();
     while(listNode != null) {
@@ -115,30 +144,31 @@ public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         listNode = listNode.next;
     }
     return list;
+    }
 }
 ```
 - 思路2：递归，list要放外面
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
+- 复杂度：O(n)、O(n)
 ```java
-ArrayList<Integer> res = new ArrayList<Integer>();
-public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-    if(listNode==null){
+import java.util.ArrayList;
+public class Solution {
+    ArrayList<Integer> res = new ArrayList<Integer>();
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        if(listNode == null) {
+            return res;
+        }
+        printListFromTailToHead(listNode.next);
+        res.add(listNode.val);
         return res;
     }
-    printListFromTailToHead(listNode.next);
-    res.add(listNode.val);
-    return res;
 }
 ```
 
 ### 7.重建二叉树
-- 7 重建二叉树
 - https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6
 - 根据前序和中序遍历的结果，重建二叉树
 - 思路：递归，前序找根，中序划分左右子树
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
+- 复杂度：O(n)、O(n)
 ```java
 import java.util.*;
 public class Solution {
@@ -168,46 +198,49 @@ public class Solution {
 ```
 
 ### 8.二叉树的下一个节点
-- 8 二叉树的下一个节点
 - https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e
-- 给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。
+- 找出二叉树中序遍历顺序的下一个结点并且返回（包含指向父节点的next指针）
+- 思路：分三种情况，有右子树、无右子树且为左、无右子树且为右
+- 复杂度：O(n)、O(1)
 ```java
-public TreeLinkNode GetNext(TreeLinkNode pNode) {
-    // 关键：next为指向父节点的指针
-    if(pNode == null) {
+public class Solution {
+     public TreeLinkNode GetNext(TreeLinkNode pNode) {
+        // 关键：next为指向父节点的指针
+        if(pNode == null) {
+            return null;
+        }
+        // 1. 有右子树：则下一个为右子树的最左孩子
+        if(pNode.right != null) {
+            TreeLinkNode pRight = pNode.right;
+            while(pRight.left != null) {
+                pRight = pRight.left;
+            }
+            return pRight;
+        }
+        // 2. 无右子树，且该节点为父节点的左子树：则下一个为该节点的父节点
+        if(pNode.next!=null && pNode.next.left==pNode) {
+            return pNode.next;
+        }
+        // 3. 无右子树，且该节点为父节点的右子树：则下一个为该节点的最父节点
+        if(pNode.next != null) {
+            TreeLinkNode pNext = pNode.next;
+            while(pNext.next!=null && pNext.next.right==pNext) {
+                pNext = pNext.next;
+            }
+            return pNext.next;
+        }
         return null;
     }
-    // 1. 有右子树：则下一个为右子树的最左孩子
-    if(pNode.right != null) {
-        TreeLinkNode pRight = pNode.right;
-        while(pRight.left != null) {
-            pRight = pRight.left;
-        }
-        return pRight;
-    }
-    // 2. 无右子树，且该节点为父节点的左子树：则下一个为该节点的父节点
-    if(pNode.next!=null && pNode.next.left==pNode) {
-        return pNode.next;
-    }
-    // 3. 无右子树，且该节点为父节点的右子树：则下一个为该节点的最父节点
-    if(pNode.next != null) {
-        TreeLinkNode pNext = pNode.next;
-        while(pNext.next!=null && pNext.next.right==pNext) {
-            pNext = pNext.next;
-        }
-        return pNext.next;
-    }
-    return null;
 }
 ```
 
 ### 9.用两个栈来实现队列
-- 9 用两个栈来实现队列
 - https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6
 - 用两个栈来实现队列的push和pop
 - 思路：直接push，pop的时候把stack1的放入stack2中
 - 复杂度：O(n)、O(n)
 ```java
+import java.util.Stack;
 public class Solution {
     private Stack<Integer> stack1 = new Stack<Integer>();
     private Stack<Integer> stack2 = new Stack<Integer>();
@@ -226,12 +259,10 @@ public class Solution {
 ```
 
 ### 10.斐波那契数列
-- 10 斐波那契数列
 - https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3
 - 输出斐波那契数列的第n项（从0开始，第0项为0）
 - 思路1：记忆化搜索
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
+- 复杂度：O(n)、O(n)
 ```java
 import java.util.*;
 public class Solution {
@@ -257,8 +288,7 @@ public class Solution {
 }
 ```
 - 思路2：动态规划
-- 时间复杂度：O(n)
-- 空间复杂度：O(n)
+- 复杂度：O(n)、O(n)
 ```java
 public class Solution {
     public int Fibonacci(int n) {
@@ -270,6 +300,45 @@ public class Solution {
             memo[i] = memo[i-1] + memo[i-2];
         }
         return memo[n];
+    }
+}
+```
+
+### 11.旋转数组的最小数字
+- https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba
+- 递增的数组会进行旋转，根据该特性找出其最小值
+- 思路：二分查找，三种情况，处于递增，处于递减，其他情况
+- 复杂度：O(logn)、O(1)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public int minNumberInRotateArray(int [] array) {
+        // 边界条件
+        if(array.length == 1) {
+            return array[0];
+        }
+        int l=0, r=array.length-1;
+        // mid初始为0
+        int mid = 0;
+        while(l < r) {
+            if(array[l] < array[r]) {
+                return array[l];
+            }
+            mid = l+(r-l)/2;
+            // 1. 处于递增，改变l
+            if(array[l] < array[mid]) {
+                l = mid + 1;
+            }
+            // 2. 处于递减，改变r
+            else if(array[mid] < array[r]) {
+                r = mid;
+            }
+            // 3. 其余情况，l++缩小范围
+            else {
+                l++;
+            }
+        }
+        return array[l];
     }
 }
 ```
