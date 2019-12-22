@@ -49,6 +49,7 @@ public class PathInMatrix {
         return x>=0 && x<m && y>=0 && y<n;
     }
 
+    /** main */
     public static void main(String[] args) {
         char[] matrix = {'a','b','t','g','c','f','c','s','j','d','e','h'};
         char[] str = {'b','f','c','e'};
