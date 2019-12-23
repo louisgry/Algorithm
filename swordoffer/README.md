@@ -22,6 +22,7 @@
 
 ## 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
+- [18-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18题解](#18-删除链表的节点)
 
 ## 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
@@ -46,6 +47,7 @@
 ## 其他
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
+- 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
 
 
 ---
@@ -588,4 +590,56 @@ public class Solution {
         }
         return false;
     }
+```
+
+### 18-删除链表的节点
+- 题目1：在O(1)时间内删除链表节点
+- 思路：修改链表的值
+- 复杂度：O(1)、O(1)
+```
+    public void deleteNode(ListNode node) {
+        if(node == null) {
+            return;
+        }
+        if(node.next == null) {
+            node = null;
+            return;
+        }
+        node.val = node.next.val;
+        node.next = node.next.next;
+        return;
+    }
+```
+- 题目2：删除链表中重复的节点
+- https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef
+- 排序的链表里删除重复的节点
+- 思路：
+- 复杂度：
+```java
+public class Solution {
+    public ListNode deleteDuplication(ListNode pHead) {
+        if(pHead==null || pHead.next==null) {
+            return pHead;
+        }
+        ListNode dummyHead = new ListNode(0);
+        dummyHead.next = pHead;
+        ListNode pre = dummyHead;
+        ListNode cur = pre.next;
+        while(cur != null) {
+            if(cur.next!=null && cur.val == cur.next.val) {
+                // 一直搜索到不同为止
+                while(cur.next!=null && cur.val==cur.next.val) {
+                    cur = cur.next;
+                }
+                pre.next = cur.next;
+                cur = cur.next;
+            }
+            else {
+                pre = pre.next;
+                cur = cur.next;
+            }
+        }
+        return dummyHead.next;
+    }
+}
 ```
