@@ -19,6 +19,8 @@
 
 ## 字符串
 - [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
+- [19-正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c)：[19题解](#19-正则表达式匹配)
+- [20-表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2)：[20题解](#20-表示数值的字符串)
 
 ## 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
@@ -640,6 +642,64 @@ public class Solution {
             }
         }
         return dummyHead.next;
+    }
+}
+```
+
+### 19-正则表达式匹配
+- https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c
+- 实现一个函数用来匹配包含'.'和'*'的正则表达式
+- 思路：递归
+- 复杂度：O(n^2)、O(n)
+```java
+public class Solution {
+    public boolean match(char[] str, char[] pattern) {
+        if(str==null || pattern==null) {
+            return false;
+        }
+        return matchCore(str, pattern, 0, 0);
+    }
+    private boolean matchCore(char[] str, char[] pattern, int s, int p) {
+        // 两个都到尾，则成功
+        if(s==str.length && p==pattern.length) {
+            return true;
+        }
+        // pattern先到尾，则失败
+        if(s!=str.length && p==pattern.length) {
+            return false;
+        }
+        // pattern下一个是*
+        // 时刻注意判断是否越界
+        if(p+1<pattern.length && pattern[p+1]=='*') {
+            // 匹配，则str后移1位或pattern后移2位
+            if(s!=str.length && (str[s]==pattern[p] || pattern[p]=='.')) {
+                return matchCore(str, pattern, s+1, p)
+                        || matchCore(str, pattern, s, p+2);
+            }
+            // 不匹配，pattern后移2位，跳过*
+            else {
+                return matchCore(str, pattern, s, p+2);
+            }
+        }
+        // pattern下一个不是*，且匹配，则str和pattern都后移1位
+        if(s!=str.length && (str[s]==pattern[p] || pattern[p]=='.')) {
+            return matchCore(str, pattern, s+1, p+1);
+        }
+        return false;
+    }
+}
+```
+
+### 20-表示数值的字符串
+- https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2
+- 判断字符串是否为数值
+- 思路：正则表达式
+- 复杂度：O(n)、O(n)
+```java
+import java.util.regex.*;
+public class Solution {
+    public boolean isNumeric(char[] str) {
+        return Pattern.matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$", new String(str));
     }
 }
 ```
