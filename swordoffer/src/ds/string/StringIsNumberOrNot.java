@@ -12,7 +12,10 @@ public class StringIsNumberOrNot {
      * https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2
      */
     public boolean isNumeric(char[] str) {
-        return Pattern.matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$", new String(str));
+        if(str==null || str.length==0) {
+            return false;
+        }
+        return new String(str).matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$");
     }
     /** main */
     public static void main(String[] args) {
