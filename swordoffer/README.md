@@ -16,6 +16,7 @@
 ## 数组
 - [3-数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[3题解](#3-数组中重复的数字)
 - [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
+- [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
 
 ## 字符串
 - [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
@@ -700,6 +701,34 @@ import java.util.regex.*;
 public class Solution {
     public boolean isNumeric(char[] str) {
         return Pattern.matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$", new String(str));
+    }
+}
+```
+
+### 21-调整数组顺序使奇数位于偶数前面
+- https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593
+- 重排序，奇数在前偶数在后，注意相对位置不能变
+- 思路：游标，但要保持相对位置，所以要对子数组再排序
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public void reOrderArray(int [] array) {
+        int k = 0;
+        for(int i=0; i<array.length; i++) {
+            if(Math.abs(array[i])%2 != 0) {
+                int j = i;
+                while(j > k) {
+                    swap(array, j, j-1);
+                    j--;
+                }
+                k++;
+            }
+        }
+    }
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
     }
 }
 ```
