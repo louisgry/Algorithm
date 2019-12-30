@@ -1,5 +1,5 @@
-# 《剑指Offer》 (Java)
-
+《剑指Offer》（Java）
+==
 - 数据结构
     - [数组](#数组)
     - [字符串](#字符串)
@@ -26,6 +26,10 @@
 ## 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
 - [18-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18题解](#18-删除链表的节点)
+- [22-链表中倒数第k个结点](https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a)：[22题解](#22-链表中倒数第k个结点)
+- [23-链表中环的入口结点](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4) ：[23题解](#23-链表中环的入口结点)
+- [24-反转链表](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)：[24题解](#24-反转链表)
+- [25-合并两个排序的链表](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)：[25题解](#25-合并两个排序的链表)
 
 ## 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
@@ -59,7 +63,33 @@
 - 请找出数组中任意一个重复的数字
 - Input: {2,3,1,0,2,5,3}
 - Output: 2
-- 思路：Hash
+- 思路1：把值为i的元素调到i的位置
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public boolean duplicate(int numbers[],int length,int [] duplication) {
+        if(numbers==null || length<=0) {
+            return false;
+        }
+        for(int i=0; i<length; i++) {
+            while(numbers[i] != i) {
+                if(numbers[i] == numbers[numbers[i]]) {
+                    duplication[0] = numbers[i];
+                    return true;
+                }
+                swap(numbers, numbers[i], i);
+            }
+        }
+        return false;
+    }
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+}
+```
+- 思路2：Hash
 - 复杂度：O(n)、O(n)
 ```java
 public class Solution {
@@ -115,32 +145,32 @@ public class Solution {
 ### 5-替换空格
 - https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423
 - 替换字符串的空格为“%20”
-- 思路：扫两遍，从前往后记录空格数，接着从后往前替换
+- 思路：扫两遍，从前往后append空格数*2，接着从后往前替换
 - 复杂度：O(n)、O(n)
 ```java
 public class Solution {
     public String replaceSpace(StringBuffer str) {
-        // 从前往后遍历，记录空格数
-        int count = 0;
-        for(int i=0; i<str.length(); i++) {
+        // 从前往后遍历，append空格数*2
+        int size1 = str.length()-1;
+        for(int i=0; i<=size1; i++) {
             if(str.charAt(i) == ' ') {
-                count++;
+                str.append(" ");
             }
         }
         // 从后往前，替换
-        char[] charArr = new char[str.length()+2*count];
-        for(int i=str.length()-1; i>=0; i--) {
-            if(str.charAt(i) != ' ') {
-                charArr[i+2*count] = str.charAt(i);
+        int size2 = str.length()-1;
+        while(size1>=0 && size1<size2) {
+            char c = str.charAt(size1--);
+            if(c == ' ') {
+                str.setCharAt(size2--, '0');
+                str.setCharAt(size2--, '2');
+                str.setCharAt(size2--, '%');
             }
             else {
-                count--;
-                charArr[i+2*count] = '%';
-                charArr[i+2*count+1] = '2';
-                charArr[i+2*count+2] = '0';
+                str.setCharAt(size2--, c);
             }
         }
-        return new String(charArr);
+        return str.toString();
     }
 }
 ```
@@ -154,23 +184,7 @@ public String replaceSpace(StringBuffer str) {
 ### 6-从尾到头打印链表
 - https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035
 - 反向打印链表
-- 思路1：模拟栈，利用List的add(index, value)方法
-- 复杂度：O(n)、O(n)
-```java
-import java.util.ArrayList;
-public class Solution {
-    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-    // 模拟栈，每次在第一个位置插入元素，取出来的就是最新的元素
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    while(listNode != null) {
-        list.add(0, listNode.val);
-        listNode = listNode.next;
-    }
-    return list;
-    }
-}
-```
-- 思路2：递归，list要放外面
+- 思路1：递归，list要放外面
 - 复杂度：O(n)、O(n)
 ```java
 import java.util.ArrayList;
@@ -183,6 +197,49 @@ public class Solution {
         printListFromTailToHead(listNode.next);
         res.add(listNode.val);
         return res;
+    }
+}
+```
+- 思路2：迭代
+- 复杂度：
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        if(listNode == null) {
+            return res;
+        }
+        ListNode pre = null;
+        ListNode cur = listNode;
+        while(cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        // 输出结果
+        while(pre != null) {
+            res.add(pre.val);
+            pre = pre.next;
+        }
+        return res;
+    }
+}
+```
+- 思路3：模拟栈，利用List的add(index, value)方法
+- 复杂度：O(n)、O(n)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+    // 模拟栈，每次在第一个位置插入元素，取出来的就是最新的元素
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    while(listNode != null) {
+        list.add(0, listNode.val);
+        listNode = listNode.next;
+    }
+    return list;
     }
 }
 ```
@@ -697,10 +754,12 @@ public class Solution {
 - 思路：正则表达式
 - 复杂度：O(n)、O(n)
 ```java
-import java.util.regex.*;
 public class Solution {
     public boolean isNumeric(char[] str) {
-        return Pattern.matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$", new String(str));
+        if(str==null || str.length==0) {
+            return false;
+        }
+        return new String(str).matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$");
     }
 }
 ```
@@ -729,6 +788,139 @@ public class Solution {
         int t = nums[i];
         nums[i] = nums[j];
         nums[j] = t;
+    }
+}
+```
+
+### 22-链表中倒数第k个结点
+- https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a
+- 返回倒数第k个节点
+- 思路：快慢指针
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public ListNode FindKthToTail(ListNode head,int k) {
+        // 边界条件判断
+        if(head == null) {
+            return null;
+        }
+        ListNode p = head;
+        ListNode q = head;
+        for(int i=0; i<k; i++) {
+            // 如果k大于链表的长度
+            if(q == null) {
+                return null;
+            }
+            q = q.next;
+        }
+        while(q != null) {
+            q = q.next;
+            p = p.next;
+        }
+        return p;
+    }
+}
+```
+
+### 23-链表中环的入口结点
+- https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4
+- 给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null
+- 思路：快慢指针
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public ListNode EntryNodeOfLoop(ListNode pHead) {
+        // 边界条件判断
+        if(pHead==null || pHead.next==null) {
+            return null;
+        }
+        ListNode p = pHead;
+        ListNode q = pHead;
+        // 判断是否有环
+        do {
+            p = p.next;
+            q = q.next.next;
+        } while(p != q);
+        // 如果存在环，q从起点p从相遇点开始，则会在入口处相遇
+        q = pHead;
+        while(p != q) {
+            p = p.next;
+            q = q.next;
+        }
+        return p;
+    }
+}
+```
+
+### 24-反转链表
+- https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca
+- 反转链表，输出新的头结点
+- 思路：递归
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public ListNode ReverseList(ListNode head) {
+        if(head == null || head.next==null) {
+            return head;
+        }
+        ListNode node = ReverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return node;
+    }
+}
+```
+
+### 25-合并两个排序的链表
+- https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337
+- 合并两个单调递增的链表为一个，保持单调递增
+- 思路1：递归
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if(list1 == null) {
+            return list2;
+        }
+        if(list2 == null) {
+            return list1;
+        }
+        if(list1.val <= list2.val) {
+            list1.next = Merge(list1.next, list2);
+            return list1;
+        }
+        else {
+            list2.next = Merge(list1, list2.next);
+            return list2;
+        }
+    }
+}
+```
+- 思路2：迭代
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
+        while(list1!=null && list2!=null) {
+            if(list1.val <= list2.val){
+                cur.next = list1;
+                list1 = list1.next;
+            }
+            else {
+                cur.next = list2;
+                list2 = list2.next;
+            }
+            cur = cur.next;
+        }
+        if(list1 != null) {
+            cur.next = list1;
+        }
+        if(list2 != null) {
+            cur.next = list2;
+        }
+        return head.next;
     }
 }
 ```
