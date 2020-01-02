@@ -17,6 +17,7 @@
 - [3-数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[3题解](#3-数组中重复的数字)
 - [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
 - [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
+- [29-顺时针打印矩阵](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)：[29题解](#29-顺时针打印矩阵)
 
 ## 字符串
 - [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
@@ -34,9 +35,13 @@
 ## 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
 - [8-二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e)：[8题解](#8-二叉树的下一个节点)
+- [26-树的子结构](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88)：[26题解](#26-树的子结构)
+- [27-二叉树的镜像](https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011)：[27题解](#27-二叉树的镜像)
+- [28-对称的二叉树](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb)：[28题解](#28-对称的二叉树)
 
 ## 栈
 - [9-用两个栈来实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)：[9题解](#9-用两个栈来实现队列)
+- [30-包含min函数的栈](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)：[30题解](#30-包含min函数的栈)
 
 ## 递归与循环
 - [10-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10题解](#10-斐波那契数列)
@@ -319,23 +324,23 @@ public class Solution {
 ### 9-用两个栈来实现队列
 - https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6
 - 用两个栈来实现队列的push和pop
-- 思路：直接push，pop的时候把stack1的放入stack2中
+- 思路：直接push，pop的时候把in的放入out中
 - 复杂度：O(n)、O(n)
 ```java
 import java.util.Stack;
 public class Solution {
-    private Stack<Integer> stack1 = new Stack<Integer>();
-    private Stack<Integer> stack2 = new Stack<Integer>();
+    private Stack<Integer> in = new Stack<Integer>();
+    private Stack<Integer> out = new Stack<Integer>();
     public void push(int node) {
-        stack1.push(node);
+       in.push(node);
     }
     public int pop() {
-        if(stack2.empty()) {
-            while(!stack1.empty()) {
-                stack2.push(stack1.pop());
+        if(out.empty()) {
+            while(!in.empty()) {
+               out.push(in.pop());
             }
         }
-        return stack2.pop();
+        return out.pop();
     }
 }
 ```
@@ -921,6 +926,165 @@ public class Solution {
             cur.next = list2;
         }
         return head.next;
+    }
+}
+```
+
+### 26-树的子结构
+- https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88
+- 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构）
+- 思路：递归，两个递归方法
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public boolean HasSubtree(TreeNode root1,TreeNode root2) {
+        if(root1==null || root2==null) {
+            return false;
+        }
+        return isSubtree(root1, root2) || 
+            HasSubtree(root1.left, root2) ||
+            HasSubtree(root1.right, root2);
+    }
+    private boolean isSubtree(TreeNode root1, TreeNode root2) {
+        // 顺序不能变
+        if(root2 == null) {
+            return true;
+        }
+        if(root1 == null) {
+            return false;
+        }
+        if(root1.val != root2.val) {
+            return false;
+        }
+        return isSubtree(root1.left, root2.left) && 
+            isSubtree(root1.right, root2.right);
+    }
+}
+```
+
+### 27-二叉树的镜像
+- https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011
+- 操作给定的二叉树，将其变换为源二叉树的镜像
+- 思路：递归
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public void Mirror(TreeNode root) {
+        if(root == null) {
+            return;
+        }
+        swap(root);
+        Mirror(root.left);
+        Mirror(root.right);
+    }
+    private void swap(TreeNode root) {
+        TreeNode t = root.left;
+        root.left = root.right;
+        root.right = t;
+    }
+}
+```
+
+### 28-对称的二叉树
+- https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb
+- 判断一颗二叉树是不是对称的
+- 思路：递归
+-复杂度：O(n)、O(n)
+```java
+public class Solution {
+    boolean isSymmetrical(TreeNode pRoot) {
+        if(pRoot == null) {
+            return true;
+        }
+        return isSymmetrical(pRoot.left, pRoot.right);
+    }
+    private boolean isSymmetrical(TreeNode p, TreeNode q) {
+        if(p==null && q==null) {
+            return true;
+        }
+        if(p==null || q==null) {
+            return false;
+        }
+        if(p.val != q.val) {
+            return false;
+        }
+        return isSymmetrical(p.left, q.right) && 
+            isSymmetrical(p.right, q.left);
+    }
+}
+```
+
+### 29-顺时针打印矩阵
+- https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a
+- 按顺时针螺旋状打印数组元素
+- 思路：定义四个变量表示范围，上下左右边界
+- 复杂度：O(n)、O(1)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> printMatrix(int [][] matrix) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if(matrix==null || matrix.length==0 || matrix[0].length==0) {
+            return res;
+        }
+        // 定义四个变量表示范围，上下左右边界
+        int up=0, down=matrix.length-1, left=0, right=matrix[0].length-1;
+        while(up<=down && left<=right) {
+            // 先向右记录
+            for(int i=left; i<=right; i++) {
+                res.add(matrix[up][i]);
+            }
+            // 再向下记录
+            for(int i=up+1; i<=down; i++) {
+                res.add(matrix[i][right]);
+            }
+            // 再向左记录
+            if(up != down) {
+                for(int i=right-1; i>=left; i--) {
+                    res.add(matrix[down][i]);
+                }
+            }
+            // 再向上记录（注意边界）
+            if(left != right) {
+                for(int i=down-1; i>up; i--) {
+                    res.add(matrix[i][left]);
+                }
+            }
+            // 更新边界
+            up++;down--;left++;right--;
+        }
+        return res;
+    }
+}
+```
+
+### 30-包含min函数的栈
+- https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49
+- 实现一个能够得到栈中所含最小元素的min函数，时间复杂度应为O(1)
+- 思路：minStack只push最小值
+- 复杂度：O(1)、O(n)
+```java
+import java.util.Stack;
+public class Solution {
+    private Stack<Integer> dataStack = new Stack<>();
+    private Stack<Integer> minStack = new Stack<>();
+    
+    public void push(int node) {
+        dataStack.push(node);
+        minStack.push(minStack.empty() ? node : Math.min(minStack.peek(), node));
+    }
+
+    public void pop() {
+        dataStack.pop();
+        minStack.pop();
+    }
+
+    public int top() {
+        return dataStack.peek();
+    }
+
+    public int min() {
+        return minStack.peek();
     }
 }
 ```
