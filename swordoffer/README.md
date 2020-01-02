@@ -13,18 +13,19 @@
     - [动态规划](#动态规划)
     - [其他](#其他)
 
-## 数组
+## 题目
+### 数组
 - [3-数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[3题解](#3-数组中重复的数字)
 - [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
 - [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
 - [29-顺时针打印矩阵](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)：[29题解](#29-顺时针打印矩阵)
 
-## 字符串
+### 字符串
 - [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
 - [19-正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c)：[19题解](#19-正则表达式匹配)
 - [20-表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2)：[20题解](#20-表示数值的字符串)
 
-## 链表
+### 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
 - [18-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18题解](#18-删除链表的节点)
 - [22-链表中倒数第k个结点](https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a)：[22题解](#22-链表中倒数第k个结点)
@@ -32,37 +33,37 @@
 - [24-反转链表](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)：[24题解](#24-反转链表)
 - [25-合并两个排序的链表](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)：[25题解](#25-合并两个排序的链表)
 
-## 树
+### 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
 - [8-二叉树的下一个节点](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e)：[8题解](#8-二叉树的下一个节点)
 - [26-树的子结构](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88)：[26题解](#26-树的子结构)
 - [27-二叉树的镜像](https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011)：[27题解](#27-二叉树的镜像)
 - [28-对称的二叉树](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb)：[28题解](#28-对称的二叉树)
 
-## 栈
+### 栈
 - [9-用两个栈来实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)：[9题解](#9-用两个栈来实现队列)
 - [30-包含min函数的栈](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)：[30题解](#30-包含min函数的栈)
 
-## 递归与循环
+### 递归与循环
 - [10-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10题解](#10-斐波那契数列)
 
-## 查找和排序
+### 查找和排序
 - [11-旋转数组的最小数字](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)：[11题解](#11-旋转数组的最小数字)
 
-## 回溯法
+### 回溯法
 - [12-矩阵中的路径](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc)：[12题解](#12-矩阵中的路径)
 - [13-机器人的运动范围](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8)：[13题解](#13-机器人的运动范围)
 
-## 动态规划
+### 动态规划
 - [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
 
-## 其他
+### 其他
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
 - 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
 
 
----
+## 题解
 ### 3-数组中重复的数字
 - https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8
 - 请找出数组中任意一个重复的数字
