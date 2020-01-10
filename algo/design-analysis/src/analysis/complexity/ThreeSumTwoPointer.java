@@ -29,7 +29,7 @@ public class ThreeSumTwoPointer implements ThreeSum {
                     l++;
                 }
                 else {
-                    r++;
+                    r--;
                 }
             }
         }
