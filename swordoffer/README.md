@@ -3,9 +3,10 @@
 - 数据结构
     - [数组](#数组)
     - [字符串](#字符串)
+    - [栈](#栈)
+    - [队列](#队列)
     - [链表](#链表)
     - [树](#树)
-    - [栈](#栈)
 - 算法思想
     - [递归与循环](#递归与循环)
     - [查找和排序](#查找和排序)
@@ -25,6 +26,16 @@
 - [19-正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c)：[19题解](#19-正则表达式匹配)
 - [20-表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2)：[20题解](#20-表示数值的字符串)
 
+### 栈
+- [9-用两个栈来实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)：[9题解](#9-用两个栈来实现队列)
+- [30-包含min函数的栈](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)：[30题解](#30-包含min函数的栈)
+- [31-栈的压入、弹出序列](https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106)：[31题解](#31-栈的压入、弹出序列)
+
+### 队列
+- [32.1-从上往下打印二叉树](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701)：[32.1题解](#32.1-从上往下打印二叉树)
+- [32.2-把二叉树打印成多行](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288)：[32.2题解](#32.2-把二叉树打印成多行)
+- [32.3-按之字形顺序打印二叉树](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)：[32.3题解](#32.3-按之字形顺序打印二叉树)
+
 ### 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
 - [18-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18题解](#18-删除链表的节点)
@@ -32,6 +43,7 @@
 - [23-链表中环的入口结点](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4) ：[23题解](#23-链表中环的入口结点)
 - [24-反转链表](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)：[24题解](#24-反转链表)
 - [25-合并两个排序的链表](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)：[25题解](#25-合并两个排序的链表)
+- [35-复杂链表的复制](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba)：[35题解](#35-复杂链表的复制)
 
 ### 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
@@ -39,10 +51,10 @@
 - [26-树的子结构](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88)：[26题解](#26-树的子结构)
 - [27-二叉树的镜像](https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011)：[27题解](#27-二叉树的镜像)
 - [28-对称的二叉树](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb)：[28题解](#28-对称的二叉树)
-
-### 栈
-- [9-用两个栈来实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)：[9题解](#9-用两个栈来实现队列)
-- [30-包含min函数的栈](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)：[30题解](#30-包含min函数的栈)
+- [33-二叉搜索树的后序遍历序列](https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd)：[33题解](#33-二叉搜索树的后序遍历序列)
+- [34-二叉树中和为某一值的路径](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca)：[34题解](#34-二叉树中和为某一值的路径)
+- [36-二叉搜索树与双向链表](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5)：[36题解](#36-二叉搜索树与双向链表)
+- [37-序列化二叉树](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84)：[37题解](#37-序列化二叉树)
 
 ### 递归与循环
 - [10-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10题解](#10-斐波那契数列)
@@ -53,6 +65,7 @@
 ### 回溯法
 - [12-矩阵中的路径](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc)：[12题解](#12-矩阵中的路径)
 - [13-机器人的运动范围](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8)：[13题解](#13-机器人的运动范围)
+- [38-字符串的排列](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7)：[38题解](#38-字符串的排列)
 
 ### 动态规划
 - [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
@@ -1086,6 +1099,373 @@ public class Solution {
 
     public int min() {
         return minStack.peek();
+    }
+}
+```
+
+### 31-栈的压入、弹出序列
+- https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106
+- 输入两个序列，一个是压入序列，一个弹出序列，判断是否匹配
+- 思路：用栈模拟
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+
+public class Solution {
+    public boolean IsPopOrder(int [] pushA,int [] popA) {
+        if(pushA.length==0 || popA.length==0) {
+            return false;
+        }
+        // 序列的下标索引
+        int popIndex = 0;
+        Stack<Integer> stack = new Stack<Integer>();
+        for(int i=0; i<pushA.length; i++) {
+            stack.push(pushA[i]);
+            // 如果栈顶元素与popA的相同，则出栈
+            while(!stack.isEmpty() && stack.peek()==popA[popIndex]) {
+                stack.pop();
+                popIndex++;
+            }
+        }
+        // 栈为空，则说明全部匹配
+        return stack.isEmpty();
+    }
+}
+```
+
+### 32.1-从上往下打印二叉树
+- https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701
+- 从上往下，从左向右打印二叉树节点
+- 思路：队列
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+        ArrayList<Integer> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            // 当前队列的size就是该层的节点数
+            int cnt = queue.size();
+            while(cnt-- > 0) {
+                TreeNode node = queue.poll();
+                if(node == null) {
+                    continue;
+                }
+                res.add(node.val);
+                queue.add(node.left);
+                queue.add(node.right);
+            }
+        }
+        return res;
+    }
+}
+```
+
+### 32.2-把二叉树打印成多行
+- https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288
+- 打印二叉树，按层打印
+- 思路：队列
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(pRoot);
+        while(!queue.isEmpty()) {
+            // 用List存每一层的节点
+            ArrayList<Integer> list = new ArrayList<>();
+            // 当前队列的size就是该层的节点数
+            int cnt = queue.size();
+            while(cnt-- > 0) {
+                TreeNode node = queue.poll();
+                if(node == null) {
+                    continue;
+                }
+                list.add(node.val);
+                queue.add(node.left);
+                queue.add(node.right);
+            }
+            // 非空判断，不然会添加空list
+            if(list.size() != 0) {
+                res.add(list);
+            }
+        }
+        return res;
+    }
+}
+```
+
+### 32.3-按之字形顺序打印二叉树
+- https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0
+- 先从左向右，再从右向左
+- 思路：队列，设置布尔变量rev
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(pRoot);
+        // 设置布尔变量表示逆序
+        boolean reverse = false;
+        while(!queue.isEmpty()) {
+            // 用List存每一层的节点
+            ArrayList<Integer> list = new ArrayList<>();
+            // 当前队列的size就是该层的节点数
+            int cnt = queue.size();
+            while(cnt-- > 0) {
+                TreeNode node = queue.poll();
+                if(node == null) {
+                    continue;
+                }
+                list.add(node.val);
+                queue.add(node.left);
+                queue.add(node.right);
+            }
+            // 使用Collections反转
+            if(reverse == true) {
+                Collections.reverse(list);
+            }
+            reverse = !reverse;
+            if(list.size() != 0) {
+                res.add(list);
+            }
+        }
+        return res;
+    }
+}
+```
+
+### 33-二叉搜索树的后序遍历序列
+- https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd
+- 判断数组是否为二叉搜索树后序遍历结果
+- 思路：递归
+- 复杂度：O(n^2)、O(n)
+```java
+public class Solution {
+    public boolean VerifySquenceOfBST(int [] sequence) {
+        if(sequence==null || sequence.length==0) {
+            return false;
+        }
+        return verify(sequence, 0, sequence.length-1);
+    }
+    private boolean verify(int[] sequence, int start, int root) {
+        if(start >= root) {
+            return true;
+        }
+        int key = sequence[root];
+        int cur;
+        // 找到左右子树的分界点
+        for(cur=start; cur<root; cur++) {
+            if(sequence[cur] > key) {
+                break;
+            }
+        }
+        // 左右子树中判断是否有小于root的值，有返回false
+        for(int i=cur; i<root; i++) {
+            if(sequence[i] < key) {
+                return false;
+            }
+        }
+        return verify(sequence, start, cur-1) && 
+            verify(sequence, cur, root-1);
+    }
+}
+```
+
+### 34-二叉树中和为某一值的路径
+- https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca
+- 返回二叉树中和为某一值的所有路径
+- 思路：回溯法，递归target-node.val
+- 复杂度：O(n)、O(h)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        ArrayList<Integer> path = new ArrayList<>();
+        backtracking(root, target, res, path);
+        return res;
+    }
+    private void backtracking(TreeNode node, int target, ArrayList<ArrayList<Integer>> res, ArrayList<Integer> path) {
+        if(node == null) {
+            return;
+        }
+        path.add(node.val);
+        if(node.left==null && node.right==null) {
+            if(node.val == target) {
+                res.add(new ArrayList<>(path));
+            }
+        }
+        // 用减去node值的方法替代求和
+        backtracking(node.left, target-node.val, res, path);
+        backtracking(node.right, target-node.val, res, path);
+        path.remove(path.size()-1);
+    }
+}
+```
+
+### 35-复杂链表的复制
+- https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba
+- 复制一个复杂的链表，不能用原来的引用
+- 思路：迭代，分三步进行（插入新节点、建立random链接、拆分）
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public RandomListNode Clone(RandomListNode pHead) {
+        if(pHead == null) {
+            return null;
+        }
+        // 1. 插入新节点
+        RandomListNode cur = pHead;
+        while(cur != null) {
+            RandomListNode clone = new RandomListNode(cur.label);
+            clone.next = cur.next;
+            cur.next = clone;
+            cur = clone.next;
+        }
+        // 2. 建立random链接
+        cur = pHead;
+        while(cur != null) {
+            RandomListNode clone = cur.next;
+            if(cur.random != null) {
+                // random的下一个
+                clone.random = cur.random.next;
+            }
+            cur = clone.next;
+        }
+        // 3. 拆分
+        cur = pHead;
+        RandomListNode cHead = pHead.next;
+        // 要判断next是否为空
+        while(cur.next != null) {
+            RandomListNode next = cur.next;
+            cur.next = next.next;
+            cur = next;
+        }
+        return cHead;
+    }
+}
+```
+
+### 36-二叉搜索树与双向链表
+- https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5
+- 将二叉搜索树改成双向链表
+- 思路：中序遍历
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    // 双向链表左边头结点、右边头结点
+    private TreeNode lHead = null;
+    private TreeNode rHead = null;
+    
+    public TreeNode Convert(TreeNode pRootOfTree) {
+        // 中序遍历
+        if(pRootOfTree == null) {
+            return null;
+        }
+        // 最左的叶子节点作为链表第一个结点
+        Convert(pRootOfTree.left);
+        if(rHead == null) {
+            lHead = pRootOfTree;
+            rHead = pRootOfTree;
+        }
+        else {
+            // 根节点插入链表右边，rHead向后移
+            rHead.right = pRootOfTree;
+            pRootOfTree.left = rHead;
+            rHead = pRootOfTree;
+        }
+        // 插入右叶子节点
+        Convert(pRootOfTree.right);
+        // 返回左边头结点
+        return lHead;
+    }
+}
+```
+
+### 37-序列化二叉树
+- https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84
+- 序列化和反序列化二叉树，以#结束
+- 思路：递归，序列化前序遍历，反序列化
+- 复杂度：O(n)、O(n)
+```
+public class Solution {
+    // 使用index设置树节点的val值，
+    int index = -1;
+    
+    String Serialize(TreeNode root) {
+        if(root == null) {
+            return "#";
+        }
+        // 前序遍历
+        return root.val+" "+Serialize(root.left)+" "+Serialize(root.right);
+    }
+    
+    TreeNode Deserialize(String str) {
+        // 将序列化str按分隔符转为数组
+        String[] s = str.split(" ");
+        index++;
+        // 下标越界则返回空
+        if(index > s.length) {
+            return null;
+        }
+        // 前序遍历递归，如果值为#返回空节点
+        TreeNode t = null;
+        if(!s[index].equals("#")) {
+            t = new TreeNode(Integer.parseInt(s[index]));
+            t.left = Deserialize(str);
+            t.right = Deserialize(str);
+        }
+        return t;
+    }
+}
+```
+
+### 38-字符串的排列
+- https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7
+- 字符串按字典序排序
+- 思路：回溯法，按递归树固定第一位、第二位
+- 复杂度：O(n^n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<String> Permutation(String str) {
+        ArrayList<String> res = new ArrayList<>();
+        if(str!=null && str.length()>0) {
+            backtracking(str.toCharArray(), 0, res);
+            // list按字典序排序
+            Collections.sort(res);
+        }
+        return res;
+    }
+    private void backtracking(char[] cArr, int index, ArrayList<String> list) {
+        if(index == cArr.length-1) {
+            String str = String.valueOf(cArr);
+            if(!list.contains(str)) {
+                list.add(str);
+            }
+        }
+        else {
+            // 第二层，变换第一位
+            for(int i=index; i<cArr.length; i++) {
+                swap(cArr, i, index);
+                // 第三层，变换第二位
+                backtracking(cArr, index+1, list);
+                // 再swap一次调整回原样
+                swap(cArr, i, index);
+            }
+        }
+    }
+    private void swap(char[] cArr, int i, int j) {
+        char t = cArr[i];
+        cArr[i] = cArr[j];
+        cArr[j] = t;
     }
 }
 ```
