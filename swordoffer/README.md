@@ -74,6 +74,7 @@
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
 - 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
+- [39-数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)：[39题解](#39-数组中出现次数超过一半的数字)
 
 
 ## 题解
@@ -1466,6 +1467,47 @@ public class Solution {
         char t = cArr[i];
         cArr[i] = cArr[j];
         cArr[j] = t;
+    }
+}
+```
+
+### 39-数组中出现次数超过一半的数字
+- https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163
+- 有一个数字出现次数超过了一半，找到则返回，没找到返回0
+- 思路：多数投票算法（排序O(nlogn)、哈希时空都是O(n)）
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public int MoreThanHalfNum_Solution(int [] array) {
+        // 第一遍扫描，得到候选节点
+        int candidate = array[0];
+        int count = 1;
+        int n = array.length;
+        for(int i=1; i<n; i++) {
+            // 计数
+            if(array[i] == candidate) {
+                count++;
+            }
+            else {
+                count--;
+            }
+            // 改变candidate
+            if(count == 0) {
+                candidate = array[i];
+                count = 1;
+            }
+        }
+        // 第二遍扫描，判断次数是否过半
+        count = 0;
+        for(int i=0; i<n; i++) {
+            if(array[i] == candidate) {
+                count++;
+            }
+        }
+        if(count > n/2) {
+            return candidate;
+        }
+        return 0;
     }
 }
 ```
