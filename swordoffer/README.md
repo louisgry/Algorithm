@@ -35,6 +35,9 @@
 - [32.1-从上往下打印二叉树](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701)：[32.1题解](#32.1-从上往下打印二叉树)
 - [32.2-把二叉树打印成多行](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288)：[32.2题解](#32.2-把二叉树打印成多行)
 - [32.3-按之字形顺序打印二叉树](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)：[32.3题解](#32.3-按之字形顺序打印二叉树)
+- [40-最小的K个数](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)：[40题解](#40-最小的K个数)
+- [41.1-数据流中的中位数](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1)：[41.1题解](#41.1-数据流中的中位数)
+- [41.2-字符流中第一个不重复的字符](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720)：[41.2题解](#41.2-字符流中第一个不重复的字符)
 
 ### 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
@@ -69,13 +72,15 @@
 
 ### 动态规划
 - [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
+- [42-连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)：[42题解](#42-连续子数组的最大和)
 
 ### 其他
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
 - 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
 - [39-数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)：[39题解](#39-数组中出现次数超过一半的数字)
-
+- [43-从1到n整数中1出现的次数](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)：[43题解](43-从1到n整数中1出现的次数)
+- 44-数字序列中的某一位数字：[44题解](#44-数字序列中的某一位数字)
 
 ## 题解
 ### 3-数组中重复的数字
@@ -1508,6 +1513,287 @@ public class Solution {
             return candidate;
         }
         return 0;
+    }
+}
+```
+
+### 40-最小的K个数
+- https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf
+- 找出数组中最小的k个数
+- 思路1：Partition快速选择，会修改数组
+- 复杂度：O(n)、O(1)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        ArrayList<Integer> res = new ArrayList<>();
+        // 边界条件，注意k的边界
+        if(input==null || input.length==0 || k<=0 || k>input.length) {
+            return res;
+        }
+        // 返回前k个是最小的
+        findKSmall(input, k-1);
+        for(int i=0; i<k; i++) {
+            res.add(input[i]);
+        }
+        return res;
+    }
+    private void findKSmall(int[] nums, int k) {
+        int l=0, r=nums.length-1;
+        while(l < r) {
+            int i = partition(nums, l, r);
+            if(i == k) {
+                break;
+            }
+            if(i > k) {
+                r = i - 1;
+            }
+            else {
+                l = i + 1;
+            }
+        }
+    }
+    private int partition(int[] nums, int l , int r){
+        int p = nums[l];
+        int i=l, j=r+1;
+        while(true) {
+            while(i!=r && nums[++i]<p);
+            while(j!=l && nums[--j]>p);
+            if(i >= j) {
+                break;
+            }
+            swap(nums, i, j);
+        }
+        swap(nums, l, j);
+        return j;
+    }
+    private void swap(int[] nums, int i, int j){
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+}
+```
+- 思路2：最小堆，适合海量数据输入
+- 复杂度：O(nlogk)、O(k)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if(k<=0 || k>input.length) {
+            return res;
+        }
+        // 添加进最小堆中
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>(k);
+        for(int i=0; i<input.length; i++) {
+            pq.add(input[i]);
+        }
+        // 返回结果
+        for(int i=0; i<k; i++) {
+            res.add(pq.poll());
+        }
+        return res;
+    }
+}
+```
+- 思路3：最大堆维护最小堆
+- 复杂度：O(nlogk)、O(k)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        if(k<=0 || k>input.length) {
+            return new ArrayList<>();
+        }
+        // 最大堆维护最小堆，只剩k个最小的
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((o1, o2) -> o2-o1);
+        for(int i=0; i<input.length; i++) {
+            pq.add(input[i]);
+            if(pq.size() > k) {
+                pq.poll();
+            }
+        }
+        return new ArrayList<>(pq);
+    }
+}
+```
+
+### 41.1-数据流中的中位数
+- https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1
+- 实现添加和获取中位数操作
+- 思路：两个优先队列
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    // 最大堆：左边是较小的元素
+    private PriorityQueue<Integer> left = new PriorityQueue<>((o1, o2) -> o2-o1);
+    // 最小堆：右边是较大的元素
+    private PriorityQueue<Integer> right = new PriorityQueue<>();
+    // 个数
+    private int n = 0;
+    
+    public void Insert(Integer num) {
+        n++;
+        // 保证两个堆平衡
+        if(n%2 == 0) {
+            // 偶数：添加最小的到左边
+            right.add(num);
+            left.add(right.poll());
+        }
+        else {
+            // 奇数：添加最大的到右边
+            left.add(num);
+            right.add(left.poll());
+        }
+    }
+
+    public Double GetMedian() {
+        if(n%2 == 0 ) {
+            return (left.peek()+right.peek())/2.0;
+        }
+        else {
+            return (double) right.peek();
+        }
+    }
+}
+```
+
+### 41.2-字符流中第一个不重复的字符
+- https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720
+- 找出第一个不重复的字符
+- 思路：hash+队列
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    private int[] hash = new int[256];
+    private Queue<Character> queue = new LinkedList<>();
+    //Insert one char from stringstream
+    public void Insert(char ch) {
+        hash[ch]++;
+        queue.add(ch);
+        // 重复的字符出队
+        while(!queue.isEmpty() && hash[queue.peek()]>1) {
+            queue.poll();
+        }
+    }
+    //return the first appearence once char in current stringstream
+    public char FirstAppearingOnce() {
+        if(queue.isEmpty()) {
+            return '#';
+        }
+        else {
+            return queue.peek();
+        }
+    }
+}
+```
+
+### 42-连续子数组的最大和
+- https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484
+- 求连续的子数组之和的最大值
+- 思路：动态规划，如果和小于等于0重新加，否则累加
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public int FindGreatestSumOfSubArray(int[] array) {
+        if(array==null || array.length==0) {
+            return 0;
+        }
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+        for(int num : array) {
+            if(sum <= 0) {
+                sum = num;
+            } 
+            else {
+                sum += num;
+            }
+            max = Math.max(max, sum);
+        }
+        return max;
+    }
+}
+```
+
+### 43-从1到n整数中1出现的次数
+- https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6
+- 计算从1开始到n，出现的1的次数
+- 思路：分别计算个位、十位、百位...上1出现的次数
+- 复杂度：O(logn)、O(1)
+```java
+public class Solution {
+    public int NumberOf1Between1AndN_Solution(int n) {
+        int count = 0;
+        for(int i=1; i<=n; i*=10) {
+            // 高位a，低位b
+            int a = n/i, b = n%i;
+            // 加8处理：当百位为0，则a/10==(a+8)/10，当百位>=2，补8会产生进位位，效果等同于(a/10+1)
+            count += (a+8)/10*i;
+            // b+1处理：当百位对应0或>=2时，有(a+8)/10次包含所有100个点，还有当百位为1(a%10==1)
+            if(a%10 == 1) {
+                count += b+1;
+            }
+        }
+        return count;
+    }
+}
+```
+
+### 44-数字序列中的某一位数字
+- 序列化012345678910...，求第n位对应的数字
+- 思路：找规律
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    /**
+     * 44-数字序列中的某一位数字
+     */
+    public int getDigitAtIndex(int index) {
+        if(index < 0) {
+            return -1;
+        }
+        // 1是个位，2是百位...
+        int place = 1;
+        while(true) {
+            int amount = getAmountOfPlace(place);
+            int total = amount*place;
+            if(index < total) {
+                return getDigitAtIndex(index, place);
+            }
+            index -= total;
+            place++;
+        }
+    }
+    /**
+     * place位数的数字组成的字符串长度：10,90,900
+     */
+    private int getAmountOfPlace(int place) {
+        if(place == 1) {
+            return 10;
+        }
+        return (int) Math.pow(10, place-1)*9;
+    }
+    /**
+     * place位数组成的字符串中，第index个数
+     */
+    private int getDigitAtIndex(int index, int place) {
+        int begin = getBeginNumberOfPlace(place);
+        int shift = index / place;
+        String num = (begin + shift) + "";
+        int count = index % place;
+        return num.charAt(count) - '0';
+    }
+    /**
+     * place位数的起始数字
+     */
+    private int getBeginNumberOfPlace(int place) {
+        if(place == 1) {
+            return 0;
+        }
+        return (int) Math.pow(10, place-1);
     }
 }
 ```
