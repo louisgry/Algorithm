@@ -11,7 +11,7 @@ public class MedianNum {
      * 41.1-数据流中的中位数
      * - https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1
      */
-    // 最大堆：左边是较小的元素
+    // 最大堆：左边是较小的元素（多用Lambda表达式）
     private PriorityQueue<Integer> left = new PriorityQueue<>((o1, o2) -> o2-o1);
     // 最小堆：右边是较大的元素
     private PriorityQueue<Integer> right = new PriorityQueue<>();
