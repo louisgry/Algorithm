@@ -20,6 +20,7 @@
 - [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
 - [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
 - [29-顺时针打印矩阵](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)：[29题解](#29-顺时针打印矩阵)
+- [45-把数组排列成最小的数](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993)：[45题解](#45-把数组排列成最小的数)
 
 ### 字符串
 - [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
@@ -73,6 +74,7 @@
 ### 动态规划
 - [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
 - [42-连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)：[42题解](#42-连续子数组的最大和)
+- 46-把数字翻译成字符串：[46题解](#46-把数字翻译成字符串)
 
 ### 其他
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
@@ -1748,9 +1750,6 @@ public class Solution {
 - 复杂度：O(n)、O(1)
 ```java
 public class Solution {
-    /**
-     * 44-数字序列中的某一位数字
-     */
     public int getDigitAtIndex(int index) {
         if(index < 0) {
             return -1;
@@ -1794,6 +1793,71 @@ public class Solution {
             return 0;
         }
         return (int) Math.pow(10, place-1);
+    }
+}
+```
+
+### 45-把数组排列成最小的数
+- https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993
+- 数组的数字排序组成最小的一个数
+- 思路：排序
+- 复杂度：O(n)、O(1)
+```java
+import java.util.*;
+public class Solution {
+    public String PrintMinNumber(int [] numbers) {
+        if(numbers==null || numbers.length==0) {
+            return "";
+        }
+        int n = numbers.length;
+        // 转换为字符串数组
+        String[] nums = new String[n];
+        for(int i=0; i<n; i++) {
+            nums[i] = numbers[i]+"";
+        }
+        // 字符串数组排序：比较s1+s2和s2+s1的大小
+        Arrays.sort(nums, (s1,s2)->(s1+s2).compareTo(s2+s1));
+        String res = "";
+        for(String num : nums) {
+            res += num;
+        }
+        return res;
+    }
+}
+```
+
+### 46-把数字翻译成字符串
+- 将数字对应成字母，计算一个数字对应的字符串有几种
+- 思路：动态规划
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public int numDecodings(String s) {
+        if(s==null || s.length()==0) {
+            return 0;
+        }
+        int n = s.length();
+        int[] dp = new int[n+1];
+        dp[0] = 1;
+        // 判断首位是否为零
+        dp[1] = s.charAt(0)=='0' ? 0 : 1;
+        for(int i=2; i<=n; i++) {
+            // 当前位的数字
+            int one = Integer.parseInt(s.substring(i-1, i));
+            if(one != 0) {
+                dp[i] += dp[i-1];
+            }
+            if(s.charAt(i-2) == '0') {
+                continue;
+            }
+            // 两位数字
+            int two = Integer.parseInt(s.substring(i-2, i));
+            // 累加次数
+            if(two <= 26) {
+                dp[i] += dp[i-2];
+            }
+        }
+        return dp[n];
     }
 }
 ```
