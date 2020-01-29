@@ -1,3 +1,4 @@
+
 # LeetCode分类汇总 (Java)
 > https://github.com/louisgry/Algorithm/tree/master/leetcode
 
@@ -20,7 +21,7 @@
 ## 数据结构
 ### stack
 - [栈](#栈)
-    - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)：[【20题解】](#20题解) 
+    - [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)：[【20题解】](#20题解)
     - [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)：[【144题解】](#144题解)
     - more
     - [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)：[【150题解】](#150题解)
@@ -132,7 +133,7 @@
     - [79. Word Search](https://leetcode.com/problems/word-search/)：[【79题解】](#79题解)
     - [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)：[【200题解】](#200题解)
     - [51. N Queens](https://leetcode.com/problems/n-queens/)：[【51题解】](#51题解)
-    
+   
 ### math
 - [数学](#数学)
     - [136. Single Number](https://leetcode.com/problems/single-number/)：[【136题解-异或】](#136题解-异或)
@@ -157,14 +158,14 @@
         // ---- 如果不匹配，返回false
         // ---- 如果for结束，栈不为空，返回false
         // ---- 否则，返回true
-        
+       
         Stack<Character> stack = new Stack<Character>();
         char[] matchs = {'(', '{', '['};
-        
+       
         for(int i=0; i<s.length(); i++) {
             // s.charAt(i) (
             if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='[') {
-                stack.push(s.charAt(i));    
+                stack.push(s.charAt(i));   
             }
             else {
                 // 【Runtime Error："]"】没有进行size为0的判断
@@ -182,13 +183,13 @@
                 else {
                     match = matchs[2];
                 }
-                
+               
                 if(c != match) {
                     return false;
                 }
             }
         }
-        
+       
         if(stack.size()!=0) {
             return false;
         }
@@ -234,7 +235,7 @@
         // 把第一个指令go-root压入栈，while循环直到stack为空
         // -- 如果指令是print，把command.node的值add进List
         // -- 否则指令就是go，把指令倒序压入stack：print-root, go-left, go-right
-        
+       
         List<Integer> res = new ArrayList<Integer>();
         // 【Runtime Error: []】没有进行非空判断
         if(root == null) {
@@ -380,7 +381,7 @@
         // 优先队列，频率为优先级(频率，元素)
         // 怎么计算频率：Map（元素，频率）
         // 怎么根据频率排序：PairComparator
-        
+       
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int i=0; i<nums.length; i++) {
             if(!map.containsKey(nums[i])) {
@@ -390,7 +391,7 @@
                 map.put(nums[i], map.get(nums[i])+1);
             }
         }
-        
+       
         PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<>(new PairComparator());
         for(Integer num : map.keySet()) {
             int freq = map.get(num);
@@ -405,7 +406,7 @@
                 pq.add(new Pair<Integer, Integer>(freq, num));
             }
         }
-        
+       
         List<Integer> res = new ArrayList<Integer>();
         while(!pq.isEmpty()) {
             res.add(pq.poll().getValue());
@@ -422,7 +423,7 @@
         }
     }
     ```
-  
+ 
 ### 102题解
 - queue
     - 102 Binary Tree Level Order Traversal：https://leetcode.com/problems/binary-tree-level-order-traversal/
@@ -445,7 +446,7 @@
         // -- 把值add进level层的res
         // -- 如果有左子树，入队left，level+1
         // -- 如果有右子树，入队right，level+1
-        
+       
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         if(root == null) {
             return res;
@@ -494,7 +495,7 @@
         // -- 取出队首，若num为0，return step
         // -- for循环，i从1开始自增，当num-i*i>=0
         // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
-        
+       
         Queue<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
         boolean[] visited = new boolean[n+1];
         queue.add(new Pair(n, 0));
@@ -538,7 +539,7 @@
         ListNode node = reverseList(head.next);
         head.next.next = head;
         head.next = null;
-        
+       
         return node;
     }
     ```
@@ -551,7 +552,7 @@
         ListNode cur = head;
         while(cur != null) {
             ListNode next = cur.next;
-            
+           
             cur.next = pre;
             pre = cur;
             cur = next;
@@ -573,7 +574,7 @@
     public ListNode removeElements(ListNode head, int val) {
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
-        
+       
         ListNode cur = dummyHead;
         while(cur.next != null) {
             if(cur.next.val == val){
@@ -606,25 +607,25 @@
         // -- 将pre指向下一个目标之前(node1)
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
-        
+       
         ListNode pre = dummyHead;
-        
+       
         while(pre.next != null && pre.next.next != null) {
             ListNode node1 = pre.next;
             ListNode node2 = node1.next;
             ListNode next = node2.next;
-            
+           
             pre.next = node2;
             node2.next = node1;
             node1.next = next;
-            
+           
             pre = node1;
         }
-        
+       
         return dummyHead.next;
     }
     ```
-  
+ 
 ### 237题解
 - linkedlist
     - 237 Delete Node in a Linked List：https://leetcode.com/problems/delete-node-in-a-linked-list/
@@ -649,7 +650,7 @@
         return;
     }
     ```
-  
+ 
 ### 19题解
 - linkedlist
     - 19 Remove Nth Node From End of List：https://leetcode.com/problems/remove-nth-node-from-end-of-list/
@@ -663,20 +664,20 @@
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
-        
+       
         ListNode p = dummyHead;
         ListNode q = dummyHead;
         for(int i=0; i<n+1; i++){
             assert q != null;
             q = q.next;
         }
-        
+       
         while(q != null) {
             p = p.next;
             q = q.next;
         }
         p.next = p.next.next;
-        
+       
         return dummyHead.next;
     }
     ```
@@ -687,7 +688,7 @@
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
-        
+       
         ListNode cur = dummyHead.next;
         int index = 0;
         while(cur != null){
@@ -702,7 +703,7 @@
         return dummyHead.next;
     }
     ```
-  
+ 
 ### 234题解
 - linkedlist
     - 234 Palindrome Linked List：https://leetcode.com/problems/palindrome-linked-list/
@@ -769,7 +770,7 @@
         return Math.max(maxDepth(root.left), maxDepth(root.right))+1;
     }
     ```
-  
+ 
 ### 111题解
 - 111题解
     - 111 Minimum Depth of Binary Tree：https://leetcode.com/problems/minimum-depth-of-binary-tree/
@@ -799,7 +800,7 @@
         return min;
     }
     ```
-  
+ 
 ### 226题解
 - 226题解
     - 226 Invert Binary Tree：https://leetcode.com/problems/invert-binary-tree/
@@ -950,7 +951,7 @@
         return root;
     }
     ```
-  
+ 
 ### 100题解
 - 100题解
     - 100 Same Tree：https://leetcode.com/problems/same-tree/
@@ -1116,7 +1117,7 @@
         middle.remove(middle.size()-1);
     }
     ```
-  
+ 
 ### 129题解
 - 129题解
     - 129 Sum Root to Leaf Numbers：https://leetcode.com/problems/sum-root-to-leaf-numbers/
@@ -1345,7 +1346,7 @@
         return false;
     }
     ```
-  
+ 
 ### 220题解
 - 220题解
     - 220 Contain Duplicate III：https://leetcode.com/problems/contains-duplicate-iii/
@@ -1371,7 +1372,7 @@
         return false;
     }
     ```
-  
+ 
 ### 136题解
 - 136 Single Number：https://leetcode.com/problems/single-number/
     - 找出数组中只出现过一次的元素，其他元素出现两次
@@ -1454,7 +1455,7 @@
         - 判断一个数字是否为happy number
         - Input: 19
         - Output: true
-        - Explanation: 
+        - Explanation:
             - 1^2 + 9^2 = 82
             - 8^2 + 2^2 = 68
             - 6^2 + 8^2 = 100
@@ -1576,7 +1577,7 @@
 
 ### 27题解
 - 27题解
-    - 27 Remove Element：https://leetcode.com/problems/remove-element/ 
+    - 27 Remove Element：https://leetcode.com/problems/remove-element/
         - 给定nums，删除指定的值val
         - Input: nums = [3,2,2,3], val = 3,
         - Output: Your function should return length = 2, with the first two elements of nums being 2.
@@ -1600,13 +1601,13 @@
         nums[j] = t;
     }
     ```
-  
+ 
 ### 122题解
 - 122 Best Time to Buy and Sell Stock II：https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
     - 求买卖股票最多可获得的收益
     - Input: [7,1,5,3,6,4]
     - Output: 7
-    - Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4. Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3. 
+    - Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4. Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 - 思路：cursor
 - 复杂度：O(n)、O(1)
 ```java
@@ -1658,7 +1659,7 @@
             }
         }
     }
-    
+   
     public void swap(int[] nums, int i, int j){
         int t = nums[i];
         nums[i] = nums[j];
@@ -1668,7 +1669,7 @@
 
 ### 215题解
 - 215题解
-    - 215 Kth Largest Element in an Array：https://leetcode.com/problems/kth-largest-element-in-an-array/ 
+    - 215 Kth Largest Element in an Array：https://leetcode.com/problems/kth-largest-element-in-an-array/
         - 返回第K大的数
         - Input: [3,2,1,5,6,4] and k = 2
         - Output: 5
@@ -1717,7 +1718,7 @@
 ## 双指针
 ### 167题解
 - 167题解
-    - 167 Two Sum II：https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ 
+    - 167 Two Sum II：https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
         - 给定排序好的数组，找出两数和等于target的下标，index1<index2
         - Input: numbers = [2,7,11,15], target = 9
         - Output: [1,2]
@@ -1745,7 +1746,7 @@
     ```
 ### 11题解
 - 11题解
-    - 11 Container With Most Water：https://leetcode.com/problems/container-with-most-water/ 
+    - 11 Container With Most Water：https://leetcode.com/problems/container-with-most-water/
         - 求Container的最大面积
         - Input: [1,8,6,2,5,4,8,3,7]
         - Output: 49
@@ -1801,7 +1802,7 @@
         return flag;
     }
     ```
-  
+ 
 ### 345题解
 - 345题解
     - 345 Reverse Vowels of a String：https://leetcode.com/problems/reverse-vowels-of-a-string/
@@ -1843,7 +1844,33 @@
         - Input: s = 7, nums = [2,3,1,2,4,3]
         - Output: 2
         - 注意：子数组是否连续？没有解怎么办？
-    - 思路：滑动窗口（维护nums[i...j]，如果sum比s小 sum += nums[++j]，否则sum -= nums[i++]）
+    - 思路1：两次遍历：求往后的和值达到要求的长度最小能为多少（包含了大量的重复计算）
+    - 时间复杂度：O(n^2)
+    - 空间复杂度：O(1)
+    ```
+    public int minSubArrayLen(int s, int[] nums) {
+        // 非空判断
+        if(nums==null || nums.length==0) {
+            return 0;
+        }
+        // 两次遍历：求往后的和值达到要求的长度最小能为多少
+        int min = Integer.MAX_VALUE;
+        for(int i=0; i<nums.length; i++) {
+            int sum = 0;
+            for(int j=i; j<nums.length; j++) {
+                sum += nums[j];
+                if(sum >= s) {
+                    min = Math.min(min, j-i+1);
+                    break;
+                }
+            }
+        }
+        if(min==Integer.MAX_VALUE)
+            return 0;
+        return min;
+    }
+    ```
+    - 思路2：滑动窗口（维护nums[i...j]，如果sum比s小 sum += nums[++j]，否则sum -= nums[i++]）
     - 时间复杂度：O(n)
     - 空间复杂度：O(1)
     ```
@@ -1874,28 +1901,35 @@
     - 3 Longest Substring Without Repeating Characters：https://leetcode.com/problems/longest-substring-without-repeating-characters/
         - 求字符串不重复子串的最长值
         - Input: "abcabcbb"
-        - Output: 3 
+        - Output: 3
         - Explanation: The answer is "abc", with the length of 3.
     - 思路：滑动窗口，使用freq[256]记录重复字符
     - 时间复杂度：O(n)
-    - 空间复杂度：O(1)
+    - 空间复杂度：O(len(charset))
     ```
     public int lengthOfLongestSubstring(String s) {
-        int[] freq = new int[256]; // 记录字母是否重复
-        int i=0, j=-1;
-        int len = 0;
-        while(i<s.length()){
-            if(j+1<s.length() && freq[s.charAt(j+1)]==0){
-                j++;
-                freq[s.charAt(j)]++;
-            }
-            else{
-                freq[s.charAt(i)]--;
-                i++;
-            }
-            len = Math.max(len, j-i+1); // 注意：是最长子串max
+        // 非空判断
+        if(s==null || s.length()==0) {
+            return 0;
         }
-        return len;
+        // 滑动窗口为s[l...r]
+        int l=0, r=-1;
+        // 记录字符频率
+        int[] freq = new int[256];
+        int max = Integer.MIN_VALUE;
+
+        while(l < s.length()) {
+            // 右边界往前移动
+            if(r+1<s.length() && freq[s.charAt(r+1)]==0) {
+                // 需判断数组下标是否越界
+                freq[s.charAt(++r)]++;
+            }
+            else {
+                freq[s.charAt(l++)]--;
+            }
+            max = Math.max(max, r-l+1);
+        }
+        return max;
     }
     ```
 
@@ -2024,7 +2058,7 @@
 - 424题解
     - 424 Longest Repeating Character Replacement：https://leetcode.com/problems/longest-repeating-character-replacement/
         - 如字符串s可以替换k次，求最长的连续重复字符的个数
-        - Input: s = "ABAB", k = 2    
+        - Input: s = "ABAB", k = 2   
         - Output: 4
         - Explanation: Replace the two 'A's with two 'B's or vice versa.
     - 思路：滑动窗口
@@ -2061,7 +2095,7 @@
             - 1 step + 1 step
             - 2 steps
     - 递归解法：StackOverflowError栈溢出（原因没有指定n=1的情况）
-        - 过不了：Time Limit Exceeded 
+        - 过不了：Time Limit Exceeded
     - Key：爬上n-1阶台阶再爬1阶，或者爬上n-2阶台阶再爬2阶
     - 记忆化搜索memo：自顶向下的解决问题
     - 时间复杂度：O(n)
@@ -2073,7 +2107,7 @@
         Arrays.fill(memo, -1);
         return climbing(n);
     }
-    
+   
     public int climbing(int n){
         if(n==1)
             return 1;
@@ -2101,14 +2135,14 @@
 
 ### 343题解
 - dp
-    - 343 Integer Break：https://leetcode.com/problems/integer-break/ 
+    - 343 Integer Break：https://leetcode.com/problems/integer-break/
         - 给定正整数n，分割n为至少两个数之和，返回分割后的数字相乘的最大值
         - Input: 10
         - Output: 36
         - Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
     - Key：f(n) = max(i*f(n-i))
-    
-    
+   
+   
     - 递归：Time Limit Exceeded（暴力解法：回溯遍历这个数分割的所有可能性 O(2^n)）
     - 思路1：记忆化搜索
     - 时间复杂度：O(n^2)
@@ -2146,7 +2180,7 @@
     public int integerBreak(int n) {
         int[] memo = new int[n+1];
         Arrays.fill(memo, -1);
-        
+       
         memo[1] = 1;
         for(int i=2; i<=n; i++)
             // 求解memo[i]
@@ -2163,7 +2197,7 @@
 
 ### 198题解
 - dp
-    - 198 House Robber：https://leetcode.com/problems/house-robber/ 
+    - 198 House Robber：https://leetcode.com/problems/house-robber/
         - 给定nums数组代表连续相邻的家庭所有的money，若抢相邻的两家会触发报警，求所能抢的money的最大值
         - Input: [1,2,3,1]
         - Output: 4
@@ -2172,8 +2206,8 @@
     - Key
         - 状态（函数的定义）：考虑偷取[x...n-1]范围里的房子
         - 状态转移方程：f(0)=max{v(0)+f(2), v(1)+f(3), v(2)+f(4), ..., v(n-3)+f(n-1), v(n-2), v(n-1)}
-    
-    
+   
+   
     - 思路1：记忆化搜索
     - 时间复杂度：O(n^2)
     - 空间复杂度：O(n)
@@ -2236,7 +2270,7 @@
         Arrays.fill(memo, -1);
         return squares(n);
     }
-    
+   
     private int squares(int n){
         if(n==0)
             return 0;
@@ -2379,7 +2413,7 @@
         for(int i=1; i<n; i++)
             for(int j=C; j>=nums[i]; j--)
                 memo[j] = memo[j] || memo[j-nums[i]];
-            
+           
         return memo[C];
     }
     ```
@@ -2387,10 +2421,10 @@
 ### 300题解
 - dp
     - 300 Longest Increasing Subsequence：https://leetcode.com/problems/longest-increasing-subsequence/
-        - 求最长上升子序列的length 
+        - 求最长上升子序列的length
         - Input: [10,9,2,5,3,7,101,18]
-        - Output: 4 
-        - Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4. 
+        - Output: 4
+        - Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
     - Key
         - 状态：f(i)表示以第i个数字为结尾的最长上升子序列的长度（即[0...i]里选择nums[i]可以获得的最长上升子序列）
         - 转移方程：f(i) = max(1+f(j) if nums[j]<nums[i])
@@ -2444,8 +2478,8 @@
 - dp
     - 1143 Longest Common Subsequence：https://leetcode.com/problems/longest-common-subsequence/
         - LCS：找两个字符串的最长公共子序列的长度
-        - Input: text1 = "abcde", text2 = "ace" 
-        - Output: 3  
+        - Input: text1 = "abcde", text2 = "ace"
+        - Output: 3 
         - Explanation: The longest common subsequence is "ace" and its length is 3.
     - Key
         - 状态：f(m,n)表示两个字符串s1[0...m]，s2[0...n]的LCS长度
