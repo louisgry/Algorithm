@@ -13,39 +13,33 @@ public class MinimumSizeSubarraySum {
      * 空间复杂度：O(1)
      */
     public int minSubArrayLen(int s, int[] nums) {
-        int i = 0, j = -1; // j不包含任何元素
-        int sum = 0;
-        int len = nums.length+1;
-        while (i<nums.length){
-            if(j+1<nums.length && sum < s){
-                j++;
-                sum += nums[j];
-            }
-            else{
-                sum -= nums[i];
-                i++;
-            }
-
-            if(sum>=s)
-                len = Math.min(len, j-i+1);
-        }
-        if(len==nums.length+1)
+        // 非空判断
+        if(nums==null || nums.length==0) {
             return 0;
-        return len;
-    }
-
-    private int lowerBound(int[] nums, int target){
-        int l=0, r=nums.length;
-        while(l != r){
-            int mid = l + (r-l)/2;
-            if(nums[mid]>=target)
-                r = mid;
-            else
-                l = mid+1;
         }
-        return l;
-    }
+        // 右边界不包含任何元素
+        int l=0, r=-1;
+        int min = Integer.MAX_VALUE;
+        int sum = 0;
+        while(l < nums.length) {
+            if(r+1<nums.length && sum < s) {
+                // 需判断是否越界
+                sum += nums[++r];
+            }
+            else {
+                sum -= nums[l++];
+            }
 
+            if(sum >= s) {
+                min = Math.min(min, r-l+1);
+            }
+        }
+        // 返回结果判断，如果没找到为0
+        if(min == Integer.MAX_VALUE) {
+            return 0;
+        }
+        return min;
+    }
     /** main */
     public static void main(String[] args) {
         int s = 7;

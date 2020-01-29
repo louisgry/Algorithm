@@ -10,24 +10,29 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * https://leetcode.com/problems/longest-substring-without-repeating-characters/
      * 思路：滑动窗口
      * 时间复杂度：O(n)
-     * 空间复杂度：O(1)
+     * 空间复杂度：O(len(charset))
      */
     public int lengthOfLongestSubstring(String s) {
-        // 记录字母是否重复
+        // 非空判断
+        if(s==null || s.length()==0) {
+            return 0;
+        }
+        // 滑动窗口为s[l...r]
+        int l=0, r=-1;
+        // 记录字符频率
         int[] freq = new int[256];
-        int i=0, j=-1;
-        int max = 0;
-        while(i<s.length()){
-            if(j+1<s.length() && freq[s.charAt(j+1)]==0){
-                j++;
-                freq[s.charAt(j)]++;
+        int max = Integer.MIN_VALUE;
+
+        while(l < s.length()) {
+            // 右边界往前移动
+            if(r+1<s.length() && freq[s.charAt(r+1)]==0) {
+                // 需判断数组下标是否越界
+                freq[s.charAt(++r)]++;
             }
-            else{
-                freq[s.charAt(i)]--;
-                i++;
+            else {
+                freq[s.charAt(l++)]--;
             }
-            // 注意：是最长子串max
-            max = Math.max(max, j-i+1);
+            max = Math.max(max, r-l+1);
         }
         return max;
     }
