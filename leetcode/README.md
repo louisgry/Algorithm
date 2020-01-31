@@ -1875,24 +1875,31 @@
     - 空间复杂度：O(1)
     ```
     public int minSubArrayLen(int s, int[] nums) {
-        int i = 0, j = -1; // j最开始是-1，不包含任何元素
-        int sum = 0;
-        int min= nums.length+1; // 设一个最大的数n+1取不到
-        while (i<nums.length){ // 遍历[0...n-1]，不是i<j
-            if(j+1<nums.length && sum < s){
-                j++;
-                sum += nums[j];
-            }
-            else{
-                sum -= nums[i];
-                i++;
-            }
-
-            if(sum>=s)
-               min = Math.min(len, j-i+1);
-        }
-        if(min==nums.length+1) // 没有判断过不了输出为0的测试用例：[1,1] 3
+        // 非空判断
+        if(nums==null || nums.length==0) {
             return 0;
+        }
+        // 右边界不包含任何元素
+        int l=0, r=-1;
+        int min = Integer.MAX_VALUE;
+        int sum = 0;
+        while(l < nums.length) {
+            if(r+1<nums.length && sum < s) {
+                // 需判断是否越界
+                sum += nums[++r];
+            }
+            else {
+                sum -= nums[l++];
+            }
+            
+            if(sum >= s) {
+                min = Math.min(min, r-l+1);
+            }
+        }
+        // 返回结果判断，如果没找到为0
+        if(min == Integer.MAX_VALUE) {
+            return 0;
+        }
         return min;
     }
     ```
