@@ -1,4 +1,4 @@
-package algo.other;
+package ds.array;
 
 /**
  * @author Louis
