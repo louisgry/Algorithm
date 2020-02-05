@@ -9,9 +9,9 @@
     - [树](#树)
 - 算法思想
     - [递归与循环](#递归与循环)
-    - [查找和排序](#查找和排序)
-    - [回溯法](#回溯法)
+    - [滑动窗口](#滑动窗口)
     - [动态规划](#动态规划)
+    - [回溯法](#回溯法)
     - [其他](#其他)
 
 ## 题目
@@ -20,10 +20,13 @@
 - [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
 - [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
 - [29-顺时针打印矩阵](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)：[29题解](#29-顺时针打印矩阵)
+- [39-数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)：[39题解](#39-数组中出现次数超过一半的数字)
+- [43-从1到n整数中1出现的次数](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)：[43题解](#43-从1到n整数中1出现的次数)
 - [45-把数组排列成最小的数](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993)：[45题解](#45-把数组排列成最小的数)
 
 ### 字符串
 - [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
+- 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
 - [19-正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c)：[19题解](#19-正则表达式匹配)
 - [20-表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2)：[20题解](#20-表示数值的字符串)
 
@@ -62,26 +65,26 @@
 
 ### 递归与循环
 - [10-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10题解](#10-斐波那契数列)
-
-### 查找和排序
 - [11-旋转数组的最小数字](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)：[11题解](#11-旋转数组的最小数字)
+
+### 滑动窗口
+- [48-最长不含重复字符的子字符串](https://leetcode.com/problems/longest-substring-without-repeating-characters/)：[48题解](#48-最长不含重复字符的子字符串)
+
+### 动态规划
+- [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
+- [42-连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)：[42题解](#42-连续子数组的最大和)
+- 46-把数字翻译成字符串：[46题解](#46-把数字翻译成字符串)
+- [47-礼物的最大值](https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab)：[47题解](#47-礼物的最大值)
+- [49-丑数](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b)：[49题解](#49-丑数)
 
 ### 回溯法
 - [12-矩阵中的路径](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc)：[12题解](#12-矩阵中的路径)
 - [13-机器人的运动范围](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8)：[13题解](#13-机器人的运动范围)
 - [38-字符串的排列](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7)：[38题解](#38-字符串的排列)
 
-### 动态规划
-- [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
-- [42-连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)：[42题解](#42-连续子数组的最大和)
-- 46-把数字翻译成字符串：[46题解](#46-把数字翻译成字符串)
-
 ### 其他
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
-- 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
-- [39-数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)：[39题解](#39-数组中出现次数超过一半的数字)
-- [43-从1到n整数中1出现的次数](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)：[43题解](43-从1到n整数中1出现的次数)
 - 44-数字序列中的某一位数字：[44题解](#44-数字序列中的某一位数字)
 
 ## 题解
@@ -1522,7 +1525,28 @@ public class Solution {
 ### 40-最小的K个数
 - https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf
 - 找出数组中最小的k个数
-- 思路1：Partition快速选择，会修改数组
+- 思路1：最大堆维护最小堆，适合海量数据输入（直接用最小堆每次添加都要入堆重建）
+- 复杂度：O(nlogk)、O(k)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        if(k<=0 || k>input.length) {
+            return new ArrayList<>();
+        }
+        // 最大堆维护最小堆，只剩k个最小的
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((o1, o2) -> o2-o1);
+        for(int num : input) {
+            pq.add(num);
+            if(pq.size() > k) {
+                pq.poll();
+            }
+        }
+        return new ArrayList<>(pq);
+    }
+}
+```
+- 思路2：Partition快速选择，会修改数组
 - 复杂度：O(n)、O(1)
 ```java
 import java.util.ArrayList;
@@ -1573,50 +1597,6 @@ public class Solution {
         int t = nums[i];
         nums[i] = nums[j];
         nums[j] = t;
-    }
-}
-```
-- 思路2：最小堆，适合海量数据输入
-- 复杂度：O(nlogk)、O(k)
-```java
-import java.util.*;
-public class Solution {
-    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
-        ArrayList<Integer> res = new ArrayList<>();
-        if(k<=0 || k>input.length) {
-            return res;
-        }
-        // 添加进最小堆中
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>(k);
-        for(int i=0; i<input.length; i++) {
-            pq.add(input[i]);
-        }
-        // 返回结果
-        for(int i=0; i<k; i++) {
-            res.add(pq.poll());
-        }
-        return res;
-    }
-}
-```
-- 思路3：最大堆维护最小堆
-- 复杂度：O(nlogk)、O(k)
-```java
-import java.util.*;
-public class Solution {
-    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
-        if(k<=0 || k>input.length) {
-            return new ArrayList<>();
-        }
-        // 最大堆维护最小堆，只剩k个最小的
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((o1, o2) -> o2-o1);
-        for(int i=0; i<input.length; i++) {
-            pq.add(input[i]);
-            if(pq.size() > k) {
-                pq.poll();
-            }
-        }
-        return new ArrayList<>(pq);
     }
 }
 ```
@@ -1858,6 +1838,94 @@ public class Solution {
             }
         }
         return dp[n];
+    }
+}
+```
+
+### 47-礼物的最大值
+- https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab
+- 在m*n的棋盘格里，从左上角开始拿礼物，求礼物拿到的最大值
+- 思路：动态规划（dfs不是最优解）
+- 复杂度：O(n^2)、O(n)
+```java
+public class Solution {
+    public int getMost(int [][] values) {
+        if(values==null || values.length==0 || values[0].length==0) {
+            return 0;
+        }
+        int n = values[0].length;
+        int[] dp = new int[n];
+        for(int[] value : values) {
+            dp[0] += value[0];
+            for(int i=1; i<n; i++) {
+                dp[i] = Math.max(dp[i], dp[i-1]) + value[i];
+            }
+        }
+        return dp[n-1];
+    }
+}
+```
+
+### 48-最长不含重复字符的子字符串
+- https://leetcode.com/problems/longest-substring-without-repeating-characters/
+- 找不含重复字符的子字符串，使其最长
+- 思路：滑动窗口
+- 复杂度：O(n)、O(len(charset))
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        // 非空判断
+        if(s==null || s.length()==0) {
+            return 0;
+        }
+        // 滑动窗口为s[l...r]
+        int l=0, r=-1;
+        // 记录字符频率
+        int[] freq = new int[256];
+        int max = Integer.MIN_VALUE;
+
+        while(l < s.length()) {
+            // 右边界往前移动
+            if(r+1<s.length() && freq[s.charAt(r+1)]==0) {
+                // 需判断数组下标是否越界
+                freq[s.charAt(++r)]++;
+            }
+            else {
+                freq[s.charAt(l++)]--;
+            }
+            max = Math.max(max, r-l+1);
+        }
+        return max;
+    }
+}
+``` 
+
+### 49-丑数
+- https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b
+- 丑数的因子只包含2,3,5，输出第index个丑数
+- 思路：动态规划，丑数可分解为2^x * 3^y * 5^z
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public int GetUglyNumber_Solution(int index) {
+        // 丑数：因子只含2,3,5
+        if(index <= 6) {
+            return index;
+        }
+        int i2=0, i3=0, i5=0;
+        int[] dp = new int[index];
+        // 1是第一个丑数
+        dp[0] = 1;
+        for(int i=1; i<index; i++) {
+            int two=dp[i2]*2, three=dp[i3]*3, five=dp[i5]*5;
+            // 取三者的最小值
+            dp[i] = Math.min(two, Math.min(three, five));
+            // 丑数 = 2^x * 3^y * 5^z
+            if(dp[i] == two) { i2++; }
+            if(dp[i] == three) { i3++; }
+            if(dp[i] == five) { i5++; }
+        }
+        return dp[index-1];
     }
 }
 ```
