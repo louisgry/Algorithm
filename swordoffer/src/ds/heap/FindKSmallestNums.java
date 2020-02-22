@@ -1,4 +1,4 @@
-package ds.queue;
+package ds.heap;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;

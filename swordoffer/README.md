@@ -5,16 +5,20 @@
     - [字符串](#字符串)
     - [栈](#栈)
     - [队列](#队列)
+    - [堆](#堆)
     - [链表](#链表)
     - [树](#树)
+    - [哈希](#哈希)
 - 算法思想
     - [递归与循环](#递归与循环)
+    - [二分查找](#二分查找)
     - [滑动窗口](#滑动窗口)
     - [动态规划](#动态规划)
     - [回溯法](#回溯法)
     - [其他](#其他)
 
-## 题目
+# 题目
+## 数据结构
 ### 数组
 - [3-数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[3题解](#3-数组中重复的数字)
 - [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
@@ -39,9 +43,12 @@
 - [32.1-从上往下打印二叉树](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701)：[32.1题解](#32.1-从上往下打印二叉树)
 - [32.2-把二叉树打印成多行](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288)：[32.2题解](#32.2-把二叉树打印成多行)
 - [32.3-按之字形顺序打印二叉树](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0)：[32.3题解](#32.3-按之字形顺序打印二叉树)
+- [41.2-字符流中第一个不重复的字符](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720)：[41.2题解](#41.2-字符流中第一个不重复的字符)
+
+### 堆
 - [40-最小的K个数](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf)：[40题解](#40-最小的K个数)
 - [41.1-数据流中的中位数](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1)：[41.1题解](#41.1-数据流中的中位数)
-- [41.2-字符流中第一个不重复的字符](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720)：[41.2题解](#41.2-字符流中第一个不重复的字符)
+- [59-滑动窗口的最大值](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)：[59题解](#59-滑动窗口的最大值)
 
 ### 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
@@ -51,6 +58,7 @@
 - [24-反转链表](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)：[24题解](#24-反转链表)
 - [25-合并两个排序的链表](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)：[25题解](#25-合并两个排序的链表)
 - [35-复杂链表的复制](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba)：[35题解](#35-复杂链表的复制)
+- [52-两个链表的第一个公共节点](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46)：[52题解](#52-两个链表的第一个公共节点)
 
 ### 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
@@ -63,14 +71,20 @@
 - [36-二叉搜索树与双向链表](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5)：[36题解](#36-二叉搜索树与双向链表)
 - [37-序列化二叉树](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84)：[37题解](#37-序列化二叉树)
 
-### 递归与循环
-- [10-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10题解](#10-斐波那契数列)
+### 哈希
+- [50-第一个只出现一次的字符](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c)：[50题解](#50-第一个只出现一次的字符)
+
+## 算法思想
+### 二分查找
 - [11-旋转数组的最小数字](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)：[11题解](#11-旋转数组的最小数字)
+- [53-数字在排序数组中出现的次数](https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2)：[53题解](#53-数字在排序数组中出现的次数)
 
 ### 滑动窗口
 - [48-最长不含重复字符的子字符串](https://leetcode.com/problems/longest-substring-without-repeating-characters/)：[48题解](#48-最长不含重复字符的子字符串)
 
 ### 动态规划
+- [10.1-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10.1题解](#10.1-斐波那契数列)
+- [10.3-跳台阶](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4)：[10.3题解](#10.3-跳台阶)
 - [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
 - [42-连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)：[42题解](#42-连续子数组的最大和)
 - 46-把数字翻译成字符串：[46题解](#46-把数字翻译成字符串)
@@ -86,14 +100,37 @@
 - [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
 - 44-数字序列中的某一位数字：[44题解](#44-数字序列中的某一位数字)
+- [51-数组中的逆序对](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5)：[51题解](#51-数组中的逆序对)
 
-## 题解
+# 题解
+## 数据结构题解
 ### 3-数组中重复的数字
 - https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8
 - 请找出数组中任意一个重复的数字
 - Input: {2,3,1,0,2,5,3}
 - Output: 2
-- 思路1：把值为i的元素调到i的位置
+- 思路1：Hash
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public boolean duplicate(int numbers[],int length,int [] duplication) {
+    // 边界条件判断
+        if(numbers==null || length==0) {
+            return false;
+        }
+        int[] freq = new int[length];
+        for(int i=0; i<numbers.length; i++) {
+            freq[numbers[i]]++;
+            if(freq[numbers[i]]>1){
+                duplication[0] = numbers[i];
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
+- 思路2：把值为i的元素调到i的位置
 - 复杂度：O(n)、O(1)
 ```java
 public class Solution {
@@ -116,27 +153,6 @@ public class Solution {
         int t = nums[i];
         nums[i] = nums[j];
         nums[j] = t;
-    }
-}
-```
-- 思路2：Hash
-- 复杂度：O(n)、O(n)
-```java
-public class Solution {
-    public boolean duplicate(int numbers[],int length,int [] duplication) {
-    // 边界条件判断
-        if(numbers==null || length==0) {
-            return false;
-        }
-        int[] freq = new int[length];
-        for(int i=0; i<numbers.length; i++) {
-            freq[numbers[i]]++;
-            if(freq[numbers[i]]>1){
-                duplication[0] = numbers[i];
-                return true;
-            }
-        }
-        return false;
     }
 }
 ```
@@ -231,7 +247,7 @@ public class Solution {
 }
 ```
 - 思路2：迭代
-- 复杂度：
+- 复杂度：O(n)、O(1)
 ```java
 import java.util.ArrayList;
 public class Solution {
@@ -370,7 +386,8 @@ public class Solution {
 }
 ```
 
-### 10-斐波那契数列
+## 算法思想题解
+### 10.1-斐波那契数列
 - https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3
 - 输出斐波那契数列的第n项（从0开始，第0项为0）
 - Input: 2
@@ -382,7 +399,6 @@ import java.util.*;
 public class Solution {
     int[] memo;
     public int Fibonacci(int n) {
-        /** 思路1：记忆化搜索 */
         memo = new int[n+2];
         Arrays.fill(memo, -1);
         return getFib(n, memo);
@@ -414,6 +430,28 @@ public class Solution {
             memo[i] = memo[i-1] + memo[i-2];
         }
         return memo[n];
+    }
+}
+```
+
+### 10.3-跳台阶
+- https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4
+- 可以跳一个台阶，也可以跳两个台阶，求第n个台阶有几种跳法
+- 思路：dp
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public int JumpFloor(int target) {
+        if(target<=0) {
+            return -1;
+        }
+        int[] dp = new int[target+2];
+        dp[1] = 1;
+        dp[2] = 2;
+        for(int i=3; i<=target; i++) {
+            dp[i] = dp[i-1]+dp[i-2];
+        }
+        return dp[target];
     }
 }
 ```
@@ -864,20 +902,21 @@ public class Solution {
         if(pHead==null || pHead.next==null) {
             return null;
         }
-        ListNode p = pHead;
-        ListNode q = pHead;
-        // 判断是否有环
+        // 快慢指针
+        ListNode fast = pHead;
+        ListNode slow = pHead;
         do {
-            p = p.next;
-            q = q.next.next;
-        } while(p != q);
-        // 如果存在环，q从起点p从相遇点开始，则会在入口处相遇
-        q = pHead;
-        while(p != q) {
-            p = p.next;
-            q = q.next;
+            fast = fast.next.next;
+            slow = slow.next;
+        } while(fast != slow);
+        
+        // 如果存在环，fast从起点slow从相遇点开始，则会在入口处相遇
+        fast = pHead;
+        while(fast != slow) {
+            fast = fast.next;
+            slow = slow.next;
         }
-        return p;
+        return slow;
     }
 }
 ```
@@ -1926,6 +1965,227 @@ public class Solution {
             if(dp[i] == five) { i5++; }
         }
         return dp[index-1];
+    }
+}
+```
+
+### 50-第一个只出现一次的字符
+- https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c
+- 找字符串中，第一个频率为1的字符
+- 思路1：HashMap计算频率
+- 复杂度：O(n)、O(n)
+```java
+import java.util.HashMap;
+
+public class Solution {
+    public int FirstNotRepeatingChar(String str) {
+        // 计算频率：Map
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(Character c : str.toCharArray()) {
+            if(!map.containsKey(c)) {
+                map.put(c, 1);
+            }
+            else {
+                map.put(c, map.get(c)+1);
+            }
+        }
+        // 找第一个频率为1的字符
+        for(int i=0; i<str.length(); i++) {
+            if(map.get(str.charAt(i))==1) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+```
+- 思路2：优化空间复杂度，用数组代替HashMap（再进一步BitSet存01）
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public int FirstNotRepeatingChar(String str) {
+        int[] hash = new int[256];
+        // 优化计算频率：数组
+        for(int i=0; i<str.length(); i++) {
+            hash[str.charAt(i)]++;
+        }
+        // 找第一个频率为1的字符
+        for(int i=0; i<str.length(); i++) {
+            if(hash[str.charAt(i)]==1){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+```
+
+### 51-数组中的逆序对
+- https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5
+- 逆序对：前面的数字大于后面
+- 思路：二路归并时计算（暴力TLE）
+- 复杂度：O(logn)、O(1)
+```java
+public class Solution {
+    private long cnt = 0;
+    // 辅助数组
+    private int[] tmp;
+    public int InversePairs(int [] array) {
+        // 二路归并
+        tmp = new int[array.length];
+        mergeSort(array, 0, array.length-1);
+        // %运算必须加括号
+        return (int) (cnt%1000000007);
+    }
+    private void mergeSort(int[] nums, int l, int r) {
+        if(r-l < 1) {
+            return;
+        }
+        int mid = l + (r-l)/2;
+        mergeSort(nums, l, mid);
+        mergeSort(nums, mid+1, r);
+        merge(nums, l, mid, r);
+    }
+    private void merge(int[] nums, int l, int mid, int r) {
+        int i=l, j=mid+1, k=l;
+        while(i<=mid || j<=r) {
+            if(i > mid) {
+                tmp[k] = nums[j++];
+            }
+            else if(j > r) {
+                tmp[k] = nums[i++];
+            }
+            else if(nums[i] <= nums[j]) {
+                tmp[k] = nums[i++];
+            }
+            else {
+                tmp[k] = nums[j++];
+                // nums[i] > nums[j]，说明 nums[i...mid] 都大于 nums[j]
+                this.cnt += mid-i+1;
+            }
+            k++;
+        }
+        for(k=l; k<=r; k++) {
+            nums[k] = tmp[k];
+        }
+    }
+}
+```
+
+### 52-两个链表的第一个公共节点
+- https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46
+- 返回两个链表的公共节点
+- 思路：遍历两遍链表，控制两者同时访问到交点
+- 复杂度：O(m+n)、O(1)
+```java
+public class Solution {
+    public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
+         // p1到尾时从p2头开始，p2到尾时从p1头开始
+        ListNode p1=pHead1, p2=pHead2;
+        while(p1 != p2) {
+            // p1 = (p1==null) ? pHead2 : p1.next;
+            if(p1==null) {
+                p1 = pHead2;
+            }
+            else {
+                p1 = p1.next;
+            }
+            
+            if(p2==null) {
+                p2 = pHead1;
+            }
+            else {
+                p2 = p2.next;
+            }
+        }
+        return p1;
+    }
+}
+```
+
+### 53-数字在排序数组中出现的次数
+- https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2
+- 统计一个数字在排序数组中出现的次数
+- 思路：使用二分法可以把复杂度降至O(logn)
+- 复杂度：O(logn)、O(1)
+```java
+public class Solution {
+    public int GetNumberOfK(int [] array , int k) {
+       // 二分搜索k两端，求下标之差
+        int l = binarySearch(array, k-0.5);
+        int r = binarySearch(array, k+0.5);
+        return r-l;
+    }
+    private int binarySearch(int[] nums, double target) {
+        // target为double类型
+        int l=0, r=nums.length-1;
+        while(l<=r) {
+            int mid = l+(r-l)/2;
+            if(target <= nums[mid]) {
+                r = mid - 1;
+            }
+            else {
+                l = mid + 1;
+            }
+        }
+        // 返回最左边的开始下标
+        return l;
+    }
+}
+```
+
+### 54-二叉查找树的第K个结点
+
+### 59-滑动窗口的最大值
+- https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788
+- 找数组中，窗口大小为size里的最大值，返回list
+- 思路1：直接遍历，for查找最大值
+- 复杂度：O((n-size)*size)、O(1)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> maxInWindows(int [] num, int size) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        // 边界条件判断
+        if(size==0) {
+            return res;
+        }
+        for(int i=0; i<=num.length-size; i++) {
+            int max = 0;
+            for(int j=0; j<size; j++) {
+                max = Math.max(num[i+j], max);
+            }
+            res.add(max);
+        }
+        return res;
+    }
+}
+```
+- 思路2：堆，维护一个大小为size的最大堆
+- 复杂度：O(n)、O(size)
+```java
+import java.util.*;
+public class Solution {
+    public ArrayList<Integer> maxInWindows(int [] num, int size) {
+        ArrayList<Integer> res = new ArrayList<>();
+        // 边界条件判断
+        if(size < 1 || size > num.length) {
+            return res;
+        }
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1, o2) -> o2-o1);
+        for(int i=0; i<size; i++) {
+            maxHeap.add(num[i]);
+        }
+        res.add(maxHeap.peek());
+        // i从1到n-size
+        for(int i=1; i<=num.length-size; i++) {
+            // 删除上一个访问过的元素
+            maxHeap.remove(num[i-1]);
+            // 添加size长度的下一个元素
+            maxHeap.add(num[i+size-1]);
+            res.add(maxHeap.peek());
+        }
+        return res;
     }
 }
 ```

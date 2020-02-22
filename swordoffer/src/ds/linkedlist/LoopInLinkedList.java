@@ -20,19 +20,19 @@ public class LoopInLinkedList {
         if(pHead==null || pHead.next==null) {
             return null;
         }
-        ListNode p = pHead;
-        ListNode q = pHead;
-        // 判断是否有环
+        // 快慢指针
+        ListNode fast = pHead;
+        ListNode slow = pHead;
         do {
-            p = p.next;
-            q = q.next.next;
-        } while(p != q);
-        // 如果存在环，q从起点p从相遇点开始，则会在入口处相遇
-        q = pHead;
-        while(p != q) {
-            p = p.next;
-            q = q.next;
+            fast = fast.next.next;
+            slow = slow.next;
+        } while(fast != slow);
+        // 如果存在环，fast从起点slow从相遇点开始，则会在入口处相遇
+        fast = pHead;
+        while(fast != slow) {
+            fast = fast.next;
+            slow = slow.next;
         }
-        return p;
+        return slow;
     }
 }
