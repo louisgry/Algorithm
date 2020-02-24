@@ -52,7 +52,8 @@
 
 ### 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
-- [18-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18题解](#18-删除链表的节点)
+- 18.1-在O(1)时间内删除链表节点：[18.1题解](#18.1-在O(1)时间内删除链表节点)
+- [18.2-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18.2题解](#18.2-删除链表的节点)
 - [22-链表中倒数第k个结点](https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a)：[22题解](#22-链表中倒数第k个结点)
 - [23-链表中环的入口结点](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4) ：[23题解](#23-链表中环的入口结点)
 - [24-反转链表](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)：[24题解](#24-反转链表)
@@ -84,7 +85,9 @@
 
 ### 动态规划
 - [10.1-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10.1题解](#10.1-斐波那契数列)
+- [10.2-矩形覆盖](https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6)：[10.2题解](#10.2-矩形覆盖)
 - [10.3-跳台阶](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4)：[10.3题解](#10.3-跳台阶)
+- [10.4-变态跳台阶](https://www.nowcoder.com/practice/22243d016f6b47f2a6928b4313c85387)：[10.4题解](#10.4-变态跳台阶)
 - [14-剪绳子](https://www.nowcoder.com/practice/57d85990ba5b440ab888fc72b0751bf8)：[14题解](#14-剪绳子)
 - [42-连续子数组的最大和](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484)：[42题解](#42-连续子数组的最大和)
 - 46-把数字翻译成字符串：[46题解](#46-把数字翻译成字符串)
@@ -434,9 +437,32 @@ public class Solution {
 }
 ```
 
+### 10.2-矩形覆盖
+- https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6
+- 用n个2*1形状的小矩形覆盖一个2*n的大矩形，有几种方法
+- 思路：dp，当n=1时只有一种，n=2时只有两种，递归函数f(n)=f(n-1)+f(n-2)
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public int RectCover(int target) {
+        if(target <= 2) {
+            return target;
+        }
+        int t1 = 1, t2 = 2;
+        int res = 0;
+        for(int i=3; i<=target; i++) {
+            res = t1 + t2;
+            t1 = t2;
+            t2 = res;
+        }
+        return res;
+    }
+}
+```
+
 ### 10.3-跳台阶
 - https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4
-- 可以跳一个台阶，也可以跳两个台阶，求第n个台阶有几种跳法
+- 可以跳一个台阶，也可以跳两个台阶，求n级台阶有几种跳法
 - 思路：dp
 - 复杂度：O(n)、O(n)
 ```java
@@ -452,6 +478,28 @@ public class Solution {
             dp[i] = dp[i-1]+dp[i-2];
         }
         return dp[target];
+    }
+}
+```
+
+### 10.4-变态跳台阶
+- https://www.nowcoder.com/practice/22243d016f6b47f2a6928b4313c85387
+- 可以跳1阶至n阶，求n级台阶有几种跳法
+- 思路：dp，递归函数`f(n)=2*f(n-1)`，分析如下
+    - `f(n-1)=f(n-2)+...+f(0)`：跳到n-1级，可以从n-2级到0级开始跳上去
+    - `f(n)=f(n-1)+f(n-2)+...+f(0)`：由上述式子得，`f(n)=2*f(n-1)`
+- 复杂度：O(n)、O(n)
+```java
+import java.util.Arrays;
+public class Solution {
+    public int JumpFloorII(int target) {
+        int[] dp = new int[target];
+        Arrays.fill(dp, 1);
+        // f(n) = 2*f(n-1);
+        for(int i=1; i<target; i++) {
+            dp[i] = 2*dp[i-1];
+        }
+        return dp[target-1];
     }
 }
 ```
@@ -720,8 +768,7 @@ public class Solution {
     }
 ```
 
-### 18-删除链表的节点
-- 题目1：在O(1)时间内删除链表节点
+### 18.1-在O(1)时间内删除链表节点
 - 思路：修改链表的值
 - 复杂度：O(1)、O(1)
 ```
@@ -738,11 +785,12 @@ public class Solution {
         return;
     }
 ```
-- 题目2：删除链表中重复的节点
+
+### 18.2-删除链表中重复的结点
 - https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef
 - 排序的链表里删除重复的节点
-- 思路：
-- 复杂度：
+- 思路：dummyHead
+- 复杂度：O(n)、O(1)
 ```java
 public class Solution {
     public ListNode deleteDuplication(ListNode pHead) {
@@ -2133,8 +2181,6 @@ public class Solution {
     }
 }
 ```
-
-### 54-二叉查找树的第K个结点
 
 ### 59-滑动窗口的最大值
 - https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788
