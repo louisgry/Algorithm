@@ -60,6 +60,7 @@
 - [25-合并两个排序的链表](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337)：[25题解](#25-合并两个排序的链表)
 - [35-复杂链表的复制](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba)：[35题解](#35-复杂链表的复制)
 - [52-两个链表的第一个公共节点](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46)：[52题解](#52-两个链表的第一个公共节点)
+- [54-二叉查找树的第K个结点](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a)：[54题解](#54-二叉查找树的第K个结点)
 
 ### 树
 - [7-重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6)：[7题解](#7-重建二叉树)
@@ -2181,6 +2182,33 @@ public class Solution {
     }
 }
 ```
+
+### 54-二叉查找树的第K个结点
+- https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a
+- 返回二叉查找树第k小的节点
+- 思路：二叉搜索树中序遍历为排序好的数组，直接返回第k个
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    /** 计数器，找第k个**/
+    private int cnt = 0;
+    private TreeNode res;
+    TreeNode KthNode(TreeNode pRoot, int k) {
+        inOrder(pRoot, k);
+        return res;
+    }
+    private void inOrder(TreeNode root, int k) {
+        if(root==null || cnt>=k) {
+            return;
+        }
+        inOrder(root.left, k);
+        cnt++;
+        if(cnt == k) { res = root; }
+        inOrder(root.right, k);
+    }
+}
+```
+
 
 ### 59-滑动窗口的最大值
 - https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788
