@@ -1,4 +1,4 @@
-package ds.array;
+package algo.pointer;
 
 /**
  * @author Louis
