@@ -1,39 +1,26 @@
 《剑指Offer》（Java）
 ==
 - 数据结构
-    - [数组](#数组)
-    - [字符串](#字符串)
     - [栈](#栈)
     - [队列](#队列)
     - [堆](#堆)
+    - [哈希](#哈希)
     - [链表](#链表)
     - [树](#树)
-    - [哈希](#哈希)
 - 算法思想
-    - [递归与循环](#递归与循环)
     - [二分查找](#二分查找)
+    - [排序](#排序)
+    - [双指针](#双指针)
     - [滑动窗口](#滑动窗口)
+    - [递归与迭代](#递归与迭代)
     - [动态规划](#动态规划)
     - [回溯法](#回溯法)
+    - [数学](#数学)
+    - [位运算](#位运算)
     - [其他](#其他)
 
 # 题目
 ## 数据结构
-### 数组
-- [3-数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[3题解](#3-数组中重复的数字)
-- [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
-- [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
-- [29-顺时针打印矩阵](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)：[29题解](#29-顺时针打印矩阵)
-- [39-数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)：[39题解](#39-数组中出现次数超过一半的数字)
-- [43-从1到n整数中1出现的次数](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)：[43题解](#43-从1到n整数中1出现的次数)
-- [45-把数组排列成最小的数](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993)：[45题解](#45-把数组排列成最小的数)
-
-### 字符串
-- [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
-- 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
-- [19-正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c)：[19题解](#19-正则表达式匹配)
-- [20-表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2)：[20题解](#20-表示数值的字符串)
-
 ### 栈
 - [9-用两个栈来实现队列](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6)：[9题解](#9-用两个栈来实现队列)
 - [30-包含min函数的栈](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49)：[30题解](#30-包含min函数的栈)
@@ -50,10 +37,15 @@
 - [41.1-数据流中的中位数](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1)：[41.1题解](#41.1-数据流中的中位数)
 - [59-滑动窗口的最大值](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788)：[59题解](#59-滑动窗口的最大值)
 
+### 哈希
+- [3-数组中重复的数字](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8)：[3题解](#3-数组中重复的数字)
+- [50-第一个只出现一次的字符](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c)：[50题解](#50-第一个只出现一次的字符)
+- [56-数组中只出现一次的数字](https://www.nowcoder.com/practice/e02fdb54d7524710a7d664d082bb7811)：[56题解](#56-数组中只出现一次的数字)
+
 ### 链表
 - [6-从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035)：[6题解](#6-从尾到头打印链表)
 - 18.1-在O(1)时间内删除链表节点：[18.1题解](#18.1-在O(1)时间内删除链表节点)
-- [18.2-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18.2题解](#18.2-删除链表的节点)
+- [18.2-删除链表中重复的节点](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef)：[18.2题解](#18.2-删除链表中重复的结点)
 - [22-链表中倒数第k个结点](https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a)：[22题解](#22-链表中倒数第k个结点)
 - [23-链表中环的入口结点](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4) ：[23题解](#23-链表中环的入口结点)
 - [24-反转链表](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca)：[24题解](#24-反转链表)
@@ -72,17 +64,38 @@
 - [34-二叉树中和为某一值的路径](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca)：[34题解](#34-二叉树中和为某一值的路径)
 - [36-二叉搜索树与双向链表](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5)：[36题解](#36-二叉搜索树与双向链表)
 - [37-序列化二叉树](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84)：[37题解](#37-序列化二叉树)
-
-### 哈希
-- [50-第一个只出现一次的字符](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c)：[50题解](#50-第一个只出现一次的字符)
+- [55.1-二叉树的深度](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b)：[55.1题解](#55.1-二叉树的深度)
+- [55.2-平衡二叉树](https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222)：[55.2题解](#55.2-平衡二叉树)
 
 ## 算法思想
 ### 二分查找
 - [11-旋转数组的最小数字](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba)：[11题解](#11-旋转数组的最小数字)
 - [53-数字在排序数组中出现的次数](https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2)：[53题解](#53-数字在排序数组中出现的次数)
 
+### 排序
+- [51-数组中的逆序对](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5)：[51题解](#51-数组中的逆序对)
+- [45-把数组排列成最小的数](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993)：[45题解](#45-把数组排列成最小的数)
+- [61-扑克牌顺子](https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4)：[61题解](#61-扑克牌顺子)
+
+### 双指针
+- [4-二维数组中的查找](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e)：[4题解](#4-二维数组中的查找)
+- [57.1-和为S的两个数字](https://www.nowcoder.com/practice/390da4f7a00f44bea7c2f3d19491311b)：[57.1题解](#57.1-和为S的两个数字)
+
 ### 滑动窗口
 - [48-最长不含重复字符的子字符串](https://leetcode.com/problems/longest-substring-without-repeating-characters/)：[48题解](#48-最长不含重复字符的子字符串)
+- [57.2-和为S的连续正数序列](https://www.nowcoder.com/practice/c451a3fd84b64cb19485dad758a55ebe)：[57.2题解](#57.2-和为S的连续正数序列)
+
+### 递归与迭代
+- [5-替换空格](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423)：[5题解](#5-替换空格)
+- [19-正则表达式匹配](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c)：[19题解](#19-正则表达式匹配)
+- [21-调整数组顺序使奇数位于偶数前面](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593)：[21题解](#21-调整数组顺序使奇数位于偶数前面)
+- [29-顺时针打印矩阵](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a)：[29题解](#29-顺时针打印矩阵)
+- [58.1-翻转单词顺序列](https://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3)：[58.1题解](#58.1-翻转单词顺序列)
+- [58.2-左旋转字符串](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec)：[58.2题解](#58.2-左旋转字符串)
+- [62-圆圈中最后剩下的数](https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6)：[62题解](#62-圆圈中最后剩下的数)
+- [64-求1+2+3+...+n](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1)：[64题解](#64-求1+2+3+...+n)
+- [68.1-二叉搜索树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)：[68.1题解](#68.1-二叉搜索树中两个节点的最低公共祖先)
+- [68.2-二叉树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)：[68.2](#68.2-二叉树中两个节点的最低公共祖先)
 
 ### 动态规划
 - [10.1-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10.1题解](#10.1-斐波那契数列)
@@ -94,17 +107,28 @@
 - 46-把数字翻译成字符串：[46题解](#46-把数字翻译成字符串)
 - [47-礼物的最大值](https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab)：[47题解](#47-礼物的最大值)
 - [49-丑数](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b)：[49题解](#49-丑数)
+- [60-n 个骰子的点数](https://www.lintcode.com/problem/dices-sum/description)：[60题解](#60-n 个骰子的点数)
+- [63-股票的最大利润](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock)：[63题解](#63-股票的最大利润)
 
 ### 回溯法
 - [12-矩阵中的路径](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc)：[12题解](#12-矩阵中的路径)
 - [13-机器人的运动范围](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8)：[13题解](#13-机器人的运动范围)
 - [38-字符串的排列](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7)：[38题解](#38-字符串的排列)
 
-### 其他
-- [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
+### 数学
 - [16-数值的整数次方](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00)：[16题解](#16-数值的整数次方)
+- [43-从1到n整数中1出现的次数](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6)：[43题解](#43-从1到n整数中1出现的次数)
 - 44-数字序列中的某一位数字：[44题解](#44-数字序列中的某一位数字)
-- [51-数组中的逆序对](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5)：[51题解](#51-数组中的逆序对)
+
+### 位运算
+- [15-二进制中1的个数](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8)：[15题解](#15-二进制中1的个数)
+- [65-不用加减乘除做加法](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215)：[65题解](#65-不用加减乘除做加法)
+
+### 其他
+- 17-打印从1到最大的n位数：[17题解](#17-打印从1到最大的n位数)
+- [20-表示数值的字符串](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2)：[20题解](#20-表示数值的字符串)
+- [39-数组中出现次数超过一半的数字](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163)：[39题解](#39-数组中出现次数超过一半的数字)
+- [67-把字符串转换成整数](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e)：[67题解](#67-把字符串转换成整数)
 
 # 题解
 ## 数据结构题解
@@ -770,6 +794,7 @@ public class Solution {
 ```
 
 ### 18.1-在O(1)时间内删除链表节点
+- 给定链表node，在O(1)时间内删除
 - 思路：修改链表的值
 - 复杂度：O(1)、O(1)
 ```
@@ -947,23 +972,17 @@ public class Solution {
 ```java
 public class Solution {
     public ListNode EntryNodeOfLoop(ListNode pHead) {
-        // 边界条件判断
-        if(pHead==null || pHead.next==null) {
-            return null;
-        }
-        // 快慢指针
-        ListNode fast = pHead;
-        ListNode slow = pHead;
-        do {
+        ListNode fast = pHead, slow = pHead;
+        while (true) {
+            if (fast == null || fast.next == null) return null;
             fast = fast.next.next;
             slow = slow.next;
-        } while(fast != slow);
-        
-        // 如果存在环，fast从起点slow从相遇点开始，则会在入口处相遇
+            if (fast == slow) break;
+        }
         fast = pHead;
-        while(fast != slow) {
-            fast = fast.next;
+        while (slow != fast) {
             slow = slow.next;
+            fast = fast.next;
         }
         return slow;
     }
@@ -2209,6 +2228,276 @@ public class Solution {
 }
 ```
 
+### 55.1-二叉树的深度
+- https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b
+- 返回二叉树的深度/高度
+- 思路：递归
+- 复杂度：O(n)、O(h)
+```java
+public class Solution {
+    public int TreeDepth(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        return Math.max(TreeDepth(root.left)+1, TreeDepth(root.right)+1);
+    }
+}
+```
+
+### 55.2-平衡二叉树
+- https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222
+- 平衡二叉树左右子树高度差不超过1
+- 思路：递归
+- 复杂度：O(n)、O(h)
+```java
+public class Solution {
+    public boolean IsBalanced_Solution(TreeNode root) {
+        if(root == null) {
+            return true;
+        }
+        // 左右子树高度差不能超过1
+        if(Math.abs(TreeDepth(root.left)-TreeDepth(root.right)) > 1) {
+            return false;
+        }
+        return IsBalanced_Solution(root.left) && IsBalanced_Solution(root.right);
+    }
+    private int TreeDepth(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        return Math.max(TreeDepth(root.left)+1, TreeDepth(root.right)+1);
+    }
+}
+```
+
+### 56-数组中只出现一次的数字
+- https://www.nowcoder.com/practice/e02fdb54d7524710a7d664d082bb7811
+- 数组中有两个数字只出现了一次，其他的都出现过两次
+- 思路1：HashMap，计算频率
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
+        // 计算频率
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i=0; i<array.length; i++) {
+            if(!map.containsKey(array[i])) {
+                map.put(array[i], 1);
+            }
+            else{
+                map.put(array[i], map.get(array[i])+1);
+            }
+        }
+        num1[0] = 0;
+        for(Integer num : map.keySet()) {
+            if(map.get(num)==1) {
+                if(num1[0] == 0) {
+                    num1[0] = num;
+                }
+                else {
+                    num2[0] = num;
+                }
+            }
+        }
+    }
+}
+```
+- 思路2：利用位运算中异或的性质（两个相同数字异或=0，一个数和0异或还是它本身）
+    - 两个不相等的元素在位级表示上必定会有一位存在不同，将数组的所有元素异或得到的结果为不存在重复的两个元素异或的结果
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
+        int diff = 0;
+        for(int num : array) {
+            diff ^= num;
+        }
+        // 得到出diff最右侧不为0的位
+        diff &= -diff;
+        for(int num : array) {
+            if((num&diff)==0) {
+                num1[0] ^= num;
+            }
+            else {
+                num2[0] ^= num;
+            }
+        }
+    }
+}
+```
+
+### 57.1-和为S的两个数字
+- https://www.nowcoder.com/practice/390da4f7a00f44bea7c2f3d19491311b
+- 递增数组中查找和为S的两个数字，如有多个返回乘积最小的
+- 思路：双指针，两端的乘积是最小的
+- 复杂度：O(n)、O(1)
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Solution {
+    public ArrayList<Integer> FindNumbersWithSum(int [] array,int sum) {
+        int i=0, j=array.length-1;
+        while(i < j) {
+            int t = array[i]+array[j];
+            // 最两端的乘积最小
+            if(t == sum) {
+                return new ArrayList<Integer>(Arrays.asList(array[i], array[j]));
+            }
+            if(t < sum) {
+                i++;
+            }
+            else {
+                j--;
+            }
+        }
+        return new ArrayList<>();
+    }
+}
+```
+
+### 57.2-和为S的连续正数序列
+- https://www.nowcoder.com/practice/c451a3fd84b64cb19485dad758a55ebe
+- 返回所有和为S的连续序列
+- 思路：滑动窗口，左右窗口右移
+- 复杂度：O(n)、O(1)
+```java
+import java.util.ArrayList;
+public class Solution {
+    public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        // 两个起点，代表滑动窗口的两边
+        int i=1, j=2;
+        while(i < j) {
+            // 等差数列求和=(a0+an)*n/2
+            int t = (i+j)*(j-i+1)/2;
+            if(t == sum) {
+                ArrayList<Integer> list = new ArrayList<>();
+                for(int k=i; k<=j; k++) {
+                    list.add(k);
+                }
+                res.add(list);
+                // 左边窗口右移
+                i++;
+            }
+            // 当前窗口值小于sum，则右窗口应该右移
+            else if(t < sum) {
+                j++;
+            }
+            // 当前窗口值大于sum，则左窗口应该右移
+            else {
+                i++;
+            }
+        }
+        return res;
+    }
+}
+```
+
+### 58.1-翻转单词顺序列
+- https://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3
+- 根据空格反转单词顺序
+- 思路1：使用str.split()
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public String ReverseSentence(String str) {
+        if(str==null || str.trim().equals("")) {
+            return str;
+        }
+        String[] arr = str.split(" ");
+        StringBuffer sb = new StringBuffer();
+        for(int i=arr.length; i>0; i--) {
+            sb.append(arr[i-1]);
+            if(i > 1) {
+                sb.append(" ");
+            }
+        }
+        return sb.toString();
+    }
+}
+```
+- 思路2：先反转每个句子，再反转每个单词
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public String ReverseSentence(String str) {
+        if(str==null || str.trim().equals("")) {
+            return str;
+        }
+        // 反转整个句子
+        StringBuffer st1 = new StringBuffer(str);
+        st1.reverse();
+        // 反转每个单词
+        StringBuffer res = new StringBuffer();
+        int j = 0;
+        int blankNum = 0;
+        for(int i=0;i<st1.length();i++){
+            // 1、当有空格，且没有到达最后一个单词时
+            if(st1.charAt(i)==' '&&(i!=st1.length()-1)){
+                blankNum++;
+                StringBuffer st2=new StringBuffer(st1.substring(j,i));
+                res.append(st2.reverse().toString()).append(" ");
+                j=i+1;
+            }
+           // 2、当有空格，且到达最后一个单词时
+            if(blankNum!=0&&i==(st1.length()-1)){
+                 StringBuffer st3=new StringBuffer(st1.substring(j,i+1));
+                res.append(st3.reverse());
+            }
+        }
+        // 空格数为0时，直接返回原字符串
+        if(blankNum==0){
+            return str;
+        }
+        return res.toString();
+    }
+}
+```
+
+### 58.2-左旋转字符串
+- https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec
+- 将左边的n个旋转到右边
+- 思路1：使用substring
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public String LeftRotateString(String str,int n) {
+        if(str==null || n>str.length()) {
+            return str;
+        }
+        return str.substring(n) + str.substring(0,n);
+    }
+}
+```
+- 思路2：先各自反转左右两边的字符串，然后再旋转整个字符串
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public String LeftRotateString(String str,int n) {
+        if(str==null || n>str.length()) {
+            return str;
+        }
+        char[] chars = str.toCharArray();
+        // 先各自反转左右两边的字符串
+        reverse(chars, 0, n-1);
+        reverse(chars, n, chars.length-1);
+        // 然后再旋转整个字符串
+        reverse(chars, 0, chars.length-1);
+        return new String(chars);
+    }
+    private void reverse(char[] chars, int i, int j) {
+        while(i < j) {
+            swap(chars, i++, j--);
+        }
+    }
+    private void swap(char[] chars, int i, int j) {
+        char t = chars[i];
+        chars[i] = chars[j];
+        chars[j] = t;
+    }
+}
+```
 
 ### 59-滑动窗口的最大值
 - https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788
@@ -2260,6 +2549,305 @@ public class Solution {
             res.add(maxHeap.peek());
         }
         return res;
+    }
+}
+```
+
+### 60-n 个骰子的点数
+- https://www.lintcode.com/problem/dices-sum/description
+- 求n个骰子点数和为s的概率
+- 思路：dp
+- 复杂度：O(n^2)、O(n^2)
+```java
+import java.util.*;
+public class Solution {
+    public List<Map.Entry<Integer, Double>> dicesSum(int n) {
+        final int face = 6;
+        final int pointNum = face*n;
+        long[][] dp = new long[n+1][pointNum+1];
+        for(int i=1; i<=face; i++) {
+            dp[1][i] = 1;
+        }
+        for(int i=2; i<=n; i++) {
+            for(int j=i; j<=pointNum; j++) {
+                for(int k=1; k<=face && k<=j; k++) {
+                    dp[i][j] += dp[i-1][j-k];
+                }
+            }
+        }
+        final double totalNum = Math.pow(6, n);
+        List<Map.Entry<Integer, Double>> res = new ArrayList<>();
+        for(int i=n; i<=pointNum; i++) {
+            res.add(new AbstractMap.SimpleEntry<>(i, dp[n][i]/totalNum));
+        }
+        return res;
+    }
+}
+```
+
+### 61-扑克牌顺子
+- https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4
+- 五张牌，大小鬼可以为任意数字，牌面为0，判断这五张牌能否组成顺子
+- 思路：先排序预处理，然后统计大小鬼的数量，根据大小王是否补全够用判定能否组成顺子
+- 复杂度：O(nlogn)、O(1)
+```java
+import java.util.*;
+public class Solution {
+    public boolean isContinuous(int [] numbers) {
+        // 边界条件判断
+        if(numbers.length < 5) {
+            return false;
+        }
+        // 排序预处理
+        Arrays.sort(numbers);
+        // 统计大小鬼的数量
+        int cnt = 0;
+        for(int num : numbers) {
+            if(num == 0) {
+                cnt++;
+            }
+        }
+        // 用大小鬼补全不连续的顺子，从非0元素开始
+        for(int i=cnt; i<numbers.length-1; i++) {
+            // 有重复元素，则不能组成顺子
+            if(numbers[i+1]==numbers[i]) {
+                return false;
+            }
+            // 用大小鬼补顺子差，差值大于1才会扣
+            cnt -= numbers[i+1]-numbers[i]-1;
+        }
+        // 返回大小王是否补够用
+        return cnt >= 0;
+    }
+}
+```
+
+### 62-圆圈中最后剩下的数
+- https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6
+- 小朋友围成圈，指定数字m，从编号0的小朋友开始报数，m-1编号的出队，他的下一个小朋友再从0开始，问最后是哪一个小朋友
+- 思路1：约瑟夫环问题，递归公式为 f(N,M)=(f(N-1,M)+M)%N
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public int LastRemaining_Solution(int n, int m) {
+        // 约瑟夫环问题 f(N,M)=(f(N-1,M)+M)%N
+        // 处理特殊情况
+        if(n==0) {
+            return -1;
+        }
+        // 递归终止条件
+        if(n==1) {
+            return 0;
+        }
+        // 公式法解约瑟夫环问题
+        return (LastRemaining_Solution(n-1, m)+m)%n;
+    }
+}
+```
+- 思路2：用链表进行模拟
+- 复杂度：O(n)、O(n)
+```java
+import java.util.*;
+public class Solution {
+    public int LastRemaining_Solution(int n, int m) {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        for(int i=0; i<n; i++) {
+            linkedList.add(i);
+        }
+        int out = 0;
+        while(linkedList.size() > 1) {
+            out = (out+m-1) % linkedList.size();
+            linkedList.remove(out);
+        }
+        // 链表中只剩最后一个则返回该元素，否则返回-1
+        return linkedList.size()==1 ? linkedList.get(0) : -1;
+    }
+}
+```
+
+### 63-股票的最大利润
+- https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock
+- 可以有一次买入和一次卖出，买入必须在卖出前，求最大收益
+- 思路：dp
+- 复杂度：O(n)、O(1)
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int n = prices.length;
+        int dp_i_0 = 0, dp_i_1=Integer.MIN_VALUE;
+        for(int i=0; i<n; i++) {
+            dp_i_0 = Math.max(dp_i_0, dp_i_1+prices[i]);
+            dp_i_1 = Math.max(dp_i_1, -prices[i]);
+        }
+        return dp_i_0;
+    }
+}
+```
+
+### 64-求1+2+3+...+n
+- https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1
+- 要求不能使用乘除法、for、while、if、else、switch、case 等关键字及条件判断语句 A ? B : C
+- 思路：递归，用&&短路特性实现if的判断
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public int Sum_Solution(int n) {
+        // if(n==1) return 1;
+        int sum = n;
+        // 利用&&短路特性实现if的判断
+        boolean b = n>0 && (sum += Sum_Solution(n-1))>0;
+        return sum;
+    }
+}
+```
+
+### 65-不用加减乘除做加法
+- https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215
+- 写一个函数，求两个整数之和，要求不能使用加减乘除
+- 思路：不用加减乘除，就只能用位运算了
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public int Add(int num1,int num2) {
+        // 异或相当于求和
+        // 进位用&和<<1
+        int res = 0, carry = 0;
+        do {
+            res = num1 ^ num2;
+            carry = (num1&num2)<<1;
+            num1 = res;
+            num2 = carry;
+        } while(carry != 0);
+        return res;
+    }
+}
+```
+
+### 66-构建乘积数组
+- https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46
+- B数组的元素等于A数组中，除了相同下标的其他所有元素的乘积，要求不能用除法
+- 思路：先计算下三角连乘，再计算上三角连乘
+- 复杂度：O(n)、O(n)
+```java
+public class Solution {
+    public int[] multiply(int[] A) {
+        int n = A.length;
+        int[] B = new int[n];
+        B[0] = 1;
+        // 先计算下三角连乘
+        for(int i=1; i<n; i++) {
+            B[i] = B[i-1]*A[i-1];
+        }
+        // 再计算上三角连乘
+        int tmp = 1;
+        for(int j=n-2; j>=0; j--) {
+            tmp *= A[j+1];
+            B[j]*= tmp;
+        }
+        return B;
+    }
+}
+```
+
+### 67-把字符串转换成整数
+- https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e
+- 将字符串转为整数，要求不能使用库函数，为零或不合法的返回0
+- 思路：一个一个字符叠加，注意防止整形溢出
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public int StrToInt(String str) {
+        if(str==null || str.length()==0) {
+            return 0;
+        }
+        // 要用long，防止整型溢出
+        long res = 0;
+        for(int i=0; i<str.length(); i++) {
+            char c = str.charAt(i);
+            // 符号判断
+            if(i==0 && (c=='+' || c=='-')) continue;
+            // 合法性判断
+            if(c<'0' || c>'9') return 0;
+            // 组合整数
+            res = res*10+(c-'0');
+        }
+        res = str.charAt(0)=='-' ? -res : res;
+        if(res>Integer.MAX_VALUE || res<Integer.MIN_VALUE) 
+            return 0;
+        return (int) res;
+    }
+}
+```
+- 如果用库函数要捕获异常
+```java
+public class Solution {
+    public int StrToInt(String str) {
+        Integer res = 0;
+        try{
+            res = Integer.valueOf(str);
+        }
+        catch(Exception e) {
+        }
+        finally {
+            return res;
+        }
+    }
+}
+```
+
+### 68.1-二叉搜索树中两个节点的最低公共祖先
+- https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+- 给定BST，求两个节点的最近公共祖先，可为自己
+- 思路：递归判断p、q在左边还是右边，根据BST性质遍历
+- 复杂度：O(n)、O(n)
+```java
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // condition: 如果root为null，则不存在公共祖先
+        if(root == null) {
+            return null;
+        }
+        // recursion: 二叉搜索树，可以直接比较
+        // 如果p、q都在左边，则公共祖先在左边
+        if(p.val<root.val && q.val<root.val) {
+            return lowestCommonAncestor(root.left, p, q);
+        }
+        // 如果p、q都在右边，则公共祖先在右边
+        if(p.val>root.val && q.val>root.val) {
+            return lowestCommonAncestor(root.right, p, q);
+        }
+        // 其他情况，root为公共祖先
+        return root;
+    }
+}
+```
+
+### 68.2-二叉树中两个节点的最低公共祖先
+- https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
+- 给定二叉树，求两个节点的最近公共祖先，可为自己
+- 思路：递归
+- 复杂度：O(n)、O(n)
+```java
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // condition: 如果root为null，则返回null
+        if(root == null) {
+            return null;
+        }
+        // 如果root等于p或q，则返回root
+        if(root==p || root==q) {
+            return root;
+        }
+        // recursion: 注意不是BST，递归计算左右子树
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        // 如果左边为null，则看右边；右边null，则看左边
+        if(left == null) { return right; }
+        if(right == null) { return left; }
+        // 如果左右都不为null，则公共祖先为root
+        if(left!=null && right!=null) { return root; }
+        // 如果左右都空，则返回null
+        return null;
     }
 }
 ```
