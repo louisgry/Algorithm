@@ -66,6 +66,8 @@
 - [37-序列化二叉树](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84)：[37题解](#37-序列化二叉树)
 - [55.1-二叉树的深度](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b)：[55.1题解](#55.1-二叉树的深度)
 - [55.2-平衡二叉树](https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222)：[55.2题解](#55.2-平衡二叉树)
+- [68.1-二叉搜索树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)：[68.1题解](#68.1-二叉搜索树中两个节点的最低公共祖先)
+- [68.2-二叉树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)：[68.2](#68.2-二叉树中两个节点的最低公共祖先)
 
 ## 算法思想
 ### 二分查找
@@ -94,8 +96,6 @@
 - [58.2-左旋转字符串](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec)：[58.2题解](#58.2-左旋转字符串)
 - [62-圆圈中最后剩下的数](https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6)：[62题解](#62-圆圈中最后剩下的数)
 - [64-求1+2+3+...+n](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1)：[64题解](#64-求1+2+3+...+n)
-- [68.1-二叉搜索树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)：[68.1题解](#68.1-二叉搜索树中两个节点的最低公共祖先)
-- [68.2-二叉树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)：[68.2](#68.2-二叉树中两个节点的最低公共祖先)
 
 ### 动态规划
 - [10.1-斐波那契数列](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3)：[10.1题解](#10.1-斐波那契数列)
@@ -393,23 +393,25 @@ public class Solution {
 ### 9-用两个栈来实现队列
 - https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6
 - 用两个栈来实现队列的push和pop
-- 思路：直接push，pop的时候把in的放入out中
+- 思路：直接push，pop的时候把stack1的放入stack2中
 - 复杂度：O(n)、O(n)
 ```java
 import java.util.Stack;
 public class Solution {
-    private Stack<Integer> in = new Stack<Integer>();
-    private Stack<Integer> out = new Stack<Integer>();
+    Stack<Integer> stack1 = new Stack<Integer>();
+    Stack<Integer> stack2 = new Stack<Integer>();
+    
     public void push(int node) {
-       in.push(node);
+        stack1.push(node);
     }
+    
     public int pop() {
-        if(out.empty()) {
-            while(!in.empty()) {
-               out.push(in.pop());
+        if(stack2.isEmpty()) {
+            while(!stack1.isEmpty()) {
+                stack2.push(stack1.pop());
             }
         }
-        return out.pop();
+        return stack2.pop();
     }
 }
 ```
@@ -1193,28 +1195,33 @@ public class Solution {
 ### 30-包含min函数的栈
 - https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49
 - 实现一个能够得到栈中所含最小元素的min函数，时间复杂度应为O(1)
-- 思路：minStack只push最小值
+- 思路：用两个stack，dataStack存数据，minStack只push最小值
 - 复杂度：O(1)、O(n)
 ```java
 import java.util.Stack;
 public class Solution {
-    private Stack<Integer> dataStack = new Stack<>();
-    private Stack<Integer> minStack = new Stack<>();
+    Stack<Integer> dataStack = new Stack<>();
+    Stack<Integer> minStack = new Stack<>();
     
     public void push(int node) {
         dataStack.push(node);
-        minStack.push(minStack.empty() ? node : Math.min(minStack.peek(), node));
+        if(minStack.isEmpty()) {
+            minStack.push(node);
+        }
+        else {
+            minStack.push(Math.min(node, minStack.peek()));
+        }
     }
-
+    
     public void pop() {
         dataStack.pop();
         minStack.pop();
     }
-
+    
     public int top() {
         return dataStack.peek();
     }
-
+    
     public int min() {
         return minStack.peek();
     }
