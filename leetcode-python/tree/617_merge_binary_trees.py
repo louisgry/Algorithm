@@ -1,8 +1,9 @@
 """
-题目：
-    617. 合并二叉树：https://leetcode-cn.com/problems/merge-two-binary-trees/
-题解：
-    https://leetcode-cn.com/problems/merge-two-binary-trees/solution/he-bing-er-cha-shu-by-leetcode/
+617-合并二叉树
+- https://leetcode-cn.com/problems/merge-two-binary-trees/
+- 合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点
+- 思路：递归
+- 复杂度：O(n)、O(h)
 """
 
 
