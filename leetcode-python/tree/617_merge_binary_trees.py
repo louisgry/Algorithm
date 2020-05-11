@@ -3,6 +3,8 @@
 - https://leetcode-cn.com/problems/merge-two-binary-trees/
 - 合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点
 - 思路：递归
+    - 终止条件：如果为空，返回非空节点
+    - 递归过程：先节点值相加，再递归
 - 复杂度：O(n)、O(h)
 """
 
@@ -42,6 +44,5 @@ if __name__ == "__main__":
     t2.left.right = TreeNode(4)
     t2.right.right = TreeNode(7)
     # merge
-    s = Solution()
-    t = s.mergeTrees(t1, t2)
+    t = Solution().mergeTrees(t1, t2)
     print(t.val, t.left.val, t.right.val, t.left.left.val, t.left.right.val, t.right.right.val)

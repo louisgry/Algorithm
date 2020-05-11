@@ -14,5 +14,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    solution = Solution()
-    print(solution.hammingDistance(1, 4))  # ==> 2
+    print(Solution().hammingDistance(1, 4))  # ==> 2
