@@ -5,6 +5,7 @@
 ### 二叉树
 - [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)：[617题解](#617-合并二叉树)
 - [226-翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)：[226题解](#226-翻转二叉树)
+- [104-二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/）：[104题解](#104-二叉树的最大深度)
 
 ### 位运算
 - [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/)：[461题解](#461-汉明距离)
@@ -64,4 +65,41 @@ class Solution:
         self.invertTree(root.left)
         self.invertTree(root.right)
         return root
+```
+
+### 104-二叉树的最大深度
+- https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
+- 给定一个二叉树，找出其最大深度
+- 思路：递归
+    - 终止条件：如为空，则深度为0
+    - 递归过程：返回左右子树中的最大深度+1
+- 复杂度：O(n)、O(h)
+```python
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        # condition：如为空，则深度为0
+        if root is None:
+            return 0
+        # recursion：返回左右子树中的最大深度+1
+        return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+```
+
+### 206-反转链表
+- https://leetcode-cn.com/problems/reverse-linked-list/
+- 反转一个单链表
+- 思路：递归
+    - 终止条件：如为空，返回结点
+    - 递归过程：先递归，再反转，返回node
+- 复杂度：O(n)、O(n)
+```python
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        # condition：如为空，返回结点
+        if head is None or head.next is None:
+            return head
+        # recursion：先递归，再反转，返回node
+        node = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return node
 ```
