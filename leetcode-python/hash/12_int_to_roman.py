@@ -1,12 +1,3 @@
-"""
-12-整数转罗马数字
-- https://leetcode-cn.com/problems/integer-to-roman/
-- 给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内
-- 思路：贪心哈希表，count key的次数进行重复
-- 复杂度：O(1)、O(1)
-"""
-
-
 class Solution:
     def intToRoman(self, num: int) -> str:
         int2roman = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL',

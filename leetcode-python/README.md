@@ -1,4 +1,4 @@
-# LeetCode Top 100 (Python)
+# LeetCode (Python)
 > https://github.com/louisgry/Algorithm/tree/master/leetcode-python
 
 ## 题目
@@ -6,6 +6,9 @@
 - [617-合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)：[617题解](#617-合并二叉树)
 - [226-翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/)：[226题解](#226-翻转二叉树)
 - [104-二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/）：[104题解](#104-二叉树的最大深度)
+
+### 哈希
+- [13-罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/)：[13题解](#13-罗马数字转整数)
 
 ### 位运算
 - [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/)：[461题解](#461-汉明距离)
@@ -103,3 +106,47 @@ class Solution:
         head.next = None
         return node
 ```
+
+### 13-罗马数字转整数
+- https://leetcode-cn.com/problems/roman-to-integer/
+- 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。若左边比右边小，则相减，如IV=5-1=4
+- 思路：直接累加，考虑左边比右边小的特殊情况
+- 复杂度：O(n)、O(1)
+```python
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman2int = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        res = 0
+        # 单独处理最后一个
+        for index in range(len(s)-1):
+            # 考虑特殊情况：左边比右边小，则相减
+            if roman2int[s[index]] < roman2int[s[index+1]]:
+                res -= roman2int[s[index]]
+            else:
+                res += roman2int[s[index]]
+        return res + roman2int[s[-1]]
+```
+
+### 12-整数转罗马数字
+- https://leetcode-cn.com/problems/integer-to-roman/
+- 给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内
+- 思路：贪心哈希表，count key的次数进行重复
+- 复杂度：O(1)、O(1)
+```python
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        int2roman = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD', 100: 'C', 90: 'XC', 50: 'L', 40: 'XL',
+                     10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'}
+        res = ''
+        for key in int2roman:
+            if num // key != 0:
+                # count有多少个key
+                count = num // key
+                # key对应的roman值重复count遍
+                res += int2roman[key] * count
+                # 求模，缩小
+                num %= key
+        return res
+```
+
+

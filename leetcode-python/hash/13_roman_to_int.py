@@ -1,12 +1,3 @@
-"""
-13-罗马数字转整数
-- https://leetcode-cn.com/problems/roman-to-integer/
-- 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。若左边比右边小，则相减，如IV=5-1=4
-- 思路：直接累加，考虑左边比右边小的特殊情况
-- 复杂度：O(n)、O(1)
-"""
-
-
 class Solution:
     def romanToInt(self, s: str) -> int:
         roman2int = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}

@@ -1,14 +1,3 @@
-"""
-226-翻转二叉树
-- https://leetcode-cn.com/problems/invert-binary-tree/
-- 左右子树互换
-- 思路：递归
-    - 终止条件：如为空，返回空
-    - 递归过程：先swap，再递归
-- 复杂度：O(n)、O(h)
-"""
-
-
 class TreeNode:
     def __init__(self, x):
         self.val = x
