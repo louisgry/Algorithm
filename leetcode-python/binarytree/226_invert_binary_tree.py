@@ -18,7 +18,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    # tree
+    # binarytree
     t = TreeNode(1)
     t.left = TreeNode(2)
     t.right = TreeNode(3)

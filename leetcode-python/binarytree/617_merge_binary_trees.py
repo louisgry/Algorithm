@@ -1,4 +1,4 @@
-# Definition for a binary tree node.
+# Definition for a binary binarytree node.
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -22,7 +22,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    # tree
+    # binarytree
     t1 = TreeNode(1)
     t1.left = TreeNode(3)
     t1.right = TreeNode(2)
