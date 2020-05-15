@@ -13,6 +13,9 @@
 ### 位运算
 - [461-汉明距离](https://leetcode-cn.com/problems/hamming-distance/)：[461题解](#461-汉明距离)
 
+### 数学
+- [1360-日期之间隔几天](https://leetcode-cn.com/problems/number-of-days-between-two-dates/)：[1360题解](#1360-日期之间隔几天)
+
 ## 题解
 ### 617-合并二叉树
 - https://leetcode-cn.com/problems/merge-two-binary-trees/
@@ -149,4 +152,91 @@ class Solution:
         return res
 ```
 
+### 1360-日期之间隔几天
+- https://leetcode-cn.com/problems/number-of-days-between-two-dates/
+- 计算两个日期之间隔了多少天，日期以字符串形式给出，格式为 YYYY-MM-DD
+- 思路：分别计算日期距离1971年1月1日有多少天，注意区分闰年的二月
+- 复杂度：O(1)、O(1)
+```python
+class Solution:
+    def daysBetweenDates(self, date1: str, date2: str) -> int:
+        # 转化为距离1971年1月1日的天数
+        date1 = [int(i) for i in date1.split('-')]
+        date2 = [int(i) for i in date2.split('-')]
+        # 传入可变参数*param，以元组形式传入date
+        return abs(self.dateToInt(*date1) - self.dateToInt(*date2))
 
+    def dateToInt(self, year, month, day):
+        res = 0
+        month_days = [31, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30]
+        while year != 1971 or month != 1 or day != 1:
+            res += 1
+            day -= 1
+            if day == 0:
+                month -= 1
+                day = month_days[month]
+                # 闰年的二月：多一天
+                if self.isLeapYear(year) and month == 2:
+                    day += 1
+            if month == 0:
+                year -= 1
+                month += 12
+        return res
+
+    def isLeapYear(self, year):
+        # 闰年：能被4整除但不能被100整除/能被400整除
+        return (year % 100 != 0 and year % 4 == 0) or year % 400 == 0
+```
+
+### 93-复原IP地址
+- https://leetcode-cn.com/problems/restore-ip-addresses/
+- 给定一个只包含数字的字符串，复原它并返回所有可能的 IP 地址格式
+- 思路：https://leetcode-cn.com/problems/restore-ip-addresses/solution/97-100-jian-ji-hui-su-by-su-zi-2/
+```python
+from typing import List
+class Solution:
+    def restoreIpAddresses(self, s: str) -> List[str]:
+        res = []
+
+        # count记录split次数，s保留剩余的str
+        def restore(count=0, ip='', s=''):
+            if count == 4:
+                if s == '':
+                    res.append(ip[:-1])
+                return
+            if len(s) > 0:
+                restore(count+1, ip+s[0]+'.', s[1:])
+            if len(s) > 1 and s[0] != '0':
+                restore(count+1, ip+s[:2]+'.', s[2:])
+            if len(s) > 2 and s[0] != '0' and int(s[0:3]) < 256:
+                restore(count+1, ip+s[:3]+'.', s[3:])
+        restore(0, '', s)
+        return res
+```
+
+### 102-二叉树的层序遍历
+- https://leetcode-cn.com/problems/binary-tree-level-order-traversal/
+- 返回二叉树按层序遍历得到的节点值
+- 思路：BFS，用队列
+- 复杂度：O(n)、O(n)
+```python
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        res = []
+        queue = collections.deque()
+        # 先将根节点入队
+        queue.append(root)
+        while queue:
+            level = []
+            for _ in range(len(queue)):
+                # pop队首元素
+                cur = queue.popleft()
+                if cur is None:
+                    continue
+                level.append(cur.val)
+                queue.append(cur.left)
+                queue.append(cur.right)
+            if level:
+                res.append(level)
+        return res
+```

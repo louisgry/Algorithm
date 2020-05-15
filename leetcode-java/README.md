@@ -1,6 +1,5 @@
 
 # LeetCode分类汇总 (Java)
-> https://github.com/louisgry/Algorithm/tree/master/leetcode
 
 - 数据结构
     - [stack](#stack)
