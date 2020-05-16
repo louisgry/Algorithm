@@ -28,8 +28,14 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
         # 再统计众数
-        kv = collections.Counter(nodes).most_common()
-        for k, v in kv:
-            if v == kv[0][1]:
+        counter = collections.Counter(nodes).most_common()
+        for k, v in counter:
+            if v == counter[0][1]:
                 res.append(k)
         return res
+
+if __name__ == '__main__':
+    root = TreeNode(1)
+    root.left = TreeNode(1)
+    root.right = TreeNode(1)
+    print(Solution().findMode(root))
