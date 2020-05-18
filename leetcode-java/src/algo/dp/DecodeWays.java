@@ -1,6 +1,7 @@
 package algo.dp;
 
 import java.util.Arrays;
+
 /**
  * @author Louis
  * @date Create in 2019/09/10 12:17
@@ -11,13 +12,14 @@ public class DecodeWays {
      * https://leetcode.com/problems/decode-ways/
      */
     int[] memo;
+
     public int numDecodings(String s) {
         /**
          * 思路1：记忆化搜索
          * 时间复杂度：O(n)
          * 空间复杂度：O(n)
          */
-        memo = new int[s.length()+1];
+        memo = new int[s.length() + 1];
         Arrays.fill(memo, -1);
         memo[s.length()] = 1;
         return getNum(s, 0);
@@ -44,24 +46,28 @@ public class DecodeWays {
 //        }
 //        return memo[0];
     }
+
     private int getNum(String s, int i) {
         int n = s.length();
-        if(n == 0) {
+        if (n == 0) {
             return 0;
         }
-        if(memo[i] > -1) {
+        if (memo[i] > -1) {
             return memo[i];
         }
-        if(s.charAt(i) == '0') {
+        if (s.charAt(i) == '0') {
             return memo[i] = 0;
         }
-        int res = getNum(s, i+1);
-        if(i<s.length()-1 && Integer.parseInt(s.substring(i, i+2)) <= 26) {
-            res += getNum(s, i+2);
+        int res = getNum(s, i + 1);
+        if (i < s.length() - 1 && Integer.parseInt(s.substring(i, i + 2)) <= 26) {
+            res += getNum(s, i + 2);
         }
         return memo[i] = res;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String s1 = "12";
         // ==> 2

@@ -19,8 +19,8 @@ public class TwoStackImplementQueue {
     }
 
     public int pop() {
-        if(stack2.empty()) {
-            while(!stack1.empty()) {
+        if (stack2.empty()) {
+            while (!stack1.empty()) {
                 stack2.push(stack1.pop());
             }
         }

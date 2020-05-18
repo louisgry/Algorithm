@@ -1,6 +1,7 @@
 package algo.dp;
 
 import java.util.Arrays;
+
 /**
  * @author Louis
  * @date Create in 2019/09/08 11:54
@@ -26,16 +27,16 @@ public class HouseRobber {
          * 空间复杂度：O(n)
          */
         int n = nums.length;
-        if(n==0)
+        if (n == 0)
             return 0;
         int[] memo = new int[n];
         Arrays.fill(memo, -1);
-        memo[n-1] = nums[n-1];
-        for(int i=n-2; i>=0; i--){
+        memo[n - 1] = nums[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
             // memo[i]
-            for(int j=i; j<n; j++)
+            for (int j = i; j < n; j++)
 //                memo[i] = Math.max(memo[i], nums[j] + memo[j+2]);
-                memo[i] = Math.max(memo[i], nums[j] + (j+2<n ? memo[j+2] : 0));
+                memo[i] = Math.max(memo[i], nums[j] + (j + 2 < n ? memo[j + 2] : 0));
         }
         return memo[0];
     }
@@ -52,11 +53,13 @@ public class HouseRobber {
 //        return max;
 //    }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[] nums1 = {1,2,3,1};
+        int[] nums1 = {1, 2, 3, 1};
         System.out.println((new HouseRobber()).rob(nums1));
-        int[] nums2 = {2,7,9,3,1};
+        int[] nums2 = {2, 7, 9, 3, 1};
         System.out.println((new HouseRobber()).rob(nums2));
     }
 }

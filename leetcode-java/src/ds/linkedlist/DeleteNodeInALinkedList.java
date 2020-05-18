@@ -9,8 +9,12 @@ public class DeleteNodeInALinkedList {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 237 Delete Node in a Linked List
      * https://leetcode.com/problems/delete-node-in-a-linked-list/
@@ -19,10 +23,10 @@ public class DeleteNodeInALinkedList {
      * 空间复杂度：O(1)
      */
     public void deleteNode(ListNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
-        if(node.next == null){
+        if (node.next == null) {
             node = null;
             return;
         }
@@ -30,7 +34,10 @@ public class DeleteNodeInALinkedList {
         node.next = node.next.next;
         return;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         DeleteNodeInALinkedList deleteNodeInALinkedList = new DeleteNodeInALinkedList();
         // 4->5->1->9->null

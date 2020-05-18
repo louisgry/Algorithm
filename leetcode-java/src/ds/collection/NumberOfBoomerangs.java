@@ -17,31 +17,35 @@ public class NumberOfBoomerangs {
     public int numberOfBoomerangs(int[][] points) {
         int res = 0;
         // 遍历枢纽点i
-        for(int i=0; i<points.length; i++) {
+        for (int i = 0; i < points.length; i++) {
             // 把其他点的距离放入Map
             HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-            for(int j=0; j<points.length; j++) {
-                if(j != i) {
+            for (int j = 0; j < points.length; j++) {
+                if (j != i) {
                     // 对比距离时使用距离的平方，无浮点数误差问题
                     int dist = dis(points[i], points[j]);
-                    if(!map.containsKey(dist))
+                    if (!map.containsKey(dist))
                         map.put(dist, 1);
                     else
-                        map.put(dist, map.get(dist)+1);
+                        map.put(dist, map.get(dist) + 1);
                 }
             }
             // 计算相同距离点的个数的组合
-            for(Integer dis : map.keySet())
-                res += map.get(dis) * (map.get(dis)-1);
+            for (Integer dis : map.keySet())
+                res += map.get(dis) * (map.get(dis) - 1);
         }
         return res;
     }
+
     private int dis(int[] a, int[] b) {
-        return (a[0]-b[0])*(a[0]-b[0]) + (a[1]-b[1])*(a[1]-b[1]);
+        return (a[0] - b[0]) * (a[0] - b[0]) + (a[1] - b[1]) * (a[1] - b[1]);
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[][] pointers = {{0,0},{1,0},{2,0}};
+        int[][] pointers = {{0, 0}, {1, 0}, {2, 0}};
         // ==> 2
         System.out.println((new NumberOfBoomerangs()).numberOfBoomerangs(pointers));
     }

@@ -21,12 +21,12 @@ public class CopyComplexLinkedList {
      * - https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba
      */
     public RandomListNode Clone(RandomListNode pHead) {
-        if(pHead == null) {
+        if (pHead == null) {
             return null;
         }
         // 1. 插入新节点
         RandomListNode cur = pHead;
-        while(cur != null) {
+        while (cur != null) {
             RandomListNode clone = new RandomListNode(cur.label);
             clone.next = cur.next;
             cur.next = clone;
@@ -34,9 +34,9 @@ public class CopyComplexLinkedList {
         }
         // 2. 建立random链接
         cur = pHead;
-        while(cur != null) {
+        while (cur != null) {
             RandomListNode clone = cur.next;
-            if(cur.random != null) {
+            if (cur.random != null) {
                 // random的下一个
                 clone.random = cur.random.next;
             }
@@ -46,7 +46,7 @@ public class CopyComplexLinkedList {
         cur = pHead;
         RandomListNode cHead = pHead.next;
         // 要判断next是否为空
-        while(cur.next != null) {
+        while (cur.next != null) {
             RandomListNode next = cur.next;
             cur.next = next.next;
             cur = next;

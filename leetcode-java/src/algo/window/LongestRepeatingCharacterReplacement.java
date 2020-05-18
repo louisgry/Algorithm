@@ -13,22 +13,25 @@ public class LongestRepeatingCharacterReplacement {
      * 空间复杂度：O(1)
      */
     public int characterReplacement(String s, int k) {
-        int i=0, j=0;
+        int i = 0, j = 0;
         int max = 0;
         int maxCount = 0;
         int[] freq = new int[256];
-        while (j<s.length()) {
+        while (j < s.length()) {
             freq[s.charAt(j)]++;
             maxCount = Math.max(maxCount, freq[s.charAt(j)]);
             j++;
-            while(j-i-maxCount > k) {
+            while (j - i - maxCount > k) {
                 freq[s.charAt(i++)]--;
             }
-            max = Math.max(max, j-i);
+            max = Math.max(max, j - i);
         }
         return max;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String s1 = "ABAB";
         int k1 = 2;

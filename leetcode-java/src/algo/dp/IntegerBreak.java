@@ -1,6 +1,7 @@
 package algo.dp;
 
 import java.util.Arrays;
+
 /**
  * @author Louis
  * @date Create in 2019/09/079 11:54
@@ -26,13 +27,13 @@ public class IntegerBreak {
          * 时间复杂度：O(n^2)
          * 空间复杂度：O(n)
          */
-        int[] memo = new int[n+1];
+        int[] memo = new int[n + 1];
         Arrays.fill(memo, -1);
         memo[1] = 1;
-        for(int i=2; i<=n; i++)
+        for (int i = 2; i <= n; i++)
             // 求解memo[i]
-            for(int j=1; j<=i-1; j++)
-                memo[i] = max3(memo[i], j*(i-j), j*memo[i-j]);
+            for (int j = 1; j <= i - 1; j++)
+                memo[i] = max3(memo[i], j * (i - j), j * memo[i - j]);
         return memo[n];
     }
 
@@ -50,11 +51,13 @@ public class IntegerBreak {
 //    }
 
     // max3
-    private int max3(int a, int b, int c){
+    private int max3(int a, int b, int c) {
         return Math.max(a, Math.max(b, c));
     }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
         System.out.println((new IntegerBreak()).integerBreak(2));
         System.out.println((new IntegerBreak()).integerBreak(10));

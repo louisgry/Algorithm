@@ -10,8 +10,12 @@ public class SameTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 100 Same Tree
      * https://leetcode.com/problems/same-tree/
@@ -21,10 +25,10 @@ public class SameTree {
      */
     public boolean isSameTree(TreeNode p, TreeNode q) {
         // 递归终止条件
-        if (p==null && q==null) {
+        if (p == null && q == null) {
             return true;
         }
-        if (p==null || q==null) {
+        if (p == null || q == null) {
             return false;
         }
         if (p.val != q.val) {
@@ -35,7 +39,10 @@ public class SameTree {
         boolean right = isSameTree(p.right, q.right);
         return left && right;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         SameTree sameTree = new SameTree();
         // binary tree [1,2,3] & [1,2,3]

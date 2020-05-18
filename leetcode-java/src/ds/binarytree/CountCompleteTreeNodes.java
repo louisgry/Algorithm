@@ -10,8 +10,12 @@ public class CountCompleteTreeNodes {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 222 Count Complete Tree Nodes
      * https://leetcode.com/problems/count-complete-tree-nodes/
@@ -21,15 +25,18 @@ public class CountCompleteTreeNodes {
      */
     public int countNodes(TreeNode root) {
         // 递归终止条件
-        if (root==null) {
+        if (root == null) {
             return 0;
         }
 
         // 递归过程
-        return 1+countNodes(root.left)+countNodes(root.right);
+        return 1 + countNodes(root.left) + countNodes(root.right);
     }
-    /** main */
-    public static void main(String[] args){
+
+    /**
+     * main
+     */
+    public static void main(String[] args) {
         CountCompleteTreeNodes countCompleteTreeNodes = new CountCompleteTreeNodes();
         // binary tree [1,2,3,4,5,6,null]
         TreeNode treeNode = countCompleteTreeNodes.new TreeNode(1);

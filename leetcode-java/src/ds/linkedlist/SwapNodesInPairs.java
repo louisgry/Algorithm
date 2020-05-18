@@ -9,8 +9,12 @@ public class SwapNodesInPairs {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 24 Swap Nodes in Pairs
      * https://leetcode.com/problems/swap-nodes-in-pairs/
@@ -24,7 +28,7 @@ public class SwapNodesInPairs {
 
         ListNode p = dummyHead;
         // 注意：边界是p.next和p.next.next
-        while(p.next!=null && p.next.next!=null) {
+        while (p.next != null && p.next.next != null) {
             ListNode node1 = p.next;
             ListNode node2 = node1.next;
             ListNode next = node2.next;
@@ -36,7 +40,10 @@ public class SwapNodesInPairs {
         }
         return dummyHead.next;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         SwapNodesInPairs swapNodesInPairs = new SwapNodesInPairs();
         // 1->2->3->4->null

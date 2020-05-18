@@ -11,12 +11,11 @@ public class BestTimeToBuyAndSellStockII {
     public int maxProfit(int[] prices) {
         int k = 0;
         int res = 0;
-        for(int i=1; i<prices.length; i++) {
-            if(prices[i]>prices[k]) {
-                res += prices[i]-prices[k];
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[k]) {
+                res += prices[i] - prices[k];
                 k = i;
-            }
-            else {
+            } else {
                 k++;
             }
         }

@@ -15,17 +15,20 @@ public class UniqueMorseRepresentations {
      * 空间复杂度：O(n)
      */
     public int uniqueMorseRepresentations(String[] words) {
-        String[] codes = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        String[] codes = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
         TreeSet<String> set = new TreeSet<String>();
-        for(String word : words) {
+        for (String word : words) {
             StringBuilder res = new StringBuilder();
-            for(int i=0; i<word.length(); i++)
-                res.append(codes[word.charAt(i)-'a']);
+            for (int i = 0; i < word.length(); i++)
+                res.append(codes[word.charAt(i) - 'a']);
             set.add(res.toString());
         }
         return set.size();
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String[] words = {"gin", "zen", "gig", "msg"};
         // ==> 2

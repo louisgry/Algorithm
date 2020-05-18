@@ -21,20 +21,20 @@ public class PerfectSquares {
         // ---- 如果num-i*i没有被访问过，入队，step+1。且visited设为true
 
         Queue<Pair<Integer, Integer>> queue = new LinkedList<Pair<Integer, Integer>>();
-        boolean[] visited = new boolean[n+1];
+        boolean[] visited = new boolean[n + 1];
         queue.add(new Pair(n, 0));
         visited[n] = true;
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             Pair<Integer, Integer> front = queue.poll();
             int num = front.getKey();
             int step = front.getValue();
-            if(num == 0) {
+            if (num == 0) {
                 return step;
             }
-            for(int i=0; num-i*i>=0; i++) {
-                if(!visited[num-i*i]) {
-                    queue.add(new Pair(num-i*i, step+1));
-                    visited[num-i*i] = true;
+            for (int i = 0; num - i * i >= 0; i++) {
+                if (!visited[num - i * i]) {
+                    queue.add(new Pair(num - i * i, step + 1));
+                    visited[num - i * i] = true;
                 }
             }
         }

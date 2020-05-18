@@ -30,21 +30,24 @@ public class CutRope {
 //        }
 //        return memo[target];
         /** 贪心 */
-        if(target == 2) {
+        if (target == 2) {
             return 1;
         }
-        if(target == 3) {
+        if (target == 3) {
             return 2;
         }
         int threeTimes = target / 3;
         // 剩下为4时，要剪成2*2
-        if(target - threeTimes*3 == 1) {
+        if (target - threeTimes * 3 == 1) {
             threeTimes -= 1;
         }
-        int twoTimes = (target - threeTimes*3)/2;
+        int twoTimes = (target - threeTimes * 3) / 2;
         return (int) (Math.pow(3, threeTimes) * Math.pow(2, twoTimes));
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         System.out.println((new CutRope()).cutRope(8));
     }

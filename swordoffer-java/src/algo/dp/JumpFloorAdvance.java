@@ -15,9 +15,9 @@ public class JumpFloorAdvance {
         int[] dp = new int[target];
         Arrays.fill(dp, 1);
         // f(n) = 2*f(n-1);
-        for(int i=1; i<target; i++) {
-            dp[i] = 2*dp[i-1];
+        for (int i = 1; i < target; i++) {
+            dp[i] = 2 * dp[i - 1];
         }
-        return dp[target-1];
+        return dp[target - 1];
     }
 }

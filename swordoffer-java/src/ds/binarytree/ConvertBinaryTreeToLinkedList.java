@@ -10,7 +10,10 @@ public class ConvertBinaryTreeToLinkedList {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 
     /**
@@ -23,16 +26,15 @@ public class ConvertBinaryTreeToLinkedList {
 
     public TreeNode Convert(TreeNode pRootOfTree) {
         // 中序遍历
-        if(pRootOfTree == null) {
+        if (pRootOfTree == null) {
             return null;
         }
         // 最左的叶子节点作为链表第一个结点
         Convert(pRootOfTree.left);
-        if(rHead == null) {
+        if (rHead == null) {
             lHead = pRootOfTree;
             rHead = pRootOfTree;
-        }
-        else {
+        } else {
             // 根节点插入链表右边，rHead向后移
             rHead.right = pRootOfTree;
             pRootOfTree.left = rHead;

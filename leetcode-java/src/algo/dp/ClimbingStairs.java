@@ -1,6 +1,7 @@
 package algo.dp;
 
 import java.util.Arrays;
+
 /**
  * @author Louis
  * @date Create in 2019/09/06 11:54
@@ -25,12 +26,12 @@ public class ClimbingStairs {
          * 时间复杂度：O(n)
          * 空间复杂度：O(n)
          */
-        int[] memo = new int[n+2];
+        int[] memo = new int[n + 2];
         Arrays.fill(memo, -1);
         memo[1] = 1;
         memo[2] = 2;
-        for(int i=3; i<=n; i++)
-            memo[i] = memo[i-1]+memo[i-2];
+        for (int i = 3; i <= n; i++)
+            memo[i] = memo[i - 1] + memo[i - 2];
         return memo[n];
     }
 
@@ -44,7 +45,9 @@ public class ClimbingStairs {
 //        return memo[n];
 //    }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
         System.out.println((new ClimbingStairs()).climbStairs(2));
         System.out.println((new ClimbingStairs()).climbStairs(3));

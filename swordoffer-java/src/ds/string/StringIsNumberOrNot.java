@@ -12,15 +12,18 @@ public class StringIsNumberOrNot {
      * https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2
      */
     public boolean isNumeric(char[] str) {
-        if(str==null || str.length==0) {
+        if (str == null || str.length == 0) {
             return false;
         }
         return new String(str).matches("^[+-]?\\d*(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?$");
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        System.out.println((new StringIsNumberOrNot()).isNumeric(new char[]{'+','1','0'}));
-        System.out.println((new StringIsNumberOrNot()).isNumeric(new char[]{'5','e','2'}));
-        System.out.println((new StringIsNumberOrNot()).isNumeric(new char[]{'+','-','0'}));
+        System.out.println((new StringIsNumberOrNot()).isNumeric(new char[]{'+', '1', '0'}));
+        System.out.println((new StringIsNumberOrNot()).isNumeric(new char[]{'5', 'e', '2'}));
+        System.out.println((new StringIsNumberOrNot()).isNumeric(new char[]{'+', '-', '0'}));
     }
 }

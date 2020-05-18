@@ -9,8 +9,12 @@ public class RemoveNthNodeFromEndOfList {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 19 Remove Nth Node From End of List
      * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
@@ -24,12 +28,12 @@ public class RemoveNthNodeFromEndOfList {
 
         ListNode p = dummyHead;
         ListNode q = dummyHead;
-        for(int i=0; i<n+1; i++){
+        for (int i = 0; i < n + 1; i++) {
             assert q != null;
             q = q.next;
         }
 
-        while(q != null) {
+        while (q != null) {
             p = p.next;
             q = q.next;
         }
@@ -58,7 +62,10 @@ public class RemoveNthNodeFromEndOfList {
 //        cur.next = cur.next.next;
 //        return dummyHead.next;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         RemoveNthNodeFromEndOfList removeNthNodeFromEndOfList = new RemoveNthNodeFromEndOfList();
         // 1->null, n=1（WA）

@@ -20,11 +20,11 @@ public class Fibonacci {
 
 
         /** 思路2：动态规划 */
-        int[] memo = new int[n+2];
+        int[] memo = new int[n + 2];
         memo[0] = 0;
         memo[1] = 1;
-        for(int i=2; i<=n; i++) {
-            memo[i] = memo[i-1] + memo[i-2];
+        for (int i = 2; i <= n; i++) {
+            memo[i] = memo[i - 1] + memo[i - 2];
         }
         return memo[n];
     }
@@ -40,7 +40,10 @@ public class Fibonacci {
 //        }
 //        return memo[n];
 //    }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         System.out.println((new Fibonacci()).Fibonacci(1));
         System.out.println((new Fibonacci()).Fibonacci(2));

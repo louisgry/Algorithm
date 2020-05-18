@@ -13,8 +13,12 @@ public class PathSumII {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 113 Path Sum II
      * https://leetcode.com/problems/path-sum-ii/
@@ -28,23 +32,27 @@ public class PathSumII {
         getPathSum(root, sum, middle, result);
         return result;
     }
+
     private void getPathSum(TreeNode root, int sum, ArrayList<Integer> middle, List<List<Integer>> result) {
         // condition
-        if(root == null) {
+        if (root == null) {
             return;
         }
         middle.add(root.val);
-        if(root.left==null && root.right==null) {
-            if(root.val == sum) {
+        if (root.left == null && root.right == null) {
+            if (root.val == sum) {
                 result.add(new ArrayList<>(middle));
             }
         }
         // recursion
-        getPathSum(root.left, sum-root.val, middle, result);
-        getPathSum(root.right, sum-root.val, middle, result);
-        middle.remove(middle.size()-1);
+        getPathSum(root.left, sum - root.val, middle, result);
+        getPathSum(root.right, sum - root.val, middle, result);
+        middle.remove(middle.size() - 1);
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         PathSumII pathSumII = new PathSumII();
         // binary tree [5,4,8,11,null,13,4,7,2,null,null,5,1]
@@ -61,7 +69,7 @@ public class PathSumII {
         // ==> [[5,4,11,2],[5,8,4,5]]
         int sum = 22;
         List<List<Integer>> result = pathSumII.pathSum(treeNode, sum);
-        for(List item : result) {
+        for (List item : result) {
             System.out.println(item.toString());
         }
     }

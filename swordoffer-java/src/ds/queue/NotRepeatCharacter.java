@@ -14,21 +14,22 @@ public class NotRepeatCharacter {
      */
     private int[] hash = new int[256];
     private Queue<Character> queue = new LinkedList<>();
+
     //Insert one char from stringstream
     public void Insert(char ch) {
         hash[ch]++;
         queue.add(ch);
         // 重复的字符出队
-        while(!queue.isEmpty() && hash[queue.peek()]>1) {
+        while (!queue.isEmpty() && hash[queue.peek()] > 1) {
             queue.poll();
         }
     }
+
     //return the first appearence once char in current stringstream
     public char FirstAppearingOnce() {
-        if(queue.isEmpty()) {
+        if (queue.isEmpty()) {
             return '#';
-        }
-        else {
+        } else {
             return queue.peek();
         }
     }

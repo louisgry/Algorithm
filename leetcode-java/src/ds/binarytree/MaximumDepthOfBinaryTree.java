@@ -10,8 +10,12 @@ public class MaximumDepthOfBinaryTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 104 Maximum Depth of Binary Tree
      * https://leetcode.com/problems/maximum-depth-of-binary-tree/
@@ -21,13 +25,16 @@ public class MaximumDepthOfBinaryTree {
      */
     public int maxDepth(TreeNode root) {
         // 递归终止条件
-        if (root==null) {
+        if (root == null) {
             return 0;
         }
         // 递归过程
-        return Math.max(maxDepth(root.left), maxDepth(root.right))+1;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         MaximumDepthOfBinaryTree maximumDepthOfBinaryTree = new MaximumDepthOfBinaryTree();
         // 成员内部类：Binary Tree [3,9,20,null,null,15,7]

@@ -17,9 +17,9 @@ public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int[] res = new int[2];
-        for(int i=0; i<nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
-            if(map.containsKey(complement)) {
+            if (map.containsKey(complement)) {
                 res[0] = i;
                 res[1] = map.get(complement);
             }
@@ -27,22 +27,25 @@ public class TwoSum {
         }
         return res;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[] nums = {2,7,11,15};
+        int[] nums = {2, 7, 11, 15};
         int target = 9;
         // ==> [0,1]
         int[] res = (new TwoSum()).twoSum(nums, target);
-        for(int num : res) {
+        for (int num : res) {
             System.out.print(num + " ");
         }
 
-        int[] nums2 = {3,2,4};
+        int[] nums2 = {3, 2, 4};
         int target2 = 6;
         // ==> [1,2]
         int[] res2 = (new TwoSum()).twoSum(nums2, target2);
         System.out.println();
-        for(int num : res2) {
+        for (int num : res2) {
             System.out.print(num + " ");
         }
     }

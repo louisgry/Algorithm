@@ -9,16 +9,20 @@ public class RemoveNodeO1 {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 18.1-在O(1)时间内删除链表节点
      */
     public void deleteNode(ListNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
-        if(node.next == null) {
+        if (node.next == null) {
             node = null;
             return;
         }

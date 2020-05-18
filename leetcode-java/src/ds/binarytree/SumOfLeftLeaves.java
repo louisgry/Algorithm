@@ -10,7 +10,10 @@ public class SumOfLeftLeaves {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 
     /**
@@ -26,14 +29,17 @@ public class SumOfLeftLeaves {
         if (root == null) {
             return 0;
         }
-        if (root.left!=null && root.left.left==null && root.left.right==null) {
+        if (root.left != null && root.left.left == null && root.left.right == null) {
             sum += root.left.val;
         }
         // 递归过程
         sum += sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
         return sum;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         SumOfLeftLeaves sumOfLeftLeavesClass = new SumOfLeftLeaves();
         // binary tree [3,9,20,null,null,15,7]

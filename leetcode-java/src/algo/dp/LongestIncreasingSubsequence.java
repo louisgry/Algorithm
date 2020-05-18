@@ -1,6 +1,7 @@
 package algo.dp;
 
 import java.util.Arrays;
+
 /**
  * @author Louis
  * @date Create in 2019/09/12 11:54
@@ -11,18 +12,19 @@ public class LongestIncreasingSubsequence {
      * https://leetcode.com/problems/longest-increasing-subsequence/
      */
     int[] memo;
+
     public int lengthOfLIS(int[] nums) {
         /**
          * 记忆化搜索
          * 时间复杂度：O(n^2)
          * 空间复杂度：O(n)
          */
-        if(nums.length==0)
+        if (nums.length == 0)
             return 0;
         memo = new int[nums.length];
         Arrays.fill(memo, -1);
         int max = 0;
-        for(int i=0; i<nums.length; i++)
+        for (int i = 0; i < nums.length; i++)
             max = Math.max(max, getMaxLen(nums, i));
         return max;
 
@@ -44,20 +46,23 @@ public class LongestIncreasingSubsequence {
 //            max = Math.max(max, memo[i]);
 //        return max;
     }
-    private int getMaxLen(int[] nums, int index){
-        if(memo[index] != -1)
+
+    private int getMaxLen(int[] nums, int index) {
+        if (memo[index] != -1)
             return memo[index];
         int max = 1;
-        for(int i=0; i<index; i++)
-            if(nums[i] < nums[index])
-                max = Math.max(max, 1+getMaxLen(nums, i));
+        for (int i = 0; i < index; i++)
+            if (nums[i] < nums[index])
+                max = Math.max(max, 1 + getMaxLen(nums, i));
         memo[index] = max;
         return memo[index];
     }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[] nums1 = {10,9,2,5,3,7,101,18};
+        int[] nums1 = {10, 9, 2, 5, 3, 7, 101, 18};
         System.out.println((new LongestIncreasingSubsequence()).lengthOfLIS(nums1));
     }
 }

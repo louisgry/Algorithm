@@ -10,8 +10,12 @@ public class SerializeBinaryTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 37-序列化二叉树
      * - https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84
@@ -20,11 +24,11 @@ public class SerializeBinaryTree {
     int index = -1;
 
     String Serialize(TreeNode root) {
-        if(root == null) {
+        if (root == null) {
             return "#";
         }
         // 前序遍历
-        return root.val+" "+Serialize(root.left)+" "+Serialize(root.right);
+        return root.val + " " + Serialize(root.left) + " " + Serialize(root.right);
     }
 
     TreeNode Deserialize(String str) {
@@ -32,19 +36,22 @@ public class SerializeBinaryTree {
         String[] s = str.split(" ");
         index++;
         // 下标越界则返回空
-        if(index > s.length) {
+        if (index > s.length) {
             return null;
         }
         // 前序遍历递归，如果值为#返回空节点
         TreeNode t = null;
-        if(!s[index].equals("#")) {
+        if (!s[index].equals("#")) {
             t = new TreeNode(Integer.parseInt(s[index]));
             t.left = Deserialize(str);
             t.right = Deserialize(str);
         }
         return t;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         SerializeBinaryTree serializeBinaryTree = new SerializeBinaryTree();
         TreeNode node = serializeBinaryTree.new TreeNode(1);

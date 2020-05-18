@@ -32,26 +32,26 @@ public class LongestCommonSubsequence {
         int n = text2.length();
         int memo[][] = new int[m][n];
         // init
-        for(int i=0; i<m; i++)
-            if(text1.charAt(i)==text2.charAt(0)){
-                for(int j=i; j<m; j++)
+        for (int i = 0; i < m; i++)
+            if (text1.charAt(i) == text2.charAt(0)) {
+                for (int j = i; j < m; j++)
                     memo[j][0] = 1;
                 break;
             }
-        for(int i=0; i<n; i++)
-            if(text1.charAt(0)==text2.charAt(i)){
-                for(int j=i; j<n; j++)
+        for (int i = 0; i < n; i++)
+            if (text1.charAt(0) == text2.charAt(i)) {
+                for (int j = i; j < n; j++)
                     memo[0][j] = 1;
                 break;
             }
         // dp
-        for(int i=1; i<m; i++)
-            for(int j=1; j<n; j++)
-                if(text1.charAt(i) == text2.charAt(j))
-                    memo[i][j] = 1 + memo[i-1][j-1];
+        for (int i = 1; i < m; i++)
+            for (int j = 1; j < n; j++)
+                if (text1.charAt(i) == text2.charAt(j))
+                    memo[i][j] = 1 + memo[i - 1][j - 1];
                 else
-                    memo[i][j] = Math.max(memo[i-1][j], memo[i][j-1]);
-        return memo[m-1][n-1];
+                    memo[i][j] = Math.max(memo[i - 1][j], memo[i][j - 1]);
+        return memo[m - 1][n - 1];
     }
     // 求s1[0...m]和s2[0...n]的最长公共子序列的长度
 //    private int lcs(String s1, String s2, int m, int n){
@@ -68,7 +68,9 @@ public class LongestCommonSubsequence {
 //        return max;
 //    }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String s1 = "abcde";
         String s2 = "ace";

@@ -9,8 +9,12 @@ public class PalindromeLinkedList {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 234 Palindrome Linked List
      * https://leetcode.com/problems/palindrome-linked-list/
@@ -21,18 +25,18 @@ public class PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
         ListNode p = head;
         ListNode q = head;
-        while(q!=null && q.next!=null) {
+        while (q != null && q.next != null) {
             q = q.next.next;
             p = p.next;
         }
-        if(q != null){
+        if (q != null) {
             p = p.next;
         }
         p = reverse(p);
 
         q = head;
-        while(p != null) {
-            if(p.val != q.val){
+        while (p != null) {
+            if (p.val != q.val) {
                 return false;
             }
             p = p.next;
@@ -40,10 +44,11 @@ public class PalindromeLinkedList {
         }
         return true;
     }
+
     private ListNode reverse(ListNode node) {
         ListNode pre = null;
         ListNode cur = node;
-        while(cur != null) {
+        while (cur != null) {
             ListNode next = cur.next;
             cur.next = pre;
             pre = cur;
@@ -51,7 +56,10 @@ public class PalindromeLinkedList {
         }
         return pre;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
         // 1->2->2->1

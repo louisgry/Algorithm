@@ -10,8 +10,12 @@ public class MinimumDepthOfBinaryTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val=x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 111 Minimum Depth of Binary Tree
      * https://leetcode.com/problems/minimum-depth-of-binary-tree/
@@ -21,23 +25,26 @@ public class MinimumDepthOfBinaryTree {
      */
     public int minDepth(TreeNode root) {
         // 递归终止条件
-        if (root==null) {
+        if (root == null) {
             return 0;
         }
-        if (root.left==null && root.right==null) {
+        if (root.left == null && root.right == null) {
             return 1;
         }
         // 递归过程
         int min = Integer.MAX_VALUE;
-        if (root.left!=null) {
-            min = Math.min(min, minDepth(root.left)+1);
+        if (root.left != null) {
+            min = Math.min(min, minDepth(root.left) + 1);
         }
-        if (root.right!=null) {
-            min = Math.min(min, minDepth(root.right)+1);
+        if (root.right != null) {
+            min = Math.min(min, minDepth(root.right) + 1);
         }
         return min;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         MinimumDepthOfBinaryTree minimumDepthOfBinaryTree = new MinimumDepthOfBinaryTree();
         // Binary Tree [3,9,20,null,null,15,7]

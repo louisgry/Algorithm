@@ -10,8 +10,12 @@ public class SymmetricTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 101 Symmetric Tree
      * https://leetcode.com/problems/symmetric-tree/
@@ -27,11 +31,12 @@ public class SymmetricTree {
         // 递归过程
         return isMirror(root.left, root.right);
     }
+
     private boolean isMirror(TreeNode p, TreeNode q) {
-        if (p==null && q==null) {
+        if (p == null && q == null) {
             return true;
         }
-        if (p==null || q==null) {
+        if (p == null || q == null) {
             return false;
         }
         if (p.val != q.val) {
@@ -39,7 +44,10 @@ public class SymmetricTree {
         }
         return isMirror(p.left, q.right) && isMirror(p.right, q.left);
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         SymmetricTree symmetricTree = new SymmetricTree();
         // binary tree [1,2,2]

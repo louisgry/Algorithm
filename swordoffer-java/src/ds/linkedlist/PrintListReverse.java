@@ -12,8 +12,12 @@ public class PrintListReverse {
     public class ListNode {
         int val;
         ListNode next = null;
-        ListNode(int val) { this.val = val; }
+
+        ListNode(int val) {
+            this.val = val;
+        }
     }
+
     /**
      * 6 从尾到头打印链表
      * https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035
@@ -36,13 +40,16 @@ public class PrintListReverse {
          */
         // 模拟栈，每次在第一个位置插入元素，取出来的就是最新的元素
         ArrayList<Integer> list = new ArrayList<Integer>();
-        while(listNode != null) {
+        while (listNode != null) {
             list.add(0, listNode.val);
             listNode = listNode.next;
         }
         return list;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         PrintListReverse printListReverse = new PrintListReverse();
         ListNode head = printListReverse.new ListNode(1);

@@ -17,8 +17,8 @@ public class PermutationInString {
         for (char c : s1.toCharArray()) {
             freq[c]++;
         }
-        int i=0, count=0;
-        for (int j=0; j<s2.length(); j++) {
+        int i = 0, count = 0;
+        for (int j = 0; j < s2.length(); j++) {
             freq[s2.charAt(j)]--;
             if (freq[s2.charAt(j)] >= 0) {
                 count++;
@@ -30,13 +30,16 @@ public class PermutationInString {
                 }
                 i++;
             }
-            if (count==s1.length()) {
+            if (count == s1.length()) {
                 return true;
             }
         }
         return false;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String s1 = "ab";
         String s2 = "eidbaooo";

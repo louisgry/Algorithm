@@ -17,18 +17,21 @@ public class ContainsDuplicateIII {
     public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
         // 需要用Long和long，会发生整型溢出
         TreeSet<Long> set = new TreeSet<Long>();
-        for(int i=0; i<nums.length; i++) {
-            if(set.ceiling((long)nums[i]-(long)t) != null && set.ceiling((long)nums[i]-(long)t)<=(long)nums[i]+(long)t){
+        for (int i = 0; i < nums.length; i++) {
+            if (set.ceiling((long) nums[i] - (long) t) != null && set.ceiling((long) nums[i] - (long) t) <= (long) nums[i] + (long) t) {
                 return true;
             }
-            set.add((long)nums[i]);
-            if(set.size() == k+1){
-                set.remove((long)nums[i-k]);
+            set.add((long) nums[i]);
+            if (set.size() == k + 1) {
+                set.remove((long) nums[i - k]);
             }
         }
         return false;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         int[] nums = {-2147483648, -2147483647};
         int k = 3;

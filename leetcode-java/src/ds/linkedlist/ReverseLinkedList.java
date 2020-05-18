@@ -9,8 +9,12 @@ public class ReverseLinkedList {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 206 Reverse Linked List
      * https://leetcode.com/problems/reverse-linked-list/
@@ -20,7 +24,7 @@ public class ReverseLinkedList {
      */
     public ListNode reverseList(ListNode head) {
         // condition
-        if(head==null || head.next==null) {
+        if (head == null || head.next == null) {
             return head;
         }
 
@@ -48,7 +52,10 @@ public class ReverseLinkedList {
 //        return pre;
 
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
         // Input: 1->2->3->4->5->NULL

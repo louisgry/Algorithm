@@ -14,36 +14,38 @@ public class MinimumSizeSubarraySum {
      */
     public int minSubArrayLen(int s, int[] nums) {
         // 非空判断
-        if(nums==null || nums.length==0) {
+        if (nums == null || nums.length == 0) {
             return 0;
         }
         // 右边界不包含任何元素
-        int l=0, r=-1;
+        int l = 0, r = -1;
         int min = Integer.MAX_VALUE;
         int sum = 0;
-        while(l < nums.length) {
-            if(r+1<nums.length && sum < s) {
+        while (l < nums.length) {
+            if (r + 1 < nums.length && sum < s) {
                 // 需判断是否越界
                 sum += nums[++r];
-            }
-            else {
+            } else {
                 sum -= nums[l++];
             }
 
-            if(sum >= s) {
-                min = Math.min(min, r-l+1);
+            if (sum >= s) {
+                min = Math.min(min, r - l + 1);
             }
         }
         // 返回结果判断，如果没找到为0
-        if(min == Integer.MAX_VALUE) {
+        if (min == Integer.MAX_VALUE) {
             return 0;
         }
         return min;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         int s = 7;
-        int[] nums = {2,3,1,2,4,3};
+        int[] nums = {2, 3, 1, 2, 4, 3};
         System.out.println((new MinimumSizeSubarraySum()).minSubArrayLen(s, nums));
     }
 }

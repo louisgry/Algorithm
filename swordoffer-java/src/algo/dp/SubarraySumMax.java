@@ -10,16 +10,15 @@ public class SubarraySumMax {
      * - https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484
      */
     public int FindGreatestSumOfSubArray(int[] array) {
-        if(array==null || array.length==0) {
+        if (array == null || array.length == 0) {
             return 0;
         }
         int max = Integer.MIN_VALUE;
         int sum = 0;
-        for(int num : array) {
-            if(sum <= 0) {
+        for (int num : array) {
+            if (sum <= 0) {
                 sum = num;
-            }
-            else {
+            } else {
                 sum += num;
             }
             max = Math.max(max, sum);

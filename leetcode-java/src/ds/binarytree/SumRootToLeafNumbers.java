@@ -10,8 +10,12 @@ public class SumRootToLeafNumbers {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 129 Sum Root to Leaf Numbers
      * https://leetcode.com/problems/sum-root-to-leaf-numbers/
@@ -22,19 +26,23 @@ public class SumRootToLeafNumbers {
     public int sumNumbers(TreeNode root) {
         return getSum(root, 0);
     }
+
     private int getSum(TreeNode root, int curSum) {
         // condition
-        if(root == null) {
+        if (root == null) {
             return 0;
         }
-        curSum = curSum*10 + root.val;
-        if(root.left==null && root.right==null) {
+        curSum = curSum * 10 + root.val;
+        if (root.left == null && root.right == null) {
             return curSum;
         }
         // recursion
         return getSum(root.left, curSum) + getSum(root.right, curSum);
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         SumRootToLeafNumbers sumRootToLeafNumbers = new SumRootToLeafNumbers();
         // binary tree [1,2,3]

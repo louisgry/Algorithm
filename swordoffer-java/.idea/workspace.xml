@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf412a5a-227e-42c8-b6e4-3eea88633d4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1SeCra1Fdt5vPipo0e0ZV009u0t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../leetcode" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MultipyArray">
+    <configuration name="AddUsingBit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algo.other.AddUsingBit" />
+      <module name="swordoffer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algo.other.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindKSmallestNums" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ds.heap.FindKSmallestNums" />
+      <module name="swordoffer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ds.heap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultipyArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algo.other.MultipyArray" />
+      <module name="swordoffer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algo.other.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokerContinuous" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algo.sort.PokerContinuous" />
+      <module name="swordoffer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algo.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WindowMaximum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ds.heap.WindowMaximum" />
+      <module name="swordoffer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ds.heap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MultipyArray" />
+        <item itemvalue="Application.AddUsingBit" />
+        <item itemvalue="Application.PokerContinuous" />
+        <item itemvalue="Application.WindowMaximum" />
+        <item itemvalue="Application.FindKSmallestNums" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf412a5a-227e-42c8-b6e4-3eea88633d4c" name="Default Changelist" comment="" />
+      <created>1571914873850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571914873850</updated>
+      <workItem from="1571914875300" duration="83000" />
+      <workItem from="1571915054458" duration="5808000" />
+      <workItem from="1571921584882" duration="609000" />
+      <workItem from="1576944905247" duration="1636000" />
+      <workItem from="1577630384930" duration="1154000" />
+      <workItem from="1577678617766" duration="3986000" />
+      <workItem from="1577858299654" duration="1026000" />
+      <workItem from="1577972644169" duration="8036000" />
+      <workItem from="1578488064286" duration="9810000" />
+      <workItem from="1578912122446" duration="1242000" />
+      <workItem from="1579085272350" duration="6339000" />
+      <workItem from="1579096441919" duration="9366000" />
+      <workItem from="1579710910962" duration="7000" />
+      <workItem from="1579782071161" duration="4775000" />
+      <workItem from="1579872691265" duration="4515000" />
+      <workItem from="1579879667206" duration="61000" />
+      <workItem from="1579966995065" duration="43000" />
+      <workItem from="1580044127980" duration="3929000" />
+      <workItem from="1580567602853" duration="1117000" />
+      <workItem from="1580568758568" duration="6429000" />
+      <workItem from="1580742309284" duration="5052000" />
+      <workItem from="1580896833603" duration="679000" />
+      <workItem from="1581834008828" duration="29000" />
+      <workItem from="1582166002015" duration="14118000" />
+      <workItem from="1582512084210" duration="2164000" />
+      <workItem from="1582547578628" duration="792000" />
+      <workItem from="1582770964781" duration="3471000" />
+      <workItem from="1583910739382" duration="5584000" />
+      <workItem from="1586760317886" duration="1149000" />
+    </task>
+    <task id="LOCAL-00001" summary="quick commit">
+      <created>1577631334955</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577631334956</updated>
+    </task>
+    <task id="LOCAL-00002" summary="quick commit">
+      <created>1577713517682</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577713517682</updated>
+    </task>
+    <task id="LOCAL-00003" summary="quick commit">
+      <created>1577976011755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577976011756</updated>
+    </task>
+    <task id="LOCAL-00004" summary="更新README">
+      <created>1577976527456</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577976527456</updated>
+    </task>
+    <task id="LOCAL-00005" summary="quick commit">
+      <created>1578231864641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578231864642</updated>
+    </task>
+    <task id="LOCAL-00006" summary="quick commit">
+      <created>1578488182907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578488182907</updated>
+    </task>
+    <task id="LOCAL-00007" summary="quick commit">
+      <created>1578488618994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578488618994</updated>
+    </task>
+    <task id="LOCAL-00008" summary="quick commit">
+      <created>1578580669819</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578580669819</updated>
+    </task>
+    <task id="LOCAL-00009" summary="quick commit">
+      <created>1578639164704</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578639164704</updated>
+    </task>
+    <task id="LOCAL-00010" summary="quick commit">
+      <created>1578915595761</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578915595761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="quick commit">
+      <created>1579093052142</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579093052142</updated>
+    </task>
+    <task id="LOCAL-00012" summary="quick commit">
+      <created>1579096512149</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579096512149</updated>
+    </task>
+    <task id="LOCAL-00013" summary="quick commit">
+      <created>1579180577688</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579180577688</updated>
+    </task>
+    <task id="LOCAL-00014" summary="quick commit">
+      <created>1579619685158</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579619685158</updated>
+    </task>
+    <task id="LOCAL-00015" summary="quick commit">
+      <created>1579707960992</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1579707960993</updated>
+    </task>
+    <task id="LOCAL-00016" summary="quick commit">
+      <created>1579791443554</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579791443554</updated>
+    </task>
+    <task id="LOCAL-00017" summary="quick commit">
+      <created>1579878596125</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579878596125</updated>
+    </task>
+    <task id="LOCAL-00018" summary="quick commit">
+      <created>1579879697020</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579879697020</updated>
+    </task>
+    <task id="LOCAL-00019" summary="quick commit">
+      <created>1579967034361</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1579967034361</updated>
+    </task>
+    <task id="LOCAL-00020" summary="quick commit">
+      <created>1580044787758</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1580044787758</updated>
+    </task>
+    <task id="LOCAL-00021" summary="quick commit">
+      <created>1580053180621</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1580053180621</updated>
+    </task>
+    <task id="LOCAL-00022" summary="quick commit">
+      <created>1580053413633</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1580053413633</updated>
+    </task>
+    <task id="LOCAL-00023" summary="quick commit">
+      <created>1580799842258</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1580799842258</updated>
+    </task>
+    <task id="LOCAL-00024" summary="quick commit">
+      <created>1580897479767</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1580897479767</updated>
+    </task>
+    <task id="LOCAL-00025" summary="quick commit">
+      <created>1582385149547</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1582385149547</updated>
+    </task>
+    <task id="LOCAL-00026" summary="quick commit">
+      <created>1582546535614</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1582546535614</updated>
+    </task>
+    <task id="LOCAL-00027" summary="quick commit">
+      <created>1582547594059</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1582547594059</updated>
+    </task>
+    <task id="LOCAL-00028" summary="quick commit">
+      <created>1582799996178</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1582799996178</updated>
+    </task>
+    <task id="LOCAL-00029" summary="finished">
+      <created>1583919861751</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1583919861751</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新README" />
+    <MESSAGE value="quick commit" />
+    <MESSAGE value="finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algo/other/AddUsingBit.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

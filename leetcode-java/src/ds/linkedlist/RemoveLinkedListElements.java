@@ -9,8 +9,12 @@ public class RemoveLinkedListElements {
     public class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 203 Remove Linked List Elements
      * https://leetcode.com/problems/remove-linked-list-elements/
@@ -22,17 +26,19 @@ public class RemoveLinkedListElements {
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
         ListNode cur = dummyHead;
-        while(cur.next != null) {
-            if(cur.next.val == val) {
+        while (cur.next != null) {
+            if (cur.next.val == val) {
                 cur.next = cur.next.next;
-            }
-            else {
+            } else {
                 cur = cur.next;
             }
         }
         return dummyHead.next;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         RemoveLinkedListElements removeLinkedListElements = new RemoveLinkedListElements();
         // 1->2->3->4->null

@@ -10,8 +10,12 @@ public class LowestCommonAncestorOfBST {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 235 Lowest Common Ancestor of a Binary Search Tree
      * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
@@ -21,19 +25,22 @@ public class LowestCommonAncestorOfBST {
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // condition
-        if(root == null) {
+        if (root == null) {
             return null;
         }
         // recursion
-        if(p.val<root.val && q.val<root.val) {
+        if (p.val < root.val && q.val < root.val) {
             return lowestCommonAncestor(root.left, p, q);
         }
-        if(p.val>root.val && q.val>root.val) {
+        if (p.val > root.val && q.val > root.val) {
             return lowestCommonAncestor(root.right, p, q);
         }
         return root;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         LowestCommonAncestorOfBST lowestCommonAncestorOfBST = new LowestCommonAncestorOfBST();
         // binary tree [6,2,8,0,4,7,9,null,null,3,5]

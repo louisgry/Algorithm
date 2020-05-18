@@ -10,8 +10,12 @@ public class PathSum {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 112 Path Sum
      * https://leetcode.com/problems/path-sum/
@@ -24,14 +28,17 @@ public class PathSum {
         if (root == null) {
             return false;
         }
-        if (root.left==null && root.right==null) {
+        if (root.left == null && root.right == null) {
             return root.val == sum;
         }
         // 递归过程
-        return hasPathSum(root.left, sum-root.val) ||
-                hasPathSum(root.right, sum-root.val);
+        return hasPathSum(root.left, sum - root.val) ||
+                hasPathSum(root.right, sum - root.val);
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         PathSum pathSum = new PathSum();
 

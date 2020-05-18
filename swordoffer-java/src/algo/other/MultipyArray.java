@@ -14,22 +14,25 @@ public class MultipyArray {
         int[] B = new int[n];
         B[0] = 1;
         // 先计算下三角连乘
-        for(int i=1; i<n; i++) {
-            B[i] = B[i-1]*A[i-1];
+        for (int i = 1; i < n; i++) {
+            B[i] = B[i - 1] * A[i - 1];
         }
         // 再计算上三角连乘
         int tmp = 1;
-        for(int j=n-2; j>=0; j--) {
-            tmp *= A[j+1];
-            B[j]*= tmp;
+        for (int j = n - 2; j >= 0; j--) {
+            tmp *= A[j + 1];
+            B[j] *= tmp;
         }
         return B;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[] A = {1,2,3,4,5};
+        int[] A = {1, 2, 3, 4, 5};
         int[] B = (new MultipyArray()).multiply(A);
-        for(int i : B) {
+        for (int i : B) {
             System.out.println(i);
         }
     }

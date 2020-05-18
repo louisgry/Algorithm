@@ -10,8 +10,12 @@ public class BalancedBinaryTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 110 Balanced Binary Tree
      * https://leetcode.com/problems/balanced-binary-tree/
@@ -24,20 +28,24 @@ public class BalancedBinaryTree {
         if (root == null) {
             return true;
         }
-        if (Math.abs(getDepth(root.left)-getDepth(root.right))>1) {
+        if (Math.abs(getDepth(root.left) - getDepth(root.right)) > 1) {
             return false;
         }
 
         // 递归过程
         return isBalanced(root.left) && isBalanced(root.right);
     }
+
     private int getDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
         return 1 + Math.max(getDepth(root.left), getDepth(root.right));
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         BalancedBinaryTree balancedBinaryTree = new BalancedBinaryTree();
         // binary tree [3,9,20,null,null,15,7]

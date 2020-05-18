@@ -12,24 +12,27 @@ public class DuplicateNumberInArray {
      * 时间复杂度：O(n)
      * 空间复杂度：O(n)
      */
-    public boolean duplicate(int numbers[],int length,int [] duplication) {
+    public boolean duplicate(int numbers[], int length, int[] duplication) {
         // 边界条件判断
-        if(numbers==null || length==0) {
+        if (numbers == null || length == 0) {
             return false;
         }
         int[] freq = new int[length];
-        for(int i=0; i<numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             freq[numbers[i]]++;
-            if(freq[numbers[i]]>1){
+            if (freq[numbers[i]] > 1) {
                 duplication[0] = numbers[i];
                 return true;
             }
         }
         return false;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[] numbers = {2,3,1,0,2,5,3};
+        int[] numbers = {2, 3, 1, 0, 2, 5, 3};
         int[] duplication = new int[7];
         boolean res = (new DuplicateNumberInArray()).duplicate(numbers, 7, duplication);
         // ==> true

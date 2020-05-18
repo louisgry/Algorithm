@@ -31,6 +31,7 @@ public class LetterCombinationsOfAPhoneNumber {
             "wxyz"
     };
     private ArrayList<String> resultList;
+
     public List<String> letterCombinations(String digits) {
         resultList = new ArrayList<String>();
         if (digits.equals("")) {
@@ -39,26 +40,30 @@ public class LetterCombinationsOfAPhoneNumber {
         findCombination(digits, 0, "");
         return resultList;
     }
+
     // s保存从digits[0...index-1]的字符串
     private void findCombination(String digits, int index, String s) {
-        if (index==digits.length()) {
+        if (index == digits.length()) {
             resultList.add(s);
             return;
         }
         Character c = digits.charAt(index);
-        String letters = letterMap[c-'0'];
-        for (int i=0; i<letters.length(); i++) {
-            findCombination(digits, index+1, s+letters.charAt(i));
+        String letters = letterMap[c - '0'];
+        for (int i = 0; i < letters.length(); i++) {
+            findCombination(digits, index + 1, s + letters.charAt(i));
         }
         return;
     }
 
-    private static void printList(List<String> list){
-        for(String s: list) {
+    private static void printList(List<String> list) {
+        for (String s : list) {
             System.out.print(s + " ");
         }
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         printList((new LetterCombinationsOfAPhoneNumber()).letterCombinations("23"));
     }

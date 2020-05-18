@@ -10,18 +10,20 @@ public class ImplementPower {
      * https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00
      */
     public double Power(double base, int exponent) {
-        if(base == 0) {
+        if (base == 0) {
             return 0.0;
         }
         double res = 1.0;
         int e = Math.abs(exponent);
-        for(int i=0; i<e; i++) {
+        for (int i = 0; i < e; i++) {
             res *= base;
         }
-        return exponent>0 ? res : 1/res;
+        return exponent > 0 ? res : 1 / res;
     }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
         System.out.println((new ImplementPower()).Power(2, 3));
         // 负数测试用例

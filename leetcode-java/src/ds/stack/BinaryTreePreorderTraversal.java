@@ -14,8 +14,12 @@ public class BinaryTreePreorderTraversal {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 144 Binary Tree Preorder Traversal
      * https://leetcode.com/problems/binary-tree-preorder-traversal/
@@ -33,23 +37,22 @@ public class BinaryTreePreorderTraversal {
          * 空间复杂度：
          */
         List<Integer> res = new ArrayList<Integer>();
-        if(root == null){
+        if (root == null) {
             return res;
         }
         Stack<Command> stack = new Stack<Command>();
         stack.push(new Command("go", root));
-        while(!stack.empty()) {
+        while (!stack.empty()) {
             Command command = stack.pop();
-            if(command.s == "print"){
+            if (command.s == "print") {
                 res.add(command.node.val);
-            }
-            else {
+            } else {
                 assert command.s.equals("go");
                 // 因为栈的先进后出，所以要反过来
-                if(command.node.right != null){
+                if (command.node.right != null) {
                     stack.push(new Command("go", command.node.right));
                 }
-                if(command.node.left != null){
+                if (command.node.left != null) {
                     stack.push(new Command("go", command.node.left));
                 }
                 stack.push(new Command("print", command.node));
@@ -57,9 +60,10 @@ public class BinaryTreePreorderTraversal {
         }
         return res;
     }
+
     private void preorderTraversal(TreeNode node, List<Integer> list) {
         // condition
-        if(node == null) {
+        if (node == null) {
             return;
         }
         // recursion
@@ -67,16 +71,23 @@ public class BinaryTreePreorderTraversal {
         preorderTraversal(node.left, list);
         preorderTraversal(node.right, list);
     }
-    /** 非递归 */
+
+    /**
+     * 非递归
+     */
     public class Command {
         String s;
         TreeNode node;
-        Command(String s, TreeNode node){
+
+        Command(String s, TreeNode node) {
             this.s = s;
             this.node = node;
         }
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         BinaryTreePreorderTraversal binaryTreePreorderTraversal = new BinaryTreePreorderTraversal();
         TreeNode treeNode = binaryTreePreorderTraversal.new TreeNode(1);

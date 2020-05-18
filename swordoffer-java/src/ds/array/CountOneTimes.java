@@ -11,19 +11,22 @@ public class CountOneTimes {
      */
     public int NumberOf1Between1AndN_Solution(int n) {
         int count = 0;
-        for(int i=1; i<=n; i*=10) {
+        for (int i = 1; i <= n; i *= 10) {
             // 高位a，低位b
-            int a = n/i, b = n%i;
+            int a = n / i, b = n % i;
             // 加8处理：当百位为0，则a/10==(a+8)/10，当百位>=2，补8会产生进位位，效果等同于(a/10+1)
-            count += (a+8)/10*i;
+            count += (a + 8) / 10 * i;
             // b+1处理：当百位对应0或>=2时，有(a+8)/10次包含所有100个点，还有当百位为1(a%10==1)
-            if(a%10 == 1) {
-                count += b+1;
+            if (a % 10 == 1) {
+                count += b + 1;
             }
         }
         return count;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         System.out.println((new CountOneTimes()).NumberOf1Between1AndN_Solution(216));
     }

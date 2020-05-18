@@ -2,6 +2,7 @@ package ds.binarytree;
 
 import java.util.List;
 import java.util.ArrayList;
+
 /**
  * @author Louis
  * @date Create in 2019/10/1 12:18
@@ -12,8 +13,12 @@ public class BinaryTreePaths {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 257 Binary Tree Paths：https
      * //leetcode.com/problems/binary-tree-paths/
@@ -24,10 +29,10 @@ public class BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> result = new ArrayList<String>();
         // 递归终止条件
-        if (root == null ) {
+        if (root == null) {
             return result;
         }
-        if (root.left==null && root.right==null) {
+        if (root.left == null && root.right == null) {
             result.add(Integer.toString(root.val));
             return result;
         }
@@ -48,7 +53,10 @@ public class BinaryTreePaths {
         }
         return result;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         BinaryTreePaths binaryTreePaths = new BinaryTreePaths();
         // binary tree [1,2,3,null,5]

@@ -35,19 +35,19 @@ public class PartitionEqualSubsetSum {
          */
         int sum = 0;
         int n = nums.length;
-        for(int i=0; i<n; i++){
-            assert nums[i]>0;
+        for (int i = 0; i < n; i++) {
+            assert nums[i] > 0;
             sum += nums[i];
         }
-        int C = sum/2;
-        if(sum%2 != 0)
+        int C = sum / 2;
+        if (sum % 2 != 0)
             return false;
-        boolean[] memo = new boolean[C+1]; // 表示0...sum/2
-        for(int j=0; j<=C; j++) // 注意是小于等于
+        boolean[] memo = new boolean[C + 1]; // 表示0...sum/2
+        for (int j = 0; j <= C; j++) // 注意是小于等于
             memo[j] = (nums[0] == j); // j -> c
-        for(int i=1; i<n; i++)
-            for(int j=C; j>=nums[i]; j--)
-                memo[j] = memo[j] || memo[j-nums[i]];
+        for (int i = 1; i < n; i++)
+            for (int j = C; j >= nums[i]; j--)
+                memo[j] = memo[j] || memo[j - nums[i]];
 
         return memo[C];
     }
@@ -63,7 +63,9 @@ public class PartitionEqualSubsetSum {
 //        return memo[index][sum] == 1;
 //    }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
         int[] nums1 = {1, 5, 11, 5};
         System.out.println((new PartitionEqualSubsetSum()).canPartition(nums1));

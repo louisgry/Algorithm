@@ -15,25 +15,28 @@ public class HappyNumber {
      * 空间复杂度：O(?)
      */
     public boolean isHappy(int n) {
-        if(n<1) {
+        if (n < 1) {
             return false;
         }
         HashSet<Integer> set = new HashSet<Integer>();
         int t;
         int newN;
-        while(n!=1 && !set.contains(n)) {
+        while (n != 1 && !set.contains(n)) {
             set.add(n);
             newN = 0;
-            while(n>0) {
-                t = n%10;
+            while (n > 0) {
+                t = n % 10;
                 n /= 10;
-                newN += t*t;
+                newN += t * t;
             }
             n = newN;
         }
         return n == 1;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         int num = 19;
         // ==> true

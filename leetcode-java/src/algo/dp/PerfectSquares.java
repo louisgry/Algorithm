@@ -26,12 +26,12 @@ public class PerfectSquares {
          * 时间复杂度：O(n)
          * 空间复杂度：O(n)
          */
-        int[] memo = new int[n+1];
+        int[] memo = new int[n + 1];
         Arrays.fill(memo, Integer.MAX_VALUE);
         memo[0] = 0;
-        for(int i=1; i<=n; i++)
-            for(int j=1; i-j*j>=0; j++)
-                memo[i] = Math.min(memo[i], 1+memo[i-j*j]);
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; i - j * j >= 0; j++)
+                memo[i] = Math.min(memo[i], 1 + memo[i - j * j]);
         return memo[n];
         /**
          * 思路3：queue
@@ -73,7 +73,10 @@ public class PerfectSquares {
 //        memo[n] = min;
 //        return min;
 //    }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         // ==> 3
         System.out.println((new PerfectSquares()).numSquares(12));

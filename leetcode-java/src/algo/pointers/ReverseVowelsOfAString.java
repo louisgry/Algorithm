@@ -13,17 +13,17 @@ public class ReverseVowelsOfAString {
      * 空间复杂度：O(n)
      */
     public String reverseVowels(String s) {
-        int i=0, j=s.length()-1;
+        int i = 0, j = s.length() - 1;
         char[] arr = s.toCharArray();
         String vowels = "aeiouAEIOU";
-        while(i<j){
-            if(!vowels.contains(arr[i]+"")){
+        while (i < j) {
+            if (!vowels.contains(arr[i] + "")) {
                 i++;
             }
-            if(!vowels.contains(arr[j]+"")){
+            if (!vowels.contains(arr[j] + "")) {
                 j--;
             }
-            if(vowels.contains(arr[i]+"")&&vowels.contains(arr[j]+"")){
+            if (vowels.contains(arr[i] + "") && vowels.contains(arr[j] + "")) {
                 char c = arr[i];
                 arr[i] = arr[j];
                 arr[j] = c;
@@ -34,7 +34,9 @@ public class ReverseVowelsOfAString {
         return new String(arr);
     }
 
-    /** main */
+    /**
+     * main
+     */
     public static void main(String[] args) {
         // ==> holle
         System.out.println((new ReverseVowelsOfAString()).reverseVowels("hello"));

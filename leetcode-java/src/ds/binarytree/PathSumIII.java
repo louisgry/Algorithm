@@ -10,8 +10,12 @@ public class PathSumIII {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 437 Path Sum III
      * https://leetcode.com/problems/path-sum-iii/
@@ -21,29 +25,33 @@ public class PathSumIII {
      */
     public int pathSum(TreeNode root, int sum) {
         // condition
-        if(root == null) {
+        if (root == null) {
             return 0;
         }
         // recursion
         return findPath(root, sum)
                 + pathSum(root.left, sum) + pathSum(root.right, sum);
     }
+
     private int findPath(TreeNode node, int sum) {
         // condition
-        if(node == null) {
+        if (node == null) {
             return 0;
         }
         int res = 0;
-        if(node.val == sum){
+        if (node.val == sum) {
             res += 1;
         }
         // recursion
-        res += findPath(node.left, sum-node.val);
-        res += findPath(node.right, sum-node.val);
+        res += findPath(node.left, sum - node.val);
+        res += findPath(node.right, sum - node.val);
 
         return res;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         PathSumIII pathSumIII = new PathSumIII();
         // binary tree [10,5,-3,3,2,null,11,3,-2,null,1]

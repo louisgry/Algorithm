@@ -18,22 +18,21 @@ public class ReplaceSpace {
          */
         // 从前往后遍历，记录空格数
         int count = 0;
-        for(int i=0; i<str.length(); i++) {
-            if(str.charAt(i) == ' ') {
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ') {
                 count++;
             }
         }
         // 从后往前，替换
-        char[] charArr = new char[str.length()+2*count];
-        for(int i=str.length()-1; i>=0; i--) {
-            if(str.charAt(i) != ' ') {
-                charArr[i+2*count] = str.charAt(i);
-            }
-            else {
+        char[] charArr = new char[str.length() + 2 * count];
+        for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) != ' ') {
+                charArr[i + 2 * count] = str.charAt(i);
+            } else {
                 count--;
-                charArr[i+2*count] = '%';
-                charArr[i+2*count+1] = '2';
-                charArr[i+2*count+2] = '0';
+                charArr[i + 2 * count] = '%';
+                charArr[i + 2 * count + 1] = '2';
+                charArr[i + 2 * count + 2] = '0';
             }
         }
         return new String(charArr);
@@ -42,7 +41,10 @@ public class ReplaceSpace {
          */
         // return str.toString().replace(" ", "%20");
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         StringBuffer s = new StringBuffer("We are happy");
         System.out.println((new ReplaceSpace()).replaceSpace(s));

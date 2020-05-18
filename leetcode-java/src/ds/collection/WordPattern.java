@@ -19,28 +19,30 @@ public class WordPattern {
         char[] patterns = pattern.toCharArray();
         String[] strs = str.split(" ");
 
-        if(patterns.length != strs.length) {
+        if (patterns.length != strs.length) {
             return false;
         }
 
-        for(int i=0; i<patterns.length; i++) {
+        for (int i = 0; i < patterns.length; i++) {
             char c = patterns[i];
-            if(!map.containsKey(c)) {
-                if(map.containsValue(strs[i])) {
+            if (!map.containsKey(c)) {
+                if (map.containsValue(strs[i])) {
                     return false;
                 }
                 map.put(c, strs[i]);
-            }
-            else {
+            } else {
                 String value = map.get(c);
-                if(!value.equals(strs[i])) {
+                if (!value.equals(strs[i])) {
                     return false;
                 }
             }
         }
         return true;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String pattern = "abba";
         String str = "dog cat cat dog";

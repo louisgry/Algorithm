@@ -15,8 +15,12 @@ public class PrintBinaryTreeZhi {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
+
     /**
      * 32.3-按之字形顺序打印二叉树
      * - https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0
@@ -27,24 +31,24 @@ public class PrintBinaryTreeZhi {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         queue.add(pRoot);
         boolean rev = false;
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             ArrayList<Integer> list = new ArrayList<>();
             // 当前队列的size就是该层的节点数
             int count = queue.size();
-            while(count-- > 0) {
+            while (count-- > 0) {
                 TreeNode t = queue.poll();
-                if(t == null) {
+                if (t == null) {
                     continue;
                 }
                 list.add(t.val);
                 queue.add(t.left);
                 queue.add(t.right);
             }
-            if(rev == true) {
+            if (rev == true) {
                 Collections.reverse(list);
             }
             rev = !rev;
-            if(list.size() != 0) {
+            if (list.size() != 0) {
                 res.add(list);
             }
         }

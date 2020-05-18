@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="064e8560-605f-4cd9-8242-2cfa8f020589" name="Default Changelist" comment="quick commit" />
+    <list id="9a494adb-ee9b-41fb-b2db-f7b791634852" name="Revert: " comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1PVp7hX4I3JhjyxchhsgYlvD3qw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="https://github.com/CyC2018/MBlog.git" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.BalancedBinaryTree (1)">
+    <configuration name="BalancedBinaryTree (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ds.binarytree.BalancedBinaryTree" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ds.binarytree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreePreorderTraversal (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ds.stack.BinaryTreePreorderTraversal" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ds.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LetterCombinationsOfAPhoneNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backtracking.LetterCombinationsOfAPhoneNumber" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="backtracking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MinimumSizeSubarraySum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algo.window.MinimumSizeSubarraySum" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algo.window.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="linkedlist.ReverseLinkedList" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LetterCombinationsOfAPhoneNumber" />
+      <item itemvalue="Application.ReverseLinkedList" />
+      <item itemvalue="Application.MinimumSizeSubarraySum" />
+      <item itemvalue="Application.BinaryTreePreorderTraversal (1)" />
+      <item itemvalue="Application.BalancedBinaryTree (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BalancedBinaryTree (1)" />
+        <item itemvalue="Application.BinaryTreePreorderTraversal (1)" />
+        <item itemvalue="Application.MinimumSizeSubarraySum" />
+        <item itemvalue="Application.ReverseLinkedList" />
+        <item itemvalue="Application.LetterCombinationsOfAPhoneNumber" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="064e8560-605f-4cd9-8242-2cfa8f020589" name="Default Changelist" comment="" />
+      <changelist id="9a494adb-ee9b-41fb-b2db-f7b791634852" name="Revert: " comment="" />
+      <created>1565968952769</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565968952769</updated>
+      <workItem from="1565968954115" duration="652000" />
+      <workItem from="1566280086827" duration="49000" />
+      <workItem from="1566308619001" duration="145000" />
+      <workItem from="1566359072457" duration="11000" />
+      <workItem from="1566990271602" duration="19233000" />
+      <workItem from="1567230880524" duration="52084000" />
+      <workItem from="1568609117007" duration="5545000" />
+      <workItem from="1568812414936" duration="10062000" />
+      <workItem from="1569308901185" duration="1832000" />
+      <workItem from="1569312464439" duration="14963000" />
+      <workItem from="1569638737476" duration="2696000" />
+      <workItem from="1570610224198" duration="722000" />
+      <workItem from="1570683392101" duration="41470000" />
+      <workItem from="1571315841846" duration="23716000" />
+      <workItem from="1571914924901" duration="2250000" />
+      <workItem from="1571921511559" duration="39000" />
+      <workItem from="1571921587425" duration="1210000" />
+      <workItem from="1571935838566" duration="60000" />
+      <workItem from="1572528526427" duration="586000" />
+      <workItem from="1572887565023" duration="3673000" />
+      <workItem from="1574523734375" duration="1334000" />
+      <workItem from="1575024390033" duration="682000" />
+      <workItem from="1575977634260" duration="1418000" />
+      <workItem from="1577630178948" duration="239000" />
+      <workItem from="1580629825653" duration="1256000" />
+      <workItem from="1581833946576" duration="48000" />
+      <workItem from="1581921485288" duration="2764000" />
+      <workItem from="1581948379073" duration="828000" />
+    </task>
+    <task id="LOCAL-00001" summary="cursor k">
+      <created>1567082484770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567082484770</updated>
+    </task>
+    <task id="LOCAL-00002" summary="quick commit">
+      <created>1567491992577</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567491992577</updated>
+    </task>
+    <task id="LOCAL-00003" summary="quick commit">
+      <created>1567612057261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567612057261</updated>
+    </task>
+    <task id="LOCAL-00004" summary="quick commit">
+      <created>1567687007313</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567687007313</updated>
+    </task>
+    <task id="LOCAL-00005" summary="quick commit">
+      <created>1568170880965</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568170880965</updated>
+    </task>
+    <task id="LOCAL-00006" summary="quick commit">
+      <created>1568208531032</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568208531032</updated>
+    </task>
+    <task id="LOCAL-00007" summary="quick commit">
+      <created>1568275491992</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1568275491992</updated>
+    </task>
+    <task id="LOCAL-00008" summary="quick commit">
+      <created>1568360796181</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568360796181</updated>
+    </task>
+    <task id="LOCAL-00009" summary="quick commit">
+      <created>1568446260368</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568446260368</updated>
+    </task>
+    <task id="LOCAL-00010" summary="quick commit">
+      <created>1568608340777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568608340777</updated>
+    </task>
+    <task id="LOCAL-00011" summary="quick commit">
+      <created>1568707684889</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1568707684889</updated>
+    </task>
+    <task id="LOCAL-00012" summary="quick commit">
+      <created>1568819037047</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1568819037047</updated>
+    </task>
+    <task id="LOCAL-00013" summary="quick commit">
+      <created>1569336480735</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569336480736</updated>
+    </task>
+    <task id="LOCAL-00014" summary="quick commit">
+      <created>1569397543149</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569397543149</updated>
+    </task>
+    <task id="LOCAL-00015" summary="quick commit">
+      <created>1569642374644</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1569642374644</updated>
+    </task>
+    <task id="LOCAL-00016" summary="quick commit">
+      <created>1570695940015</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570695940015</updated>
+    </task>
+    <task id="LOCAL-00017" summary="quick commit">
+      <created>1570801247370</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570801247370</updated>
+    </task>
+    <task id="LOCAL-00018" summary="quick commit">
+      <created>1570806841517</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570806841517</updated>
+    </task>
+    <task id="LOCAL-00019" summary="quick commit">
+      <created>1570854871014</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570854871014</updated>
+    </task>
+    <task id="LOCAL-00020" summary="quick commit">
+      <created>1571039611284</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571039611284</updated>
+    </task>
+    <task id="LOCAL-00021" summary="quick commit">
+      <created>1571043525744</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1571043525744</updated>
+    </task>
+    <task id="LOCAL-00022" summary="quick commit">
+      <created>1571109293531</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1571109293531</updated>
+    </task>
+    <task id="LOCAL-00023" summary="quick commit">
+      <created>1571226855807</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1571226855807</updated>
+    </task>
+    <task id="LOCAL-00024" summary="quick commit">
+      <created>1571414503061</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1571414503061</updated>
+    </task>
+    <task id="LOCAL-00025" summary="quick commit">
+      <created>1571647414077</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1571647414078</updated>
+    </task>
+    <task id="LOCAL-00026" summary="quick commit">
+      <created>1571804251773</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1571804251773</updated>
+    </task>
+    <task id="LOCAL-00027" summary="quick commit">
+      <created>1571908951418</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1571908951418</updated>
+    </task>
+    <task id="LOCAL-00028" summary="quick commit">
+      <created>1575991943159</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1575991943159</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cursor k" />
+    <MESSAGE value="quick commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="quick commit" />
+  </component>
+</project>

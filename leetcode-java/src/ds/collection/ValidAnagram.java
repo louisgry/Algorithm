@@ -13,18 +13,18 @@ public class ValidAnagram {
      * 空间复杂度：O(26)
      */
     public boolean isAnagram(String s, String t) {
-        if(s.length() != t.length()){
+        if (s.length() != t.length()) {
             return false;
         }
         // HashTable
         int[] freq = new int[26];
-        for(int i=0; i<s.length(); i++) {
-            freq[s.charAt(i)-'a']++;
+        for (int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i) - 'a']++;
         }
 
-        for(int i=0; i<t.length(); i++){
-            freq[t.charAt(i)-'a']--;
-            if(freq[t.charAt(i)-'a'] < 0) {
+        for (int i = 0; i < t.length(); i++) {
+            freq[t.charAt(i) - 'a']--;
+            if (freq[t.charAt(i) - 'a'] < 0) {
                 return false;
             }
         }
@@ -54,7 +54,10 @@ public class ValidAnagram {
 //        }
 //        return false;
 //    }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
         String s = "anagram";
         String t = "nagaram";

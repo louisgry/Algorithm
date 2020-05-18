@@ -1,6 +1,7 @@
 package algo.greedy;
 
 import java.util.*;
+
 /**
  * @author Louis
  * @date Create in 2019/10/28 11:44
@@ -16,7 +17,7 @@ public class NonOverlappingIntervals {
          * 时间复杂度：O(n)
          * 空间复杂度：O(n)
          */
-        if(intervals.length == 0) {
+        if (intervals.length == 0) {
             return 0;
         }
         // 结尾早的靠前
@@ -32,8 +33,8 @@ public class NonOverlappingIntervals {
 
         int count = 1;
         int pre = 0;
-        for(int i=1; i<intervals.length; i++) {
-            if(intervals[i][0] >= intervals[pre][1]) {
+        for (int i = 1; i < intervals.length; i++) {
+            if (intervals[i][0] >= intervals[pre][1]) {
                 count++;
                 pre = i;
             }
@@ -78,9 +79,12 @@ public class NonOverlappingIntervals {
 //
 //        return intervals.length - count;
     }
-    /** main */
+
+    /**
+     * main
+     */
     public static void main(String[] args) {
-        int[][] intervals1 = {{1,2},{2,3},{3,4},{1,3}};
+        int[][] intervals1 = {{1, 2}, {2, 3}, {3, 4}, {1, 3}};
         // ==> 1
         System.out.println((new NonOverlappingIntervals()).eraseOverlapIntervals(intervals1));
     }
