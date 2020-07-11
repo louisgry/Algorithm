@@ -1,4 +1,4 @@
-package ds.array;
+package ds.hash;
 
 /**
  * @author Louis
