@@ -15,7 +15,7 @@ public class LeetCode_111_MinDepth {
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
-    /** 111-二叉树的最小深度 */
+    /** 111-二叉树的最小深度：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/ */
     public int minDepth(TreeNode root) {
         // 非空判断
         if(root == null) {

@@ -8,7 +8,7 @@ package hash;
 import java.util.Set;
 import java.util.HashSet;
 public class Offer_3_Duplicate {
-    /** 3-数组中重复的数字 */
+    /** 3-数组中重复的数字：https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8 */
     public boolean duplicate(int numbers[], int length, int[] duplication) {
         Set<Integer> set = new HashSet<Integer>();
         for(int i=0; i<length; i++) {

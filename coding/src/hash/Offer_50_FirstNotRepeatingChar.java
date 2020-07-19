@@ -5,7 +5,7 @@ package hash;
  * @date Create in 2020/7/11 23:35
  */
 public class Offer_50_FirstNotRepeatingChar {
-    /** 50-第一个只出现一次的字符 */
+    /** 50-第一个只出现一次的字符：https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c */
     public int FirstNotRepeatingChar(String str) {
         int[] hash = new int[256];
         // 统计出现的次数

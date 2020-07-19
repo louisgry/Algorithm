@@ -10,7 +10,7 @@ import java.util.Set;
  * @date Create in 2020/7/12 21:46
  */
 public class LeetCode_752_OpenLock {
-    /** 752-打开转盘锁 */
+    /** 752-打开转盘锁：https://leetcode-cn.com/problems/open-the-lock/ */
     public int openLock(String[] deadends, String target) {
         // 死亡密码
         Set<String> deads = new HashSet<>();
