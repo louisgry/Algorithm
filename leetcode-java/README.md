@@ -1,5 +1,6 @@
 
 # LeetCode分类汇总 (Java)
+> https://github.com/louisgry/Algorithm/tree/master/leetcode
 
 - 数据结构
     - [stack](#stack)
@@ -41,6 +42,7 @@
     - [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)：[【19题解】](#19题解)
     - more
     - [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)：[【234题解】](#234题解)
+    - [160-相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)：[160题解](#160-相交链表)
 
 ### binarytree
 - [二叉树](#二叉树)
@@ -132,7 +134,7 @@
     - [79. Word Search](https://leetcode.com/problems/word-search/)：[【79题解】](#79题解)
     - [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)：[【200题解】](#200题解)
     - [51. N Queens](https://leetcode.com/problems/n-queens/)：[【51题解】](#51题解)
-   
+
 ### math
 - [数学](#数学)
     - [136. Single Number](https://leetcode.com/problems/single-number/)：[【136题解-异或】](#136题解-异或)
@@ -748,6 +750,38 @@
     }
     ```
 
+### 160-相交链表
+- https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
+- 编写程序，找到两个链表的相交节点
+- 思路：两个节点同时开始，若pA到尾部移到pB链，若pB到尾部移到pA链，最终会同时走到相交节点处
+- 复杂度：O(n)、O(1)
+```java
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        // pA, pB同时开始
+        ListNode pA = headA;
+        ListNode pB = headB;
+        while(pA != pB) {
+            // 若pA到尾部移到pB链，若pB到尾部移到pA链
+            if(pA == null) {
+                pA = headB;
+            }
+            else {
+                pA = pA.next;
+            }
+            if(pB == null) {
+                pB = headA;
+            }
+            else {
+                pB = pB.next;
+            }      
+        }
+        // 会同时走到相交节点处
+        return pA;
+    }
+}
+```
+
 ## 二叉树
 ### 104题解
 - 104题解
@@ -936,17 +970,21 @@
     - 空间复杂度：O(h)
     ```java
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        // condition
+        // condition: 如果root为null，则不存在公共祖先
         if(root == null) {
             return null;
         }
-        // recursion
+
+        // recursion: 
+        // 如果p、q都在左边，则公共祖先在左边
         if(p.val<root.val && q.val<root.val) {
             return lowestCommonAncestor(root.left, p, q);
         }
+        // 如果p、q都在右边，则公共祖先在右边
         if(p.val>root.val && q.val>root.val) {
             return lowestCommonAncestor(root.right, p, q);
         }
+        // 其他情况，root为公共祖先
         return root;
     }
     ```

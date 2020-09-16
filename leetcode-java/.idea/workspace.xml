@@ -5,102 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="064e8560-605f-4cd9-8242-2cfa8f020589" name="Default Changelist" comment="quick commit">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algo/bfs/MinimumDepthOfBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ds/linkedlist/IntersectionNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/Combinations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/Combinations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/LetterCombinationsOfAPhoneNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/LetterCombinationsOfAPhoneNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/NQueens.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/NQueens.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/NumberOfIslands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/NumberOfIslands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/Permutations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/Permutations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/WordSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/backtracking/WordSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/bfs/BinaryTreeLevelOrderTraversal$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/bfs/BinaryTreeLevelOrderTraversal$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/bfs/BinaryTreeLevelOrderTraversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/bfs/BinaryTreeLevelOrderTraversal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/cursor/BestTimeToBuyAndSellStockII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/cursor/BestTimeToBuyAndSellStockII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/cursor/MoveZeroes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/cursor/MoveZeroes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/cursor/RemoveElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/cursor/RemoveElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/ClimbingStairs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/ClimbingStairs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/DecodeWays.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/DecodeWays.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/HouseRobber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/HouseRobber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/IntegerBreak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/IntegerBreak.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/LongestCommonSubsequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/LongestCommonSubsequence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/LongestIncreasingSubsequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/LongestIncreasingSubsequence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/PartitionEqualSubsetSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/PartitionEqualSubsetSum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/dp/PerfectSquares.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/dp/PerfectSquares.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/greedy/AssignCookies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/greedy/AssignCookies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/greedy/NonOverlappingIntervals$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/greedy/NonOverlappingIntervals$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/greedy/NonOverlappingIntervals.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/greedy/NonOverlappingIntervals.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/partition/KthLargestElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/partition/KthLargestElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/partition/SortColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/partition/SortColors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/ContainerWithMostWater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/ContainerWithMostWater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/ReverseVowelsOfAString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/ReverseVowelsOfAString.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/TwoSumII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/TwoSumII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/ValidPalindrome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/pointers/ValidPalindrome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/window/FindAllAnagramsInAString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/window/FindAllAnagramsInAString.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/window/LongestRepeatingCharacterReplacement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/window/LongestRepeatingCharacterReplacement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/window/LongestSubstringWithoutRepeatingCharacters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/window/LongestSubstringWithoutRepeatingCharacters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/window/MinimumSizeSubarraySum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/window/MinimumSizeSubarraySum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/window/MinimumWindowSubstring.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/window/MinimumWindowSubstring.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algo/window/PermutationInString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algo/window/PermutationInString.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BalancedBinaryTree$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BalancedBinaryTree$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BalancedBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BalancedBinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BinaryTreePaths$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BinaryTreePaths$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BinaryTreePaths.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/BinaryTreePaths.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/CountCompleteTreeNodes$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/CountCompleteTreeNodes$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/CountCompleteTreeNodes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/CountCompleteTreeNodes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/InvertBinaryTree$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/InvertBinaryTree$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/InvertBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/InvertBinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/LowestCommonAncestorOfBST$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/LowestCommonAncestorOfBST$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/LowestCommonAncestorOfBST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/LowestCommonAncestorOfBST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MaximumDepthOfBinaryTree$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MaximumDepthOfBinaryTree$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MaximumDepthOfBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MaximumDepthOfBinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MinimumDepthOfBinaryTree$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MinimumDepthOfBinaryTree$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MinimumDepthOfBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/MinimumDepthOfBinaryTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSum$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSum$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumII$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumII$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumIII$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumIII$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumIII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/PathSumIII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SameTree$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SameTree$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SameTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SameTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumOfLeftLeaves$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumOfLeftLeaves$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumOfLeftLeaves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumOfLeftLeaves.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumRootToLeafNumbers$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumRootToLeafNumbers$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumRootToLeafNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SumRootToLeafNumbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SymmetricTree$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SymmetricTree$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SymmetricTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/binarytree/SymmetricTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/ContainsDuplicateII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/ContainsDuplicateII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/ContainsDuplicateIII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/ContainsDuplicateIII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/FourSumII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/FourSumII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/HappyNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/HappyNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/IntersectionOfTwoArrays.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/IntersectionOfTwoArrays.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/IntersectionOfTwoArraysII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/IntersectionOfTwoArraysII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/NumberOfBoomerangs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/NumberOfBoomerangs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/TwoSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/TwoSum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/UniqueMorseRepresentations.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/UniqueMorseRepresentations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/ValidAnagram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/ValidAnagram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/collection/WordPattern.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/collection/WordPattern.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/DeleteNodeInALinkedList$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/DeleteNodeInALinkedList$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/DeleteNodeInALinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/DeleteNodeInALinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/PalindromeLinkedList$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/PalindromeLinkedList$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/PalindromeLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/PalindromeLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveLinkedListElements$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveLinkedListElements$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveLinkedListElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveLinkedListElements.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveNthNodeFromEndOfList$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveNthNodeFromEndOfList$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveNthNodeFromEndOfList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/RemoveNthNodeFromEndOfList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/ReverseLinkedList$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/ReverseLinkedList$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/ReverseLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/ReverseLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/SwapNodesInPairs$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/SwapNodesInPairs$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/SwapNodesInPairs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/linkedlist/SwapNodesInPairs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/queue/TopKFrequentElements$PairComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/queue/TopKFrequentElements$PairComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/queue/TopKFrequentElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/queue/TopKFrequentElements.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/stack/BinaryTreePreorderTraversal$Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/stack/BinaryTreePreorderTraversal$Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/stack/BinaryTreePreorderTraversal$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/stack/BinaryTreePreorderTraversal$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/stack/BinaryTreePreorderTraversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/stack/BinaryTreePreorderTraversal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/stack/EvaluateReversePolishNotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/stack/EvaluateReversePolishNotation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/stack/TrappingRainWater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/stack/TrappingRainWater.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/ds/stack/ValidParentheses.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/ds/stack/ValidParentheses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <list id="9a494adb-ee9b-41fb-b2db-f7b791634852" name="Revert: " comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interview-java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MinimumDepthOfBinaryTree">
+  <component name="RunManager" selected="Application.IntersectionNode">
     <configuration name="BalancedBinaryTree (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ds.binarytree.BalancedBinaryTree" />
       <module name="leetcode" />
@@ -178,6 +85,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ds.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntersectionNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ds.linkedlist.IntersectionNode" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ds.linkedlist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,33 +131,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="linkedlist.ReverseLinkedList" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.ReverseLinkedList" />
       <item itemvalue="Application.MinimumSizeSubarraySum" />
       <item itemvalue="Application.BinaryTreePreorderTraversal (1)" />
       <item itemvalue="Application.BalancedBinaryTree (1)" />
       <item itemvalue="Application.MinimumDepthOfBinaryTree" />
+      <item itemvalue="Application.IntersectionNode" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IntersectionNode" />
         <item itemvalue="Application.MinimumDepthOfBinaryTree" />
         <item itemvalue="Application.BalancedBinaryTree (1)" />
         <item itemvalue="Application.BinaryTreePreorderTraversal (1)" />
         <item itemvalue="Application.MinimumSizeSubarraySum" />
-        <item itemvalue="Application.ReverseLinkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -283,6 +190,7 @@
       <workItem from="1593701238767" duration="3028000" />
       <workItem from="1594182715235" duration="643000" />
       <workItem from="1594476029873" duration="750000" />
+      <workItem from="1600238734657" duration="1525000" />
     </task>
     <task id="LOCAL-00001" summary="cursor k">
       <created>1567082484770</created>
