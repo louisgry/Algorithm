@@ -55,12 +55,14 @@ public class LC_20_ValidParentheses {
     /** main */
     public static void main(String[] args) {
         LC_20_ValidParentheses solution = new LC_20_ValidParentheses();
-        // out: true, true, false
+        // out: true, true, false, false
         String s1 = "";
         System.out.println(solution.isValid(s1));
         String s2 = "(){}[]";
         System.out.println(solution.isValid(s2));
         String s3 = "(){]";
         System.out.println(solution.isValid(s3));
+        String s4 = "([)]";
+        System.out.println(solution.isValid(s4));
     }
 }
