@@ -12,6 +12,13 @@ public class LC_20_ValidParentheses {
      * https://leetcode-cn.com/problems/valid-parentheses/
      */
     public boolean isValid(String s) {
+        // 遍历string
+        // -- 如果是左括号，压入栈
+        // -- 如果是右括号，弹出栈
+        // ---- 如果不匹配，返回false
+        // ---- 如果for结束，栈不为空，返回false
+        // ---- 否则，返回true
+
         char[] charArr = {'(', ')', '{', '}', '[', ']'};
         // 用栈来进行对比
         Stack<Character> stack = new Stack<>();

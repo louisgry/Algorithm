@@ -16,6 +16,9 @@ public class LC_144_BinaryTreePreorderTraversal {
      * 思路1：递归
      */
     public List<Integer> preorderTraversal(TreeNode root) {
+        // 递归解法：根节点->左节点->右节点
+        // 要返回List，所以需要辅助函数来做递归
+
         List<Integer> res = new ArrayList<>();
         helper(root, res);
         return res;

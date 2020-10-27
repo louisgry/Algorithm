@@ -17,6 +17,11 @@ public class LC_144_BinaryTreePreorderTraversal {
      * 思路2：栈
      */
     public List<Integer> preorderTraversal(TreeNode root) {
+        // 非递归解法：栈（递归的本质是栈）
+        // 把第一个指令go-root压入栈，while循环直到stack为空
+        // -- 如果指令是print，把command.node的值add进List
+        // -- 否则指令就是go，把指令倒序压入stack：print-root, go-left, go-right
+
         List<Integer> res = new ArrayList<>();
         if(root == null) {
             return res;
